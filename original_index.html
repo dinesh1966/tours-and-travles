@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NextTrip Holidays - Tour Booking</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Premium Page Loader -->
+
+  <div id="premiumLoader">
+    <div class="loader-plane"><i class="fa fa-plane"></i></div>
+  </div>
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const loader = document.getElementById('premiumLoader');
+        if (loader) loader.classList.add('fade-out');
+        document.body.classList.add('body-loaded');
+      }, 400); // Small delay to appreciate the loader
+    });
+
+    // Add page exit transitions for links
+    document.querySelectorAll('a').forEach(link => {
+      if (link.target !== '_blank' && link.href && link.href.indexOf('#') === -1) {
+        link.addEventListener('click', (e) => {
+          const loader = document.getElementById('premiumLoader');
+          if (loader) {
+            e.preventDefault();
+            loader.style.transition = 'opacity 0.4s ease'; // fast fade-in
+            loader.style.transform = 'translateY(0)';
+            loader.style.opacity = '1';
+            setTimeout(() => window.location = link.href, 400);
+          }
+        });
+      }
+    });
+  </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <img
+          src="https://res.cloudinary.com/drkgkgiat/image/upload/q_auto/f_auto/v1775567539/Next_TRip_Final_Logo_Square_Size_-_Copy-removebg-preview_bsfsev.png"
+          alt="NextTrip" height="50">
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#destinations">Destination</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <span class="phone-link"><i class="fa fa-phone"></i> +91 9976692604</span>
+        <button class="icon-btn"><i class="fa fa-search"></i></button>
+        <button class="icon-btn"><i class="fa fa-user"></i></button>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#destinations">Destination</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+    <p class="mobile-phone"><i class="fa fa-phone"></i> +91 99766 92604</p>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <!-- Hero Image Slider -->
+    <div class="hero-slider" id="heroSlider">
+      <div class="hero-slide active" style="background-image: url('hero-1.png')"></div>
+      <div class="hero-slide" style="background-image: url('hero-2.png')"></div>
+      <div class="hero-slide" style="background-image: url('hero-3.png')"></div>
+    </div>
+
+    <!-- Slider Navigation Arrows -->
+    <button class="slider-btn slider-prev" id="sliderPrev" aria-label="Previous Slide">
+      <i class="fa fa-chevron-left"></i>
+    </button>
+    <button class="slider-btn slider-next" id="sliderNext" aria-label="Next Slide">
+      <i class="fa fa-chevron-right"></i>
+    </button>
+
+
+
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Discover the World's <span>Hidden Wonders</span></h1>
+      <p class="hero-sub">Born from a passion for storytelling and global exploration, Next Trip Holidays has grown from
+        a Coimbatore boutique agency into India’s most trusted travel partner. For 15 years, we’ve dedicated ourselves
+        to crafting journeys that don't just show you a place, but immerse you in its soul.</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="openBookingModal()">Book Now</button>
+        <a href="#destinations" class="btn-secondary-outline">Explore Now</a>
+      </div>
+    </div>
+    <div class="hero-scroll"><span></span></div>
+  </section>
+
+  <!-- ===== TOUR PACKAGES GRID ===== -->
+  <section class="section-pad packages-section" id="destinations">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Explore</span>
+        <h2>Our Tour <span>Packages</span></h2>
+      </div>
+      <div class="packages-grid">
+        <div class="pkg-card pkg-large" onclick="window.location.href='india-tour-packages.html'">
+          <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800" alt="India">
+          <div class="pkg-overlay">
+            <h3>India Tour Packages</h3>
+            <a href="#" class="pkg-btn" onclick="return false;">98 Tours</a>
+          </div>
+        </div>
+        <div class="pkg-card pkg-medium" onclick="window.location.href='international-packages.html'">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600" alt="International">
+          <div class="pkg-overlay">
+            <h3>International Packages</h3>
+            <a href="#" class="pkg-btn" onclick="return false;">362 Tours</a>
+          </div>
+        </div>
+        <div class="pkg-card" onclick="window.location.href='exotic-tour.html'">
+          <img
+            src="https://res.cloudinary.com/drkgkgiat/image/upload/q_auto/f_auto/v1775826706/Gemini_Generated_Image_892g2b892g2b892g_m4alkr.png"
+            alt="Exotic Heritage">
+          <div class="pkg-overlay">
+            <h3>Exotic Packages</h3>
+            <a href="#" class="pkg-btn" onclick="return false;">Student Special</a>
+          </div>
+        </div>
+        <div class="pkg-card" onclick="window.location.href='boat-houses.html'">
+          <img src="https://images.unsplash.com/photo-1583037189850-1921ae7c6c22?w=600" alt="Boat">
+          <div class="pkg-overlay">
+            <h3>Boat Houses</h3>
+            <a href="#" class="pkg-btn" onclick="return false;">17 Tours</a>
+          </div>
+        </div>
+        <div class="pkg-card" onclick="window.location.href='properties.html'">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Properties">
+          <div class="pkg-overlay">
+            <h3>Properties</h3>
+            <a href="#" class="pkg-btn" onclick="return false;">144 Tours</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PACKAGE DETAIL MODAL ===== -->
+  <div class="package-modal" id="packageModal">
+    <div class="modal-overlay" onclick="closePackageModal()"></div>
+    <div class="modal-content">
+      <button class="modal-close" onclick="closePackageModal()"><i class="fa fa-times"></i></button>
+
+      <div class="modal-body">
+        <div class="modal-images">
+          <div class="main-image">
+            <img id="mainImage" src="" alt="Package">
+          </div>
+          <div class="thumbnail-images">
+            <img class="thumbnail" src="" alt="Thumbnail 1" onclick="changeMainImage(this)">
+            <img class="thumbnail" src="" alt="Thumbnail 2" onclick="changeMainImage(this)">
+            <img class="thumbnail" src="" alt="Thumbnail 3" onclick="changeMainImage(this)">
+            <img class="thumbnail" src="" alt="Thumbnail 4" onclick="changeMainImage(this)">
+          </div>
+        </div>
+
+        <div class="modal-details">
+          <h2 id="modalTitle">Package Title</h2>
+          <p id="modalDescription">Package description goes here</p>
+
+          <div class="package-highlights">
+            <h4>Package Includes:</h4>
+            <ul id="packageHighlights">
+              <li>Accommodation</li>
+              <li>Guided Tours</li>
+              <li>Meals</li>
+              <li>Transportation</li>
+            </ul>
+          </div>
+
+          <div class="package-info-grid">
+            <div class="info-item">
+              <span class="label">Duration</span>
+              <span id="duration" class="value">5-7 Days</span>
+            </div>
+            <div class="info-item">
+              <span class="label">Tours Available</span>
+              <span id="toursAvailable" class="value">50+</span>
+            </div>
+            <div class="info-item">
+              <span class="label">Starting Price</span>
+              <span id="price" class="value">From ₹ 25,000</span>
+            </div>
+            <div class="info-item">
+              <span class="label">Best Season</span>
+              <span id="season" class="value">Oct - Mar</span>
+            </div>
+          </div>
+
+          <div class="modal-actions">
+            <button class="btn-primary" onclick="bookPackage()">Book Now</button>
+            <button class="btn-secondary" onclick="closePackageModal()">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section class="section-pad why-section">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-tag">Why Us</span>
+        <h2>Why <span>Choose</span> Us</h2>
+        <p>Everything you need for the perfect journey</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon"><i class="fa fa-headset"></i></div>
+          <h4>Global Travel Support</h4>
+          <p>24/7 customer support in multiple languages</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fa fa-map-marked-alt"></i></div>
+          <h4>Expert Local Guides</h4>
+          <p>Connect with certified local guides for authentic experiences</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fa fa-passport"></i></div>
+          <h4>Visa Assistance</h4>
+          <p>Hassle-free visa processing and travel document support</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fa fa-ship"></i></div>
+          <h4>Luxury Cruises</h4>
+          <p>Sail the seas with cruise packages for every budget</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRENDING TOURS ===== -->
+  <section class="section-pad trending-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Hot Picks</span>
+        <h2>Trending <span>Tours</span></h2>
+      </div>
+      <div class="tours-grid">
+        <div class="tour-card" onclick="window.location.href='thailand-tour.html'" style="cursor: pointer;">
+          <div class="tour-img">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500" alt="Thailand">
+            <span class="tour-badge">Best Seller</span>
+            <button class="fav-btn" onclick="event.stopPropagation()"><i class="fa fa-heart"></i></button>
+          </div>
+          <div class="tour-body">
+            <h4>Thailand Explorer</h4>
+            <p class="tour-loc"><i class="fa fa-location-dot"></i> Bangkok, Phuket</p>
+            <div class="tour-meta">
+              <span><i class="fa fa-calendar"></i> 5 Days / 4 Nights</span>
+              <span><i class="fa fa-users"></i> 12 Guests</span>
+            </div>
+            <div class="tour-footer">
+              <div class="tour-price">
+                <small>per Person</small>
+                <strong>₹32,500</strong>
+              </div>
+              <a href="thailand-tour.html" class="tour-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="tour-card" onclick="window.location.href='singapore-tour.html'" style="cursor: pointer;">
+          <div class="tour-img">
+            <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=500" alt="Singapore">
+            <span class="tour-badge">Popular</span>
+            <button class="fav-btn" onclick="event.stopPropagation()"><i class="fa fa-heart"></i></button>
+          </div>
+          <div class="tour-body">
+            <h4>Singapore Dream</h4>
+            <p class="tour-loc"><i class="fa fa-location-dot"></i> Singapore City</p>
+            <div class="tour-meta">
+              <span><i class="fa fa-calendar"></i> 5 Days / 4 Nights</span>
+              <span><i class="fa fa-users"></i> 10 Guests</span>
+            </div>
+            <div class="tour-footer">
+              <div class="tour-price">
+                <small>per Person</small>
+                <strong>₹48,000</strong>
+              </div>
+              <a href="singapore-tour.html" class="tour-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="tour-card" onclick="window.location.href='malaysia-tour.html'" style="cursor: pointer;">
+          <div class="tour-img">
+            <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=500" alt="Malaysia">
+            <button class="fav-btn" onclick="event.stopPropagation()"><i class="fa fa-heart"></i></button>
+          </div>
+          <div class="tour-body">
+            <h4>Malaysia Getaway</h4>
+            <p class="tour-loc"><i class="fa fa-location-dot"></i> Kuala Lumpur, Langkawi</p>
+            <div class="tour-meta">
+              <span><i class="fa fa-calendar"></i> 3 Days / 2 Nights</span>
+              <span><i class="fa fa-users"></i> 8 Guests</span>
+            </div>
+            <div class="tour-footer">
+              <div class="tour-price">
+                <small>per Person</small>
+                <strong>₹42,000</strong>
+              </div>
+              <a href="malaysia-tour.html" class="tour-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="tour-card" onclick="window.location.href='bali-tour.html'" style="cursor: pointer;">
+          <div class="tour-img">
+            <img src="https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?w=500" alt="Indonesia">
+            <span class="tour-badge">New</span>
+            <button class="fav-btn" onclick="event.stopPropagation()"><i class="fa fa-heart"></i></button>
+          </div>
+          <div class="tour-body">
+            <h4>Bali Paradise</h4>
+            <p class="tour-loc"><i class="fa fa-location-dot"></i> Bali, Indonesia</p>
+            <div class="tour-meta">
+              <span><i class="fa fa-calendar"></i> 4 Days / 3 Nights</span>
+              <span><i class="fa fa-users"></i> 14 Guests</span>
+            </div>
+            <div class="tour-footer">
+              <div class="tour-price">
+                <small>per Person</small>
+                <strong>₹55,000</strong>
+              </div>
+              <a href="bali-tour.html" class="tour-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section class="gallery-section section-pad" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Visual Stories</span>
+        <h2>Gallery</h2>
+        <p>Explore stunning moments from our travelers' adventures around the world</p>
+      </div>
+
+      <!-- Gallery Filters -->
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="asia">Asia</button>
+        <button class="filter-btn" data-filter="europe">Europe</button>
+        <button class="filter-btn" data-filter="africa">Africa</button>
+        <button class="filter-btn" data-filter="adventure">Adventure</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid">
+        <div class="gallery-item" data-category="asia" data-title="Thailand Beach Paradise"
+          data-place="Phuket, Thailand" onclick="openLightbox(this)">
+          <div class="gallery-img-wrap">
+            <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800" alt="Thailand Beach">
+            <div class="gallery-overlay">
+              <div class="gallery-place-label"><i class="fa fa-location-dot"></i> Phuket, Thailand</div>
+              <div class="zoom-btn"><i class="fa fa-expand"></i></div>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <h4>Thailand Beach Paradise</h4>
+            <span class="category-tag">Asia</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="europe" data-title="Alpine Adventure"
+          data-place="Swiss Alps, Switzerland" onclick="openLightbox(this)">
+          <div class="gallery-img-wrap">
+            <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?w=800" alt="Swiss Mountains">
+            <div class="gallery-overlay">
+              <div class="gallery-place-label"><i class="fa fa-location-dot"></i> Swiss Alps, Switzerland</div>
+              <div class="zoom-btn"><i class="fa fa-expand"></i></div>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <h4>Alpine Adventure</h4>
+            <span class="category-tag">Europe</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="africa" data-title="African Safari" data-place="Serengeti, Tanzania"
+          onclick="openLightbox(this)">
+          <div class="gallery-img-wrap">
+            <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800" alt="Safari">
+            <div class="gallery-overlay">
+              <div class="gallery-place-label"><i class="fa fa-location-dot"></i> Serengeti, Tanzania</div>
+              <div class="zoom-btn"><i class="fa fa-expand"></i></div>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <h4>African Safari</h4>
+            <span class="category-tag">Africa</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="adventure" data-title="Mountain Trekking" data-place="Himalayas, Nepal"
+          onclick="openLightbox(this)">
+          <div class="gallery-img-wrap">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800" alt="Hiking">
+            <div class="gallery-overlay">
+              <div class="gallery-place-label"><i class="fa fa-location-dot"></i> Himalayas, Nepal</div>
+              <div class="zoom-btn"><i class="fa fa-expand"></i></div>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <h4>Mountain Trekking</h4>
+            <span class="category-tag">Adventure</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="asia" data-title="Bali Temples" data-place="Ubud, Bali, Indonesia"
+          onclick="openLightbox(this)">
+          <div class="gallery-img-wrap">
+            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800" alt="Bali">
+            <div class="gallery-overlay">
+              <div class="gallery-place-label"><i class="fa fa-location-dot"></i> Ubud, Bali, Indonesia</div>
+              <div class="zoom-btn"><i class="fa fa-expand"></i></div>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <h4>Bali Temples</h4>
+            <span class="category-tag">Asia</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="europe" data-title="Paris Romance" data-place="Paris, France"
+          onclick="openLightbox(this)">
+          <div class="gallery-img-wrap">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e907600236a?w=800" alt="Paris">
+            <div class="gallery-overlay">
+              <div class="gallery-place-label"><i class="fa fa-location-dot"></i> Paris, France</div>
+              <div class="zoom-btn"><i class="fa fa-expand"></i></div>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <h4>Paris Romance</h4>
+            <span class="category-tag">Europe</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="adventure" data-title="Underwater Wonders"
+          data-place="Great Barrier Reef, Australia" onclick="openLightbox(this)">
+          <div class="gallery-img-wrap">
+            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800" alt="Diving">
+            <div class="gallery-overlay">
+              <div class="gallery-place-label"><i class="fa fa-location-dot"></i> Great Barrier Reef, Australia</div>
+              <div class="zoom-btn"><i class="fa fa-expand"></i></div>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <h4>Underwater Wonders</h4>
+            <span class="category-tag">Adventure</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="africa" data-title="Egyptian Wonders" data-place="Giza, Egypt"
+          onclick="openLightbox(this)">
+          <div class="gallery-img-wrap">
+            <img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2b50?w=800" alt="Egypt">
+            <div class="gallery-overlay">
+              <div class="gallery-place-label"><i class="fa fa-location-dot"></i> Giza, Egypt</div>
+              <div class="zoom-btn"><i class="fa fa-expand"></i></div>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <h4>Egyptian Wonders</h4>
+            <span class="category-tag">Africa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUICK BOOKING MODAL ===== -->
+  <div class="booking-modal-overlay" id="bookingModal">
+    <div class="booking-modal-box">
+      <button class="close-modal-btn" onclick="closeBookingModal()"><i class="fa fa-times"></i></button>
+      <div class="modal-header-premium">
+        <h3>Quick <span>Booking</span></h3>
+        <p>Fill in the details below and we'll get back to you shortly.</p>
+      </div>
+      <form class="modal-booking-form" id="quickBookingForm">
+        <div class="modal-form-grid">
+          <div class="modal-group">
+            <label>Name</label>
+            <input type="text" placeholder="Your Name" required>
+          </div>
+          <div class="modal-group">
+            <label>Email</label>
+            <input type="email" placeholder="Your Email" required>
+          </div>
+          <div class="modal-group">
+            <label>Phone</label>
+            <input type="tel" placeholder="Your Phone" required>
+          </div>
+          <div class="modal-group">
+            <label>Destination</label>
+            <input type="text" placeholder="Where to go?" required>
+          </div>
+          <div class="modal-group full">
+            <label>Special Instructions</label>
+            <textarea rows="3" placeholder="Tell us more..."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="modal-submit-btn">Reserve Now <i class="fa fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== GALLERY LIGHTBOX ===== -->
+  <div class="lightbox-overlay" id="galleryLightbox" onclick="closeLightboxOnBg(event)">
+    <div class="lightbox-box">
+      <button class="lightbox-close" onclick="closeLightbox()"><i class="fa fa-times"></i></button>
+      <button class="lightbox-prev" onclick="lightboxNav(-1)"><i class="fa fa-chevron-left"></i></button>
+      <button class="lightbox-next" onclick="lightboxNav(1)"><i class="fa fa-chevron-right"></i></button>
+      <div class="lightbox-img-wrap">
+        <img id="lightboxImg" src="" alt="">
+      </div>
+      <div class="lightbox-caption">
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxPlace"><i class="fa fa-location-dot"></i> <span></span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== NEWSLETTER ===== -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-box">
+        <div class="newsletter-text">
+          <h2>Stay Updated</h2>
+          <p>Sign up for new offers & updates from NextTrip</p>
+        </div>
+        <div class="newsletter-form">
+          <div class="nl-input-wrap">
+            <i class="fa fa-envelope"></i>
+            <input type="email" placeholder="Enter your email address">
+            <button>Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section-pad testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-tag">Reviews</span>
+        <h2>What Our <span>Clients</span> Say</h2>
+        <p>Heartfelt stories from our satisfied travelers</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"Booking our dream cruise was incredibly easy. The interface was user-friendly and everything was a dream
+            come true!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar">AM</div>
+            <div>
+              <strong>Andrew Miller</strong>
+              <span>Illinois, United States</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card featured">
+          <div class="stars">★★★★★</div>
+          <p>"Finding the perfect bus was effortless. Smart filters and clear route comparisons made my journey simple,
+            organized, and completely hassle-free."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">ST</div>
+            <div>
+              <strong>Sarah Thompson</strong>
+              <span>Texas, United States</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"The entire booking experience was seamless. I could easily browse schedules and check seat availability
+            with just a few clicks."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">DR</div>
+            <div>
+              <strong>Daniel Roberts</strong>
+              <span>Washington, United States</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CUSTOMER REVIEW FORM ===== -->
+  <section class="section-pad review-section">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-tag">Share</span>
+        <h2>Write a <span>Review</span></h2>
+      </div>
+      <div class="review-form-wrap">
+        <div class="review-form-card">
+          <div class="review-row">
+            <input type="text" id="reviewName" placeholder="Your Name" class="review-input">
+            <div class="file-upload-wrap">
+              <label for="reviewPhoto" class="file-label">
+                <i class="fa fa-camera"></i>
+                <span>Add Photos</span>
+              </label>
+              <input type="file" id="reviewPhoto" accept="image/*" class="file-input"
+                onchange="previewReviewImage(this)">
+            </div>
+          </div>
+          <div id="photoPreviewArea" class="photo-preview-area"></div>
+          <textarea id="reviewText" placeholder="Share your travel experience..." class="review-textarea"
+            rows="4"></textarea>
+          <div class="star-rating-wrap">
+            <span>Rating: </span>
+            <div class="stars-input" id="starInput">
+              <span class="star" data-val="1">★</span>
+              <span class="star" data-val="2">★</span>
+              <span class="star" data-val="3">★</span>
+              <span class="star" data-val="4">★</span>
+              <span class="star" data-val="5">★</span>
+            </div>
+          </div>
+          <button class="submit-review-btn" onclick="submitReview()">Submit Review <i
+              class="fa fa-paper-plane"></i></button>
+        </div>
+        <div id="reviewList" class="review-list"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section-pad faq-section">
+    <div class="container">
+      <div class="faq-layout">
+        <div class="faq-image">
+          <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600" alt="FAQ">
+        </div>
+        <div class="faq-content">
+          <div class="section-header">
+            <span class="section-tag">FAQ</span>
+            <h2>Frequently Asked <span>Questions</span></h2>
+          </div>
+          <div class="accordion" id="faqAccordion">
+            <div class="acc-item">
+              <button class="acc-trigger active" onclick="toggleAcc(this)">
+                What types of tours do you offer? <i class="fa fa-plus"></i>
+              </button>
+              <div class="acc-body open">
+                <p>We offer a wide range of tours including cultural, adventure, luxury, and customized itineraries.
+                  Popular destinations include Europe, Africa, Asia, and the Middle East.</p>
+              </div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-trigger" onclick="toggleAcc(this)">
+                Are the tours customizable? <i class="fa fa-plus"></i>
+              </button>
+              <div class="acc-body">
+                <p>Absolutely! We specialize in creating personalized itineraries tailored to your preferences, budget,
+                  and travel style.</p>
+              </div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-trigger" onclick="toggleAcc(this)">
+                What safety measures do you follow? <i class="fa fa-plus"></i>
+              </button>
+              <div class="acc-body">
+                <p>Safety is our top priority. All our tours follow strict safety protocols, with experienced guides and
+                  24/7 emergency support.</p>
+              </div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-trigger" onclick="toggleAcc(this)">
+                How far in advance should I book? <i class="fa fa-plus"></i>
+              </button>
+              <div class="acc-body">
+                <p>We recommend booking at least 2–4 weeks in advance for domestic tours and 4–8 weeks for international
+                  packages.</p>
+              </div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-trigger" onclick="toggleAcc(this)">
+                What is your cancellation policy? <i class="fa fa-plus"></i>
+              </button>
+              <div class="acc-body">
+                <p>Cancellations made 15 days before the tour are eligible for a full refund. For later cancellations, a
+                  partial charge may apply depending on the booking type.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section-pad contact-section" id="contact">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-tag">Contact Us</span>
+        <h2>Get in <span>Touch</span></h2>
+        <p>Planning a trip? Let us help you create the perfect itinerary.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info-wrap">
+          <div class="contact-info-card">
+            <div class="info-icon"><i class="fa fa-phone"></i></div>
+            <div class="info-text">
+              <h5>Mobile Number</h5>
+              <p>+91 98765 43210</p>
+              <p>+91 12345 67890</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="info-icon"><i class="fa fa-envelope"></i></div>
+            <div class="info-text">
+              <h5>Email Address</h5>
+              <p>info@nextripholidays.com</p>
+              <p>bookings@nextripholidays.com</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="info-icon"><i class="fa fa-location-dot"></i></div>
+            <div class="info-text">
+              <h5>Office Location</h5>
+              src="https://res.cloudinary.com/drkgkgiat/image/upload/q_auto/f_auto/v1775567539/Next_TRip_Final_Logo_Square_Size_-_Copy-removebg-preview_bsfsev.png"
+              alt="NextTrip" height="60">
+            <p>Your trusted partner for seamless, memorable travel experiences around the globe.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h5>Quick Links</h5>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Tours</a>
+            <a href="#">Hotels</a>
+            <a href="#">Cruises</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="footer-col">
+            <h5>Destinations</h5>
+            <a href="#">Thailand</a>
+            <a href="#">Singapore</a>
+            <a href="#">Dubai</a>
+            <a href="#">Europe</a>
+            <a href="#">Kerala</a>
+            <a href="#">Goa</a>
+          </div>
+          <div class="footer-col">
+            <h5>Contact Us</h5>
+            <p><i class="fa fa-phone"></i> +91 99766 92604</p>
+            <p><i class="fa fa-envelope"></i> info@nextripholidays.com</p>
+            <p><i class="fa fa-location-dot"></i> Madurai, Tamil Nadu</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 <strong>NextTrip Holidays</strong>. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+<script>
+    function openBookingModal() { 
+        if(typeof window.openModal === "function") {
+            window.openModal(); 
+        } else {
+            console.warn("Global booking system not ready");
+            alert("Booking system is loading. Please try again in a moment.");
+        }
+    }
+</script>
+</body>
+
+</html>

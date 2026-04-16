@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vacation Properties - NextTrip Holidays</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+  <script src="script.js" defer></script>
+  
+  <!-- Lottie Player -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+
+<body>
+
+  <!-- Premium Page Loader -->
+  <div id="premiumLoader">
+    <div class="loader-earth">
+      <lottie-player src="https://lottie.host/df254881-c7c4-42f1-aa8f-28c0570bde7c/55u6YkF8Wb.json" background="transparent" speed="1" style="width: 220px; height: 220px;" loop autoplay></lottie-player>
+    </div>
+    <div class="loader-text">NextTrip Holidays</div>
+  </div>
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const loader = document.getElementById('premiumLoader');
+        if (loader) loader.classList.add('fade-out');
+        document.body.classList.add('body-loaded');
+      }, 900);
+    });
+    document.querySelectorAll('a').forEach(link => {
+      if (link.target !== '_blank' && link.href && link.href.indexOf('#') === -1 && !link.href.startsWith('tel:') && !link.href.startsWith('mailto:')) {
+        link.addEventListener('click', (e) => {
+          const loader = document.getElementById('premiumLoader');
+          if (loader) {
+            e.preventDefault();
+            loader.classList.remove('fade-out');
+            loader.style.opacity = '1';
+            loader.style.transform = 'translateY(0)';
+            setTimeout(() => window.location = link.href, 500);
+          }
+        });
+      }
+    });
+  </script>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="https://res.cloudinary.com/drkgkgiat/image/upload/q_auto/f_auto/v1775567539/Next_TRip_Final_Logo_Square_Size_-_Copy-removebg-preview_bsfsev.png"
+          alt="NextTrip" height="50">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#packages">Packages</a></li>
+        <li><a href="index.html#experiences">Experiences</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="package-hero"
+    style="background-image: url('https://images.unsplash.com/photo-1522321318423-f06c0b12c41e?w=1400&h=600&fit=crop');">
+    <div class="package-hero-content">
+      <h1>Vacation Properties</h1>
+      <p>Exclusive homes and villas for your perfect getaway</p>
+    </div>
+  </section>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <a href="index.html#packages">Packages</a>
+      <span>/</span>
+      <span>Vacation Properties</span>
+    </div>
+  </div>
+
+  <!-- ===== TOUR PACKAGE TYPES ===== -->
+  <section class="section-pad tour-types-section">
+    <div class="container">
+      <h2 class="section-title">Browse by Property Type</h2>
+      <div class="tour-types-grid">
+        <div class="tour-type-card" onclick="window.location.href='beach-villas.html'"
+          style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800');">
+          <div class="tour-type-content">
+            <h3>Beach Villas</h3>
+            <a href="beach-villas.html" class="tour-count">32 TOURS</a>
+          </div>
+        </div>
+
+        <div class="tour-type-card" onclick="window.location.href='mountain-cabins.html'"
+          style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800');">
+          <div class="tour-type-content">
+            <h3>Mountain Cabins</h3>
+            <a href="mountain-cabins.html" class="tour-count">28 TOURS</a>
+          </div>
+        </div>
+
+        <div class="tour-type-card" onclick="window.location.href='heritage-homes.html'"
+          style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f7ecd89f?w=800');">
+          <div class="tour-type-content">
+            <h3>Heritage Homes</h3>
+            <a href="heritage-homes.html" class="tour-count">18 TOURS</a>
+          </div>
+        </div>
+
+        <div class="tour-type-card" onclick="window.location.href='urban-apartments.html'"
+          style="background-image: url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800');">
+          <div class="tour-type-content">
+            <h3>Urban Apartments</h3>
+            <a href="urban-apartments.html" class="tour-count">45 TOURS</a>
+          </div>
+        </div>
+
+        <div class="tour-type-card" onclick="window.location.href='nature-retreats.html'"
+          style="background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800');">
+          <div class="tour-type-content">
+            <h3>Nature Retreats</h3>
+            <a href="nature-retreats.html" class="tour-count">22 TOURS</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <!-- Packages Grid Section -->
+  <div class="dt-packages container" style="margin-top: 80px; margin-bottom: 80px;">
+    <h2
+      style="font-family: 'Playfair Display', serif; font-size: 36px; color: var(--dark); margin-bottom: 40px; font-weight: 700;">
+      Top Vacation Properties & Villas
+    </h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px;">
+
+      <!-- Package pkg1 -->
+      <div class="itinerary-card" onclick="openItinerary('pkg1')"
+        style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+        <div style="position: relative; height: 220px;">
+          <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=600"
+            style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+          <div
+            style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+            <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 1 Day / 1 Night
+          </div>
+        </div>
+        <div style="padding: 24px;">
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">
+            Ocean View Villa</h3>
+          <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+              style="color: var(--gold); margin-right: 6px;"></i> Maldives</p>
+          <div
+            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+            <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 40,000 / night</span>
+            <span style="color: var(--gold); font-size: 14px; font-weight: 600;">View Details <i
+                class="fa fa-arrow-right" style="margin-left: 4px;"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package pkg2 -->
+      <div class="itinerary-card" onclick="openItinerary('pkg2')"
+        style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+        <div style="position: relative; height: 220px;">
+          <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=600"
+            style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+          <div
+            style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+            <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 1 Day / 1 Night
+          </div>
+        </div>
+        <div style="padding: 24px;">
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">
+            Mountain Cabin</h3>
+          <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+              style="color: var(--gold); margin-right: 6px;"></i> Swiss Alps</p>
+          <div
+            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+            <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 35,000 / night</span>
+            <span style="color: var(--gold); font-size: 14px; font-weight: 600;">View Details <i
+                class="fa fa-arrow-right" style="margin-left: 4px;"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package pkg3 -->
+      <div class="itinerary-card" onclick="openItinerary('pkg3')"
+        style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+        <div style="position: relative; height: 220px;">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600"
+            style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+          <div
+            style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+            <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 1 Day / 1 Night
+          </div>
+        </div>
+        <div style="padding: 24px;">
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">
+            Heritage Mansion</h3>
+          <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+              style="color: var(--gold); margin-right: 6px;"></i> Rajasthan</p>
+          <div
+            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+            <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 25,000 / night</span>
+            <span style="color: var(--gold); font-size: 14px; font-weight: 600;">View Details <i
+                class="fa fa-arrow-right" style="margin-left: 4px;"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package pkg4 -->
+      <div class="itinerary-card" onclick="openItinerary('pkg4')"
+        style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+        <div style="position: relative; height: 220px;">
+          <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600"
+            style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+          <div
+            style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+            <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 1 Day / 1 Night
+          </div>
+        </div>
+        <div style="padding: 24px;">
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">
+            Luxury Apartment</h3>
+          <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+              style="color: var(--gold); margin-right: 6px;"></i> Dubai</p>
+          <div
+            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+            <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 30,000 / night</span>
+            <span style="color: var(--gold); font-size: 14px; font-weight: 600;">View Details <i
+                class="fa fa-arrow-right" style="margin-left: 4px;"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package pkg5 -->
+      <div class="itinerary-card" onclick="openItinerary('pkg5')"
+        style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+        <div style="position: relative; height: 220px;">
+          <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600"
+            style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+          <div
+            style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+            <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 1 Day / 1 Night
+          </div>
+        </div>
+        <div style="padding: 24px;">
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">
+            Santorini Cliff House</h3>
+          <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+              style="color: var(--gold); margin-right: 6px;"></i> Greece</p>
+          <div
+            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+            <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 55,000 / night</span>
+            <span style="color: var(--gold); font-size: 14px; font-weight: 600;">View Details <i
+                class="fa fa-arrow-right" style="margin-left: 4px;"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package pkg6 -->
+      <div class="itinerary-card" onclick="openItinerary('pkg6')"
+        style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+        <div style="position: relative; height: 220px;">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600"
+            style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+          <div
+            style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+            <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 1 Day / 1 Night
+          </div>
+        </div>
+        <div style="padding: 24px;">
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">
+            Bali Pool Villa</h3>
+          <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+              style="color: var(--gold); margin-right: 6px;"></i> Indonesia</p>
+          <div
+            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+            <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 20,000 / night</span>
+            <span style="color: var(--gold); font-size: 14px; font-weight: 600;">View Details <i
+                class="fa fa-arrow-right" style="margin-left: 4px;"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package pkg7 -->
+      <div class="itinerary-card" onclick="openItinerary('pkg7')"
+        style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+        <div style="position: relative; height: 220px;">
+          <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600"
+            style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+          <div
+            style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+            <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 1 Day / 1 Night
+          </div>
+        </div>
+        <div style="padding: 24px;">
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">
+            French Chateau</h3>
+          <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+              style="color: var(--gold); margin-right: 6px;"></i> France</p>
+          <div
+            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+            <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 60,000 / night</span>
+            <span style="color: var(--gold); font-size: 14px; font-weight: 600;">View Details <i
+                class="fa fa-arrow-right" style="margin-left: 4px;"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package pkg8 -->
+      <div class="itinerary-card" onclick="openItinerary('pkg8')"
+        style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+        <div style="position: relative; height: 220px;">
+          <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=600"
+            style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+          <div
+            style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+            <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 1 Day / 1 Night
+          </div>
+        </div>
+        <div style="padding: 24px;">
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">
+            Goan Beach Hut</h3>
+          <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+              style="color: var(--gold); margin-right: 6px;"></i> India</p>
+          <div
+            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+            <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 10,000 / night</span>
+            <span style="color: var(--gold); font-size: 14px; font-weight: 600;">View Details <i
+                class="fa fa-arrow-right" style="margin-left: 4px;"></i></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Itinerary Modal -->
+  <div class="itinerary-modal" id="itineraryModal"
+    style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.75); backdrop-filter: blur(5px); z-index: 10000; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box;">
+    <div class="modal-content"
+      style="background: white; width: 100%; max-width: 750px; max-height: 85vh; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 20px 50px rgba(0,0,0,0.3); animation: fadeUp 0.4s ease;">
+      <!-- Header -->
+      <div
+        style="padding: 24px 30px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; background: #fafafa;">
+        <div>
+          <h2 id="modalTitle"
+            style="font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 6px; color: var(--dark);">
+            Tour Itinerary</h2>
+          <span id="modalDuration" style="font-size: 14px; color: var(--text-light); font-weight: 500;"><i
+              class="fa fa-clock" style="color: var(--gold); margin-right: 6px;"></i> Loading...</span>
+        </div>
+        <button onclick="closeItinerary()"
+          style="width: 40px; height: 40px; border-radius: 50%; background: #eee; border: none; font-size: 18px; color: #555; cursor: pointer; display: flex; justify-content: center; align-items: center; transition: 0.3s;"
+          onmouseover="this.style.background='#ddd'" onmouseout="this.style.background='#eee'"><i
+            class="fa fa-times"></i></button>
+      </div>
+      <!-- Body -->
+      <div style="padding: 30px; overflow-y: auto; flex: 1; background: white;">
+        <div id="modalItineraryList" style="display: flex; flex-direction: column; gap: 0;">
+        </div>
+      </div>
+      <!-- Footer -->
+      <div
+        style="padding: 20px 30px; border-top: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; background: #fafafa;">
+        <div id="modalPrice" style="font-size: 20px; font-weight: 700; color: var(--dark);"></div>
+        <button onclick="openBookingModal()"
+          style="background: var(--gold); color: white; border: none; padding: 14px 36px; border-radius: 8px; font-weight: 600; font-size: 16px; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 12px rgba(245,166,35,0.3);"
+          onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">Book This
+          Tour</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    const itineraries = {
+
+      'pkg1': {
+        title: 'Ocean View Villa',
+        duration: '1 Day / 1 Night',
+        price: '₹ 40,000 / night',
+        days: [
+          { day: 'Day 01', title: 'Check In', desc: 'Arrive at your destination and enjoy an exclusive stay. Free time to relax and experience the local surroundings.' }
+        ]
+      },
+      'pkg2': {
+        title: 'Mountain Cabin',
+        duration: '1 Day / 1 Night',
+        price: '₹ 35,000 / night',
+        days: [
+          { day: 'Day 01', title: 'Check In', desc: 'Arrive at your destination and enjoy an exclusive stay. Free time to relax and experience the local surroundings.' }
+        ]
+      },
+      'pkg3': {
+        title: 'Heritage Mansion',
+        duration: '1 Day / 1 Night',
+        price: '₹ 25,000 / night',
+        days: [
+          { day: 'Day 01', title: 'Check In', desc: 'Arrive at your destination and enjoy an exclusive stay. Free time to relax and experience the local surroundings.' }
+        ]
+      },
+      'pkg4': {
+        title: 'Luxury Apartment',
+        duration: '1 Day / 1 Night',
+        price: '₹ 30,000 / night',
+        days: [
+          { day: 'Day 01', title: 'Check In', desc: 'Arrive at your destination and enjoy an exclusive stay. Free time to relax and experience the local surroundings.' }
+        ]
+      },
+      'pkg5': {
+        title: 'Santorini Cliff House',
+        duration: '1 Day / 1 Night',
+        price: '₹ 55,000 / night',
+        days: [
+          { day: 'Day 01', title: 'Check In', desc: 'Arrive at your destination and enjoy an exclusive stay. Free time to relax and experience the local surroundings.' }
+        ]
+      },
+      'pkg6': {
+        title: 'Bali Pool Villa',
+        duration: '1 Day / 1 Night',
+        price: '₹ 20,000 / night',
+        days: [
+          { day: 'Day 01', title: 'Check In', desc: 'Arrive at your destination and enjoy an exclusive stay. Free time to relax and experience the local surroundings.' }
+        ]
+      },
+      'pkg7': {
+        title: 'French Chateau',
+        duration: '1 Day / 1 Night',
+        price: '₹ 60,000 / night',
+        days: [
+          { day: 'Day 01', title: 'Check In', desc: 'Arrive at your destination and enjoy an exclusive stay. Free time to relax and experience the local surroundings.' }
+        ]
+      },
+      'pkg8': {
+        title: 'Goan Beach Hut',
+        duration: '1 Day / 1 Night',
+        price: '₹ 10,000 / night',
+        days: [
+          { day: 'Day 01', title: 'Check In', desc: 'Arrive at your destination and enjoy an exclusive stay. Free time to relax and experience the local surroundings.' }
+        ]
+      },
+    };
+
+    function openItinerary(id) {
+      const data = itineraries[id];
+      document.getElementById('modalTitle').innerText = data.title;
+      document.getElementById('modalDuration').innerHTML = '<i class="fa fa-clock" style="color: var(--gold); margin-right: 6px;"></i> ' + data.duration;
+      document.getElementById('modalPrice').innerHTML = data.price;
+
+      const list = document.getElementById('modalItineraryList');
+      list.innerHTML = data.days.map((d, index) => {
+        const isLast = index === data.days.length - 1;
+        return `
+          <div style="display: flex; gap: 24px;">
+            <div style="flex-shrink: 0; display: flex; flex-direction: column; align-items: center; width: 44px;">
+              <div style="width: 44px; height: 44px; border-radius: 50%; background: #fff; border: 2px solid var(--gold); color: var(--gold); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; box-shadow: 0 4px 10px rgba(245,166,35,0.15); z-index: 2;">${d.day.replace('Day ', '')}</div>
+              ${!isLast ? '<div style="width: 2px; height: 100%; background: #eaeaea; margin: 4px 0; min-height: 40px;"></div>' : ''}
+            </div>
+            <div style="padding-bottom: ${isLast ? '0' : '30px'}; padding-top: 5px;">
+              <div style="font-size: 13px; color: var(--gold); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">${d.day}</div>
+              <h4 style="font-size: 20px; color: var(--dark); margin-bottom: 10px; font-family: 'Playfair Display', serif;">${d.title}</h4>
+              <p style="color: #666; font-size: 15px; line-height: 1.6; margin: 0;">${d.desc}</p>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      const modal = document.getElementById('itineraryModal');
+      modal.style.display = 'flex';
+      setTimeout(() => modal.style.opacity = '1', 10);
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeItinerary() {
+      const modal = document.getElementById('itineraryModal');
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    const style = document.createElement('style');
+    style.innerHTML = `
+      .itinerary-card:hover .pkg-img { transform: scale(1.05); }
+      .itinerary-card:hover { transform: translateY(-8px) !important; box-shadow: 0 12px 30px rgba(0,0,0,0.12) !important; }
+    `;
+    document.head.appendChild(style);
+
+  </script>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>NextTrip Holidays</h4>
+          <p>Your trusted travel partner for unforgettable journeys around the world.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="index.html#packages">Packages</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="#">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p><i class="fa fa-phone"></i> +91-XXX-XXX-XXXX</p>
+          <p><i class="fa fa-envelope"></i> info@nexttrip.com</p>
+          <p><i class="fa fa-map-marker"></i> India</p>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 NextTrip Holidays. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+<script>
+    function openBookingModal() { 
+        if(typeof window.openModal === "function") {
+            window.openModal(); 
+        } else {
+            console.warn("Global booking system not ready");
+            alert("Booking system is loading. Please try again in a moment.");
+        }
+    }
+</script>
+</body>
+
+</html>

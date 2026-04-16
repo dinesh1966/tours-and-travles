@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>India Tour Packages - NextTrip Holidays</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+
+  <!-- Premium Page Loader -->
+  <div id="premiumLoader">
+    <div class="loader-plane"><i class="fa fa-plane"></i></div>
+  </div>
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const loader = document.getElementById('premiumLoader');
+        if (loader) loader.classList.add('fade-out');
+        document.body.classList.add('body-loaded');
+      }, 800);
+    });
+
+    document.querySelectorAll('a').forEach(link => {
+      if (link.target !== '_blank' && link.href && link.href.indexOf('#') === -1 && !link.href.startsWith('tel:') && !link.href.startsWith('mailto:')) {
+        link.addEventListener('click', (e) => {
+          const loader = document.getElementById('premiumLoader');
+          if (loader) {
+            e.preventDefault();
+            loader.style.transition = 'opacity 0.4s ease';
+            loader.style.transform = 'translateY(0)';
+            loader.style.opacity = '1';
+            setTimeout(() => window.location = link.href, 400);
+          }
+        });
+      }
+    });
+  </script>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+  <script src="script.js" defer></script>
+
+  <!-- Lottie Player -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img
+          src="https://res.cloudinary.com/drkgkgiat/image/upload/q_auto/f_auto/v1775567539/Next_TRip_Final_Logo_Square_Size_-_Copy-removebg-preview_bsfsev.png"
+          alt="NextTrip" height="50">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#packages" class="active">Packages</a></li>
+        <li><a href="index.html#experiences">Experiences</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="package-hero"
+    style="background-image: url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200'); background-size: cover; background-position: center;">
+    <div class="hero-overlay-dark"></div>
+    <div class="package-hero-content">
+      <h1>India Tour Packages</h1>
+      <p>Explore the incredible regions of Incredible India</p>
+    </div>
+  </section>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <a href="index.html#packages">Packages</a>
+      <span>/</span>
+      <span>India Tour Packages</span>
+    </div>
+  </div>
+
+  <!-- ===== TOUR PACKAGE REGIONS ===== -->
+  <section class="section-pad tour-types-section">
+    <div class="container">
+      <h2 class="section-title">Discover India by Region</h2>
+      <div class="tour-types-grid">
+
+        <!-- Region 1: South India -->
+        <div class="tour-type-card"
+          style="background-image: url('https://images.unsplash.com/photo-1602216056096-3b40cc0f9942?w=800');">
+          <div class="tour-type-content">
+            <h3>South India</h3>
+            <a href="south-india-tour.html" class="tour-count">33 TOURS</a>
+          </div>
+        </div>
+
+        <!-- Region 2: North India -->
+        <div class="tour-type-card"
+          style="background-image: url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800');">
+          <div class="tour-type-content">
+            <h3>North India</h3>
+            <a href="north-india-tour.html" class="tour-count">42 TOURS</a>
+          </div>
+        </div>
+
+        <!-- Region 3: East India -->
+        <div class="tour-type-card"
+          style="background-image: url('https://images.unsplash.com/photo-1576008678082-f3e1a0bba8cf?w=800');">
+          <div class="tour-type-content">
+            <h3>East India</h3>
+            <a href="east-india-tour.html" class="tour-count">14 TOURS</a>
+          </div>
+        </div>
+
+        <!-- Region 4: West India -->
+        <div class="tour-type-card"
+          style="background-image: url('https://images.unsplash.com/photo-1506461883276-594c39bb8afc?w=800');">
+          <div class="tour-type-content">
+            <h3>West India</h3>
+            <a href="west-india-tour.html" class="tour-count">24 TOURS</a>
+          </div>
+        </div>
+
+        <!-- Region 5: North East India -->
+        <div class="tour-type-card"
+          style="background-image: url('https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800');">
+          <div class="tour-type-content">
+            <h3>North East India</h3>
+            <a href="north-east-india-tour.html" class="tour-count">19 TOURS</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>NextTrip Holidays</h4>
+          <p>Your trusted travel partner for unforgettable journeys around the world.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="index.html#packages">Packages</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="#">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p><i class="fa fa-phone"></i> +91-XXX-XXX-XXXX</p>
+          <p><i class="fa fa-envelope"></i> info@nexttrip.com</p>
+          <p><i class="fa fa-map-marker"></i> India</p>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 NextTrip Holidays. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>

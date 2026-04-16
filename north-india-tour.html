@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>North India Tour Packages - NextTrip Holidays</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+  <script src="script.js" defer></script>
+  
+  <!-- Lottie Player -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+
+<body>
+
+  <!-- Premium Page Loader -->
+  <div id="premiumLoader">
+    <div class="loader-earth">
+      <lottie-player src="https://lottie.host/df254881-c7c4-42f1-aa8f-28c0570bde7c/55u6YkF8Wb.json" background="transparent" speed="1" style="width: 220px; height: 220px;" loop autoplay></lottie-player>
+    </div>
+    <div class="loader-text">NextTrip Holidays</div>
+  </div>
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const loader = document.getElementById('premiumLoader');
+        if (loader) loader.classList.add('fade-out');
+        document.body.classList.add('body-loaded');
+      }, 900);
+    });
+    document.querySelectorAll('a').forEach(link => {
+      if (link.target !== '_blank' && link.href && link.href.indexOf('#') === -1 && !link.href.startsWith('tel:') && !link.href.startsWith('mailto:')) {
+        link.addEventListener('click', (e) => {
+          const loader = document.getElementById('premiumLoader');
+          if (loader) {
+            e.preventDefault();
+            loader.classList.remove('fade-out');
+            loader.style.opacity = '1';
+            loader.style.transform = 'translateY(0)';
+            setTimeout(() => window.location = link.href, 500);
+          }
+        });
+      }
+    });
+  </script>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="https://res.cloudinary.com/drkgkgiat/image/upload/q_auto/f_auto/v1775567539/Next_TRip_Final_Logo_Square_Size_-_Copy-removebg-preview_bsfsev.png"
+          alt="NextTrip" height="50">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#packages" class="active">Packages</a></li>
+        <li><a href="index.html#experiences">Experiences</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main style="padding-top: 140px; background: white;">
+    <div class="container">
+      <!-- Header Area -->
+      <div class="dt-header"
+        style="display: flex; justify-content: space-between; align-items: stretch; margin-bottom: 40px; flex-wrap: wrap; gap: 20px;">
+        <div class="dt-header-left" style="display: flex; gap: 30px; align-items: flex-start;">
+          <div class="dt-count"
+            style="text-align: center; border-right: 1px solid #eee; padding-right: 30px; margin-top: 5px;">
+            <span style="display: block; font-size: 52px; color: var(--gold); font-weight: 700; line-height: 1; letter-spacing: -1px;">14</span>
+            <span style="display: block; font-size: 16px; color: var(--text-light); line-height: 1.2; margin-top: 8px;">Tour<br>Packages</span>
+          </div>
+          <div class="dt-title-area">
+            <div class="breadcrumb"
+              style="padding: 0; background: transparent; border: none; margin-bottom: 8px; font-size: 13px;">
+              <a href="index.html">Home</a> <span>»</span> <a href="index.html#packages">Tour Packages</a>
+              <span>»</span> <a href="india-tour-packages.html">India Tour Packages</a> <span>»</span> <span
+                style="color: #888;">North India Tour Packages</span>
+            </div>
+            <h1
+              style="font-family: 'Playfair Display', serif; font-size: 46px; margin-bottom: 12px; color: var(--dark); font-weight: 700; letter-spacing: -0.5px;">
+              North India Tour Packages</h1>
+            <p style="color: var(--text); font-weight: 600; font-size: 17px;"><i class="fa fa-map-marked-alt"
+                style="color: var(--gold); margin-right: 8px;"></i> North India Region</p>
+          </div>
+        </div>
+        <div class="dt-header-right"
+          style="display: flex; flex-direction: column; gap: 12px; justify-content: flex-start; min-width: 220px;">
+          <button class="btn-primary" onclick="openBookingModal()">Book Now</button>
+          <button class="btn-secondary"
+            style="background: #40e0d0; color: white; padding: 14px 30px; border-radius: 6px; font-weight: 600; font-size: 15px; border: none; cursor: pointer; transition: 0.3s; width: 100%;" onclick="document.querySelector('.dt-packages').scrollIntoView({behavior: 'smooth'})">View All Packages</button>
+        </div>
+      </div>
+
+      <!-- Main Content Area -->
+      <div class="dt-main" style="display: grid; grid-template-columns: 8fr 4fr; gap: 40px;">
+        <!-- Left col -->
+        <div class="dt-image-col">
+          <div class="dt-main-img"
+            style="position: relative; border-radius: 12px; overflow: hidden; margin-bottom: 20px; background-image: url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200'); background-size: cover; background-position: center; width: 100%; aspect-ratio: 16/9;">
+            <!-- Left/right arrows -->
+            <button
+              style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.15); border: none; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: 0.3s;"><i
+                class="fa fa-chevron-left"></i></button>
+            <button
+              style="position: absolute; right: 16px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.15); border: none; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: 0.3s;"><i
+                class="fa fa-chevron-right"></i></button>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <p style="font-size: 15px; margin: 0; color: #222;"><strong>Princess of Hill Stations:</strong> Kodaikanal
+            </p>
+            <button
+              style="background: var(--gold); color: white; padding: 12px 28px; border-radius: 6px; font-weight: 600; font-size: 14px; border: none; cursor: pointer;" onclick="document.querySelector('.dt-packages').scrollIntoView({behavior: 'smooth'})">View All Packages</button>
+          </div>
+        </div>
+
+        <!-- Right col -->
+        <div class="dt-info-col">
+          <div style="background: #f8f8f8; padding: 24px; border-radius: 8px; margin-bottom: 30px;">
+            <h3
+              style="font-family: 'Playfair Display', serif; font-size: 22px; color: var(--dark); margin-bottom: 20px; border-bottom: 1px solid #e5e5e5; padding-bottom: 12px;">
+              North India's No.1 Travel Brand</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; row-gap: 20px;">
+              <div>
+                <div style="font-size: 17px; color: var(--dark); font-weight: 500; margin-bottom: 4px;">Rajasthan</div>
+                <div style="font-size: 12px; color: var(--text-light);">God's Own Country</div>
+              </div>
+              <div>
+                <div style="font-size: 17px; color: var(--dark); font-weight: 500; margin-bottom: 4px;">Himachal</div>
+                <div style="font-size: 12px; color: var(--text-light);">Land of Temples</div>
+              </div>
+              <div>
+                <div style="font-size: 17px; color: var(--dark); font-weight: 500; margin-bottom: 4px;">Agra</div>
+                <div style="font-size: 12px; color: var(--text-light);">Scotland of India</div>
+              </div>
+              <div>
+                <div style="font-size: 17px; color: var(--dark); font-weight: 500; margin-bottom: 4px;">Delhi</div>
+                <div style="font-size: 12px; color: var(--text-light);">Cape of India</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3
+              style="font-family: 'Playfair Display', serif; font-size: 24px; color: var(--dark); margin-bottom: 24px;">
+              Top Cultural Highlights of North India</h3>
+            <ul class="dt-highlights"
+              style="display: flex; flex-direction: column; gap: 16px; margin: 0; padding: 0; list-style: none;">
+              <li
+                style="display: flex; gap: 12px; align-items: flex-start; font-size: 14px; color: #555; line-height: 1.5;">
+                <div
+                  style="width: 26px; height: 26px; background: var(--gold); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 2px 5px rgba(245,166,42,0.4);">
+                  <i class="fa fa-vihara" style="font-size: 11px;"></i>
+                </div>
+                <span>Meenakshi Temple is a Dravidian masterpiece.</span>
+              </li>
+              <li
+                style="display: flex; gap: 12px; align-items: flex-start; font-size: 14px; color: #555; line-height: 1.5;">
+                <div
+                  style="width: 26px; height: 26px; background: var(--gold); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 2px 5px rgba(245,166,42,0.4);">
+                  <i class="fa fa-train" style="font-size: 11px;"></i>
+                </div>
+                <span>Nilgiri Mountain Railway offers scenic train journey.</span>
+              </li>
+              <li
+                style="display: flex; gap: 12px; align-items: flex-start; font-size: 14px; color: #555; line-height: 1.5;">
+                <div
+                  style="width: 26px; height: 26px; background: var(--gold); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 2px 5px rgba(245,166,42,0.4);">
+                  <i class="fa fa-leaf" style="font-size: 11px;"></i>
+                </div>
+                <span>Sadhya is a Rajasthan feast served on banana leaf.</span>
+              </li>
+              <li
+                style="display: flex; gap: 12px; align-items: flex-start; font-size: 14px; color: #555; line-height: 1.5;">
+                <div
+                  style="width: 26px; height: 26px; background: var(--gold); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 2px 5px rgba(245,166,42,0.4);">
+                  <i class="fa fa-tree" style="font-size: 11px;"></i>
+                </div>
+                <span>Western Ghats, world's 8th hottest biodiversity hotspot.</span>
+              </li>
+              <li
+                style="display: flex; gap: 12px; align-items: flex-start; font-size: 14px; color: #555; line-height: 1.5;">
+                <div
+                  style="width: 26px; height: 26px; background: var(--gold); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 2px 5px rgba(245,166,42,0.4);">
+                  <i class="fa fa-book" style="font-size: 11px;"></i>
+                </div>
+                <span>Tamil, one of the oldest languages, culturally rich.</span>
+              </li>
+              <li
+                style="display: flex; gap: 12px; align-items: flex-start; font-size: 14px; color: #555; line-height: 1.5;">
+                <div
+                  style="width: 26px; height: 26px; background: var(--gold); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 2px 5px rgba(245,166,42,0.4);">
+                  <i class="fa fa-sun" style="font-size: 11px;"></i>
+                </div>
+                <span>Delhi offers a unique sunrise and sunset view.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overview Section -->
+      <div class="dt-overview" style="margin-top: 80px;">
+        <h2
+          style="font-family: 'Playfair Display', serif; font-size: 36px; color: var(--dark); margin-bottom: 40px; font-weight: 700;">
+          North India - Overview</h2>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 0; border-top: 2px solid var(--gold); padding-top: 40px;">
+          <!-- Map image -->
+          <div
+            style="flex: 1; min-width: 250px; display: flex; justify-content: center; align-items: flex-start; padding-right: 40px;">
+            <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=400" alt="North India Map"
+              style="max-width: 220px; filter: grayscale(100%) opacity(0.8) sepia(0.5) hue-rotate(200deg);">
+          </div>
+
+          <!-- By Purpose -->
+          <div
+            style="flex: 1.5; min-width: 300px; border-left: 1px solid #ddd; padding-left: 40px; padding-right: 30px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 26px; margin-bottom: 30px; font-weight: 500;">
+              By Purpose</h3>
+
+            <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
+              <div
+                style="width:56px; height:56px; display:flex; align-items:center; justify-content:center; background:#fff3e0; border-radius:50%; flex-shrink:0;">
+                <i class="fa fa-user-friends" style="font-size: 24px; color: var(--gold);"></i>
+              </div>
+              <div style="flex: 1;">
+                <div style="font-size: 19px; color: var(--dark); font-weight: 500;">Couples</div>
+                <div style="font-size: 14px; color: var(--text-light); margin-bottom: 10px;">For Newlywed Vacations
+                </div>
+                <div style="width: 100%; height: 4px; background: #e5e5e5; border-radius: 2px; position: relative;">
+                  <div style="width: 80%; height: 100%; background: var(--gold); border-radius: 2px;"></div>
+                </div>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 20px;">
+              <div
+                style="width:56px; height:56px; display:flex; align-items:center; justify-content:center; background:#fff3e0; border-radius:50%; flex-shrink:0;">
+                <i class="fa fa-users" style="font-size: 24px; color: var(--gold);"></i>
+              </div>
+              <div style="flex: 1;">
+                <div style="font-size: 19px; color: var(--dark); font-weight: 500;">Family</div>
+                <div style="font-size: 14px; color: var(--text-light); margin-bottom: 10px;">For Family Vacations</div>
+                <div style="width: 100%; height: 4px; background: #e5e5e5; border-radius: 2px; position: relative;">
+                  <div style="width: 65%; height: 100%; background: var(--gold); border-radius: 2px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Top Attractions -->
+          <div style="flex: 2; min-width: 420px; border-left: 1px solid #ddd; padding-left: 40px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 26px; margin-bottom: 30px; font-weight: 500;">
+              Top Attractions</h3>
+            <ul
+              style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 0; padding: 0; list-style: none;">
+              <li style="font-size: 15px; color: #444;"><span
+                  style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Agra</li>
+              <li style="font-size: 15px; color: #444;"><span
+                  style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Mysore</li>
+              <li style="font-size: 15px; color: #444;"><span
+                  style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Ooty</li>
+
+              <li style="font-size: 15px; color: #444;"><span
+                  style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Kodaikanal</li>
+              <li style="font-size: 15px; color: #444;"><span
+                  style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Chennai</li>
+              <li style="font-size: 15px; color: #444;"><span
+                  style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Hampi</li>
+
+              <li style="font-size: 15px; color: #444;"><span
+                  style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Alleppey</li>
+              <li style="font-size: 15px; color: #444;"><span
+                  style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Munnar</li>
+              <li style="font-size: 15px; color: #444;"><span
+                  style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Rameswaram</li>
+
+              <li style="font-size: 15px; color: #444;"><span
+                  style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Madurai</li>
+              <li style="font-size: 15px; color: #444;"><span
+                  style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Pondicherry</li>
+              <li style="font-size: 15px; color: #444;"><span
+                  style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Kanchipuram</li>
+
+              <li style="font-size: 15px; color: #444;"><span
+                  style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Varkala</li>
+              <li style="font-size: 15px; color: #444;"><span
+                  style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Wayanad</li>
+              <li style="font-size: 15px; color: #444;"><span
+                  style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Tiruvannamalai</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Packages Grid Section -->
+      <div class="dt-packages" style="margin-top: 80px;">
+        <h2
+          style="font-family: 'Playfair Display', serif; font-size: 36px; color: var(--dark); margin-bottom: 40px; font-weight: 700;">
+          North India Packages & Itineraries</h2>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px;">
+
+          <!-- Package pkg1 -->
+          <div class="itinerary-card" onclick="openItinerary('pkg1')"
+            style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+            <div style="position: relative; height: 220px;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/India-taj-mahal.jpg/1280px-India-taj-mahal.jpg" style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+              <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+                <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 2 Days / 1 Nights
+              </div>
+            </div>
+            <div style="padding: 24px;">
+              <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">Taj Mahal Tour</h3>
+              <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt" style="color: var(--gold); margin-right: 6px;"></i> Uttar Pradesh</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 8,500 <span style="font-size: 13px; font-weight: 400; color: #888;">/ pax</span></span>
+                <span style="color: var(--gold); font-size: 14px; font-weight: 700;">VIEW PROGRAM <i class="fa fa-chevron-right" style="margin-left: 4px;"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package pkg2 -->
+          <div class="itinerary-card" onclick="openItinerary('pkg2')"
+            style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+            <div style="position: relative; height: 220px;">
+              <img src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?w=600" style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+              <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+                <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 6 Days / 5 Nights
+              </div>
+            </div>
+            <div style="padding: 24px;">
+              <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">Kashmir Valley Paradise</h3>
+              <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt" style="color: var(--gold); margin-right: 6px;"></i> Jammu & Kashmir</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 22,500 <span style="font-size: 13px; font-weight: 400; color: #888;">/ pax</span></span>
+                <span style="color: var(--gold); font-size: 14px; font-weight: 700;">VIEW PROGRAM <i class="fa fa-chevron-right" style="margin-left: 4px;"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package pkg3 -->
+          <div class="itinerary-card" onclick="openItinerary('pkg3')"
+            style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+            <div style="position: relative; height: 220px;">
+              <img src="https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?w=600" style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+              <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+                <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 7 Days / 6 Nights
+              </div>
+            </div>
+            <div style="padding: 24px;">
+              <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">Leh Ladakh Expedition</h3>
+              <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt" style="color: var(--gold); margin-right: 6px;"></i> Ladakh</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 25,000 <span style="font-size: 13px; font-weight: 400; color: #888;">/ pax</span></span>
+                <span style="color: var(--gold); font-size: 14px; font-weight: 700;">VIEW PROGRAM <i class="fa fa-chevron-right" style="margin-left: 4px;"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package pkg4 -->
+          <div class="itinerary-card" onclick="openItinerary('pkg4')"
+            style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+            <div style="position: relative; height: 220px;">
+              <img src="https://images.unsplash.com/photo-1605649487212-4d43be263b65?w=600" style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+              <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+                <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 5 Days / 4 Nights
+              </div>
+            </div>
+            <div style="padding: 24px;">
+              <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">Shimla & Manali</h3>
+              <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt" style="color: var(--gold); margin-right: 6px;"></i> Himachal Pradesh</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 16,500 <span style="font-size: 13px; font-weight: 400; color: #888;">/ pax</span></span>
+                <span style="color: var(--gold); font-size: 14px; font-weight: 700;">VIEW PROGRAM <i class="fa fa-chevron-right" style="margin-left: 4px;"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package pkg5 -->
+          <div class="itinerary-card" onclick="openItinerary('pkg5')"
+            style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+            <div style="position: relative; height: 220px;">
+              <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=600" style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+              <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+                <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 3 Days / 2 Nights
+              </div>
+            </div>
+            <div style="padding: 24px;">
+              <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">Varanasi Ghats</h3>
+              <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt" style="color: var(--gold); margin-right: 6px;"></i> Uttar Pradesh</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 11,000 <span style="font-size: 13px; font-weight: 400; color: #888;">/ pax</span></span>
+                <span style="color: var(--gold); font-size: 14px; font-weight: 700;">VIEW PROGRAM <i class="fa fa-chevron-right" style="margin-left: 4px;"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package pkg6 -->
+          <div class="itinerary-card" onclick="openItinerary('pkg6')"
+            style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+            <div style="position: relative; height: 220px;">
+              <img src="https://images.unsplash.com/photo-1601267860298-2bf5d96207c4?w=600" style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+              <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+                <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 4 Days / 3 Nights
+              </div>
+            </div>
+            <div style="padding: 24px;">
+              <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">Rishikesh Rafting</h3>
+              <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt" style="color: var(--gold); margin-right: 6px;"></i> Uttarakhand</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 12,500 <span style="font-size: 13px; font-weight: 400; color: #888;">/ pax</span></span>
+                <span style="color: var(--gold); font-size: 14px; font-weight: 700;">VIEW PROGRAM <i class="fa fa-chevron-right" style="margin-left: 4px;"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package pkg7 -->
+          <div class="itinerary-card" onclick="openItinerary('pkg7')"
+            style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+            <div style="position: relative; height: 220px;">
+              <img src="https://images.unsplash.com/photo-1587635835698-dc532e185f26?w=600" style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+              <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+                <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 2 Days / 1 Nights
+              </div>
+            </div>
+            <div style="padding: 24px;">
+              <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">Golden Temple</h3>
+              <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt" style="color: var(--gold); margin-right: 6px;"></i> Punjab</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 9,000 <span style="font-size: 13px; font-weight: 400; color: #888;">/ pax</span></span>
+                <span style="color: var(--gold); font-size: 14px; font-weight: 700;">VIEW PROGRAM <i class="fa fa-chevron-right" style="margin-left: 4px;"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package pkg8 -->
+          <div class="itinerary-card" onclick="openItinerary('pkg8')"
+            style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+            <div style="position: relative; height: 220px;">
+              <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?w=600" style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+              <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+                <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 4 Days / 3 Nights
+              </div>
+            </div>
+            <div style="padding: 24px;">
+              <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">Jaipur Royal City</h3>
+              <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt" style="color: var(--gold); margin-right: 6px;"></i> Rajasthan</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 14,000 <span style="font-size: 13px; font-weight: 400; color: #888;">/ pax</span></span>
+                <span style="color: var(--gold); font-size: 14px; font-weight: 700;">VIEW PROGRAM <i class="fa fa-chevron-right" style="margin-left: 4px;"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package pkg9 -->
+          <div class="itinerary-card" onclick="openItinerary('pkg9')"
+            style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+            <div style="position: relative; height: 220px;">
+              <img src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?w=600" style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+              <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+                <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 4 Days / 3 Nights
+              </div>
+            </div>
+            <div style="padding: 24px;">
+              <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">Udaipur Lakes</h3>
+              <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt" style="color: var(--gold); margin-right: 6px;"></i> Rajasthan</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 15,500 <span style="font-size: 13px; font-weight: 400; color: #888;">/ pax</span></span>
+                <span style="color: var(--gold); font-size: 14px; font-weight: 700;">VIEW PROGRAM <i class="fa fa-chevron-right" style="margin-left: 4px;"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package pkg10 -->
+          <div class="itinerary-card" onclick="openItinerary('pkg10')"
+            style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+            <div style="position: relative; height: 220px;">
+              <img src="https://images.unsplash.com/photo-1599814470940-92892994e43b?w=600" style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+              <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+                <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 5 Days / 4 Nights
+              </div>
+            </div>
+            <div style="padding: 24px;">
+              <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">Jaisalmer Desert Safari</h3>
+              <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt" style="color: var(--gold); margin-right: 6px;"></i> Rajasthan</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 17,200 <span style="font-size: 13px; font-weight: 400; color: #888;">/ pax</span></span>
+                <span style="color: var(--gold); font-size: 14px; font-weight: 700;">VIEW PROGRAM <i class="fa fa-chevron-right" style="margin-left: 4px;"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package pkg11 -->
+          <div class="itinerary-card" onclick="openItinerary('pkg11')"
+            style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+            <div style="position: relative; height: 220px;">
+              <img src="https://images.unsplash.com/photo-1584824388147-3dc6fc48bc95?w=600" style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+              <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+                <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 3 Days / 2 Nights
+              </div>
+            </div>
+            <div style="padding: 24px;">
+              <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">Jim Corbett Safari</h3>
+              <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt" style="color: var(--gold); margin-right: 6px;"></i> Uttarakhand</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 13,800 <span style="font-size: 13px; font-weight: 400; color: #888;">/ pax</span></span>
+                <span style="color: var(--gold); font-size: 14px; font-weight: 700;">VIEW PROGRAM <i class="fa fa-chevron-right" style="margin-left: 4px;"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package pkg12 -->
+          <div class="itinerary-card" onclick="openItinerary('pkg12')"
+            style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+            <div style="position: relative; height: 220px;">
+              <img src="https://images.unsplash.com/photo-1591557022067-c22ba14197ba?w=600" style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+              <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+                <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 3 Days / 2 Nights
+              </div>
+            </div>
+            <div style="padding: 24px;">
+              <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">Haridwar Pilgrimage</h3>
+              <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt" style="color: var(--gold); margin-right: 6px;"></i> Uttarakhand</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 9,800 <span style="font-size: 13px; font-weight: 400; color: #888;">/ pax</span></span>
+                <span style="color: var(--gold); font-size: 14px; font-weight: 700;">VIEW PROGRAM <i class="fa fa-chevron-right" style="margin-left: 4px;"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package pkg13 -->
+          <div class="itinerary-card" onclick="openItinerary('pkg13')"
+            style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+            <div style="position: relative; height: 220px;">
+              <img src="https://images.unsplash.com/photo-1626782522774-709deaaaecc2?w=600" style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+              <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+                <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 6 Days / 5 Nights
+              </div>
+            </div>
+            <div style="padding: 24px;">
+              <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">Spiti Valley</h3>
+              <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt" style="color: var(--gold); margin-right: 6px;"></i> Himachal Pradesh</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 21,000 <span style="font-size: 13px; font-weight: 400; color: #888;">/ pax</span></span>
+                <span style="color: var(--gold); font-size: 14px; font-weight: 700;">VIEW PROGRAM <i class="fa fa-chevron-right" style="margin-left: 4px;"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package pkg14 -->
+          <div class="itinerary-card" onclick="openItinerary('pkg14')"
+            style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+            <div style="position: relative; height: 220px;">
+              <img src="https://images.unsplash.com/photo-1582236371727-86cbf22fd6fe?w=600" style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+              <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+                <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 4 Days / 3 Nights
+              </div>
+            </div>
+            <div style="padding: 24px;">
+              <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">Dalhousie Retreat</h3>
+              <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt" style="color: var(--gold); margin-right: 6px;"></i> Himachal Pradesh</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 14,500 <span style="font-size: 13px; font-weight: 400; color: #888;">/ pax</span></span>
+                <span style="color: var(--gold); font-size: 14px; font-weight: 700;">VIEW PROGRAM <i class="fa fa-chevron-right" style="margin-left: 4px;"></i></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- Info section -->
+      <div class="dt-info" style="margin-top: 80px; margin-bottom: 100px;">
+        <h2
+          style="font-family: 'Playfair Display', serif; font-size: 32px; color: var(--dark); margin-bottom: 30px; font-weight: 700;">
+          Everything You Need to Know About North India</h2>
+        <p style="color: #666; font-size: 16px; margin-bottom: 20px; line-height: 1.8;">North India, or Southern India,
+          is a region steeped in a rich tapestry of history, culture, and heritage. It's a society that has flourished
+          south of the Vindhyas for several thousand years, offering every visitor a unique and fascinating experience.
+          Southern India differs from the North in various aspects, including topography, race, language, weather,
+          cuisine, festivals, and architectural heritage.</p>
+        <p style="color: #666; font-size: 16px; margin-bottom: 20px; line-height: 1.8;">Even within North India, you'll
+          find varied geographical and cultural differences. For instance, Rajasthan is famous for its backwaters and
+          the verdant greenery of the Western Ghats, but its adjacent state Himachal is famed for its grand temples and
+          magnificent architecture ranging from the Cholas and Pandyas.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>NextTrip Holidays</h4>
+          <p>Your trusted travel partner for unforgettable journeys around the world.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="index.html#packages">Packages</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="#">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p><i class="fa fa-phone"></i> +91-XXX-XXX-XXXX</p>
+          <p><i class="fa fa-envelope"></i> info@nexttrip.com</p>
+          <p><i class="fa fa-map-marker"></i> India</p>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 NextTrip Holidays. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Handle transparent navbar
+    var navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+        navbar.style.background = 'var(--dark)';
+      } else {
+        navbar.classList.remove('scrolled');
+        navbar.style.background = 'var(--dark)'; // Ensure background because there is no hero image overlay for this page
+      }
+    });
+    // Set initial background for this page
+    navbar.style.background = 'var(--dark)';
+  </script>
+
+  <!-- Itinerary Modal -->
+  <div class="itinerary-modal" id="itineraryModal"
+    style="display: none; opacity: 0; position: fixed; inset: 0; background: rgba(0,0,0,0.82); backdrop-filter: blur(8px); z-index: 100000; justify-content: center; align-items: center; padding: 30px 20px; box-sizing: border-box; transition: opacity 0.4s ease;">
+    <div class="modal-content"
+      style="background: white; width: 100%; max-width: 760px; max-height: 88vh; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 30px 70px rgba(0,0,0,0.4);">
+
+      <!-- Header -->
+      <div
+        style="padding: 28px 30px; border-bottom: 1px solid #f0f0f0; display: flex; justify-content: space-between; align-items: flex-start; background: #fff; position: relative;">
+        <div>
+          <span style="display: inline-block; background: rgba(245,166,35,0.1); color: var(--gold); padding: 4px 12px; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px;">Detailed Itinerary</span>
+          <h2 id="modalTitle"
+            style="font-family: 'Playfair Display', serif; font-size: 30px; margin: 0; color: var(--dark); font-weight: 700; line-height: 1.2;">
+            Tour Itinerary</h2>
+          <div style="display: flex; align-items: center; gap: 15px; margin-top: 10px;">
+            <span id="modalDuration" style="font-size: 14px; color: #777; font-weight: 500; display: flex; align-items: center;">
+              <i class="fa fa-clock" style="color: var(--gold); margin-right: 8px;"></i> Loading...
+            </span>
+            <span style="width: 4px; height: 4px; background: #ccc; border-radius: 50%;"></span>
+            <span style="font-size: 14px; color: #777; font-weight: 500; display: flex; align-items: center;">
+              <i class="fa fa-map-location-dot" style="color: var(--gold); margin-right: 8px;"></i> Multi-city Tour
+            </span>
+          </div>
+        </div>
+        <button onclick="closeItinerary()"
+          style="width: 44px; height: 44px; border-radius: 12px; background: #f8f8f8; border: none; font-size: 18px; color: #888; cursor: pointer; display: flex; justify-content: center; align-items: center; transition: 0.3s;"
+          onmouseover="this.style.background='#eee'; this.style.color='#333'" onmouseout="this.style.background='#f8f8f8'; this.style.color='#888'"><i
+            class="fa fa-times"></i></button>
+      </div>
+
+      <!-- Body -->
+      <div style="padding: 30px; overflow-y: auto; flex: 1; background: white;">
+        <div id="modalItineraryList" style="display: flex; flex-direction: column; gap: 0;">
+          <!-- Day items injected here via JS -->
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div
+        style="padding: 20px 30px; border-top: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; background: #fafafa;">
+        <div id="modalPrice" style="font-size: 20px; font-weight: 700; color: var(--dark);"></div>
+        <button onclick="openBookingModal()"
+          style="background: var(--gold); color: white; border: none; padding: 14px 36px; border-radius: 8px; font-weight: 600; font-size: 16px; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 12px rgba(245,166,35,0.3);"
+          onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">Book This
+          Tour</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const itineraries = {
+
+      'pkg1': {
+        title: 'Taj Mahal Tour',
+        duration: '2 Days / 1 Nights',
+        price: '₹ 8,500 <span style="font-size:14px; font-weight:normal; color:#888">/ pax</span>',
+        days: [
+          { day: 'Day 01', title: 'Arrival & Welcome', desc: 'Arrive at the destination. You will be greeted by our representative and transferred to your premium accommodation in Uttar Pradesh.' },
+          { day: 'Day 02', title: 'Departure', desc: 'Enjoy your final breakfast at the accommodation. Check out and transfer for your onward journey.' }
+        ]
+      },
+      'pkg2': {
+        title: 'Kashmir Valley Paradise',
+        duration: '6 Days / 5 Nights',
+        price: '₹ 22,500 <span style="font-size:14px; font-weight:normal; color:#888">/ pax</span>',
+        days: [
+          { day: 'Day 01', title: 'Arrival & Welcome', desc: 'Arrive at the destination. You will be greeted by our representative and transferred to your premium accommodation in Jammu & Kashmir.' },
+          { day: 'Day 02', title: 'Explore Kashmir Valley Paradise', desc: 'Full day sightseeing and activities around Kashmir Valley Paradise. Evening at leisure.' },
+          { day: 'Day 03', title: 'Explore Kashmir Valley Paradise', desc: 'Full day sightseeing and activities around Kashmir Valley Paradise. Evening at leisure.' },
+          { day: 'Day 04', title: 'Explore Kashmir Valley Paradise', desc: 'Full day sightseeing and activities around Kashmir Valley Paradise. Evening at leisure.' },
+          { day: 'Day 05', title: 'Explore Kashmir Valley Paradise', desc: 'Full day sightseeing and activities around Kashmir Valley Paradise. Evening at leisure.' },
+          { day: 'Day 06', title: 'Departure', desc: 'Enjoy your final breakfast at the accommodation. Check out and transfer for your onward journey.' }
+        ]
+      },
+      'pkg3': {
+        title: 'Leh Ladakh Expedition',
+        duration: '7 Days / 6 Nights',
+        price: '₹ 25,000 <span style="font-size:14px; font-weight:normal; color:#888">/ pax</span>',
+        days: [
+          { day: 'Day 01', title: 'Arrival & Welcome', desc: 'Arrive at the destination. You will be greeted by our representative and transferred to your premium accommodation in Ladakh.' },
+          { day: 'Day 02', title: 'Explore Leh Ladakh Expedition', desc: 'Full day sightseeing and activities around Leh Ladakh Expedition. Evening at leisure.' },
+          { day: 'Day 03', title: 'Explore Leh Ladakh Expedition', desc: 'Full day sightseeing and activities around Leh Ladakh Expedition. Evening at leisure.' },
+          { day: 'Day 04', title: 'Explore Leh Ladakh Expedition', desc: 'Full day sightseeing and activities around Leh Ladakh Expedition. Evening at leisure.' },
+          { day: 'Day 05', title: 'Explore Leh Ladakh Expedition', desc: 'Full day sightseeing and activities around Leh Ladakh Expedition. Evening at leisure.' },
+          { day: 'Day 06', title: 'Explore Leh Ladakh Expedition', desc: 'Full day sightseeing and activities around Leh Ladakh Expedition. Evening at leisure.' },
+          { day: 'Day 07', title: 'Departure', desc: 'Enjoy your final breakfast at the accommodation. Check out and transfer for your onward journey.' }
+        ]
+      },
+      'pkg4': {
+        title: 'Shimla & Manali',
+        duration: '5 Days / 4 Nights',
+        price: '₹ 16,500 <span style="font-size:14px; font-weight:normal; color:#888">/ pax</span>',
+        days: [
+          { day: 'Day 01', title: 'Arrival & Welcome', desc: 'Arrive at the destination. You will be greeted by our representative and transferred to your premium accommodation in Himachal Pradesh.' },
+          { day: 'Day 02', title: 'Explore Shimla & Manali', desc: 'Full day sightseeing and activities around Shimla & Manali. Evening at leisure.' },
+          { day: 'Day 03', title: 'Explore Shimla & Manali', desc: 'Full day sightseeing and activities around Shimla & Manali. Evening at leisure.' },
+          { day: 'Day 04', title: 'Explore Shimla & Manali', desc: 'Full day sightseeing and activities around Shimla & Manali. Evening at leisure.' },
+          { day: 'Day 05', title: 'Departure', desc: 'Enjoy your final breakfast at the accommodation. Check out and transfer for your onward journey.' }
+        ]
+      },
+      'pkg5': {
+        title: 'Varanasi Ghats',
+        duration: '3 Days / 2 Nights',
+        price: '₹ 11,000 <span style="font-size:14px; font-weight:normal; color:#888">/ pax</span>',
+        days: [
+          { day: 'Day 01', title: 'Arrival & Welcome', desc: 'Arrive at the destination. You will be greeted by our representative and transferred to your premium accommodation in Uttar Pradesh.' },
+          { day: 'Day 02', title: 'Explore Varanasi Ghats', desc: 'Full day sightseeing and activities around Varanasi Ghats. Evening at leisure.' },
+          { day: 'Day 03', title: 'Departure', desc: 'Enjoy your final breakfast at the accommodation. Check out and transfer for your onward journey.' }
+        ]
+      },
+      'pkg6': {
+        title: 'Rishikesh Rafting',
+        duration: '4 Days / 3 Nights',
+        price: '₹ 12,500 <span style="font-size:14px; font-weight:normal; color:#888">/ pax</span>',
+        days: [
+          { day: 'Day 01', title: 'Arrival & Welcome', desc: 'Arrive at the destination. You will be greeted by our representative and transferred to your premium accommodation in Uttarakhand.' },
+          { day: 'Day 02', title: 'Explore Rishikesh Rafting', desc: 'Full day sightseeing and activities around Rishikesh Rafting. Evening at leisure.' },
+          { day: 'Day 03', title: 'Explore Rishikesh Rafting', desc: 'Full day sightseeing and activities around Rishikesh Rafting. Evening at leisure.' },
+          { day: 'Day 04', title: 'Departure', desc: 'Enjoy your final breakfast at the accommodation. Check out and transfer for your onward journey.' }
+        ]
+      },
+      'pkg7': {
+        title: 'Golden Temple',
+        duration: '2 Days / 1 Nights',
+        price: '₹ 9,000 <span style="font-size:14px; font-weight:normal; color:#888">/ pax</span>',
+        days: [
+          { day: 'Day 01', title: 'Arrival & Welcome', desc: 'Arrive at the destination. You will be greeted by our representative and transferred to your premium accommodation in Punjab.' },
+          { day: 'Day 02', title: 'Departure', desc: 'Enjoy your final breakfast at the accommodation. Check out and transfer for your onward journey.' }
+        ]
+      },
+      'pkg8': {
+        title: 'Jaipur Royal City',
+        duration: '4 Days / 3 Nights',
+        price: '₹ 14,000 <span style="font-size:14px; font-weight:normal; color:#888">/ pax</span>',
+        days: [
+          { day: 'Day 01', title: 'Arrival & Welcome', desc: 'Arrive at the destination. You will be greeted by our representative and transferred to your premium accommodation in Rajasthan.' },
+          { day: 'Day 02', title: 'Explore Jaipur Royal City', desc: 'Full day sightseeing and activities around Jaipur Royal City. Evening at leisure.' },
+          { day: 'Day 03', title: 'Explore Jaipur Royal City', desc: 'Full day sightseeing and activities around Jaipur Royal City. Evening at leisure.' },
+          { day: 'Day 04', title: 'Departure', desc: 'Enjoy your final breakfast at the accommodation. Check out and transfer for your onward journey.' }
+        ]
+      },
+      'pkg9': {
+        title: 'Udaipur Lakes',
+        duration: '4 Days / 3 Nights',
+        price: '₹ 15,500 <span style="font-size:14px; font-weight:normal; color:#888">/ pax</span>',
+        days: [
+          { day: 'Day 01', title: 'Arrival & Welcome', desc: 'Arrive at the destination. You will be greeted by our representative and transferred to your premium accommodation in Rajasthan.' },
+          { day: 'Day 02', title: 'Explore Udaipur Lakes', desc: 'Full day sightseeing and activities around Udaipur Lakes. Evening at leisure.' },
+          { day: 'Day 03', title: 'Explore Udaipur Lakes', desc: 'Full day sightseeing and activities around Udaipur Lakes. Evening at leisure.' },
+          { day: 'Day 04', title: 'Departure', desc: 'Enjoy your final breakfast at the accommodation. Check out and transfer for your onward journey.' }
+        ]
+      },
+      'pkg10': {
+        title: 'Jaisalmer Desert Safari',
+        duration: '5 Days / 4 Nights',
+        price: '₹ 17,200 <span style="font-size:14px; font-weight:normal; color:#888">/ pax</span>',
+        days: [
+          { day: 'Day 01', title: 'Arrival & Welcome', desc: 'Arrive at the destination. You will be greeted by our representative and transferred to your premium accommodation in Rajasthan.' },
+          { day: 'Day 02', title: 'Explore Jaisalmer Desert Safari', desc: 'Full day sightseeing and activities around Jaisalmer Desert Safari. Evening at leisure.' },
+          { day: 'Day 03', title: 'Explore Jaisalmer Desert Safari', desc: 'Full day sightseeing and activities around Jaisalmer Desert Safari. Evening at leisure.' },
+          { day: 'Day 04', title: 'Explore Jaisalmer Desert Safari', desc: 'Full day sightseeing and activities around Jaisalmer Desert Safari. Evening at leisure.' },
+          { day: 'Day 05', title: 'Departure', desc: 'Enjoy your final breakfast at the accommodation. Check out and transfer for your onward journey.' }
+        ]
+      },
+      'pkg11': {
+        title: 'Jim Corbett Safari',
+        duration: '3 Days / 2 Nights',
+        price: '₹ 13,800 <span style="font-size:14px; font-weight:normal; color:#888">/ pax</span>',
+        days: [
+          { day: 'Day 01', title: 'Arrival & Welcome', desc: 'Arrive at the destination. You will be greeted by our representative and transferred to your premium accommodation in Uttarakhand.' },
+          { day: 'Day 02', title: 'Explore Jim Corbett Safari', desc: 'Full day sightseeing and activities around Jim Corbett Safari. Evening at leisure.' },
+          { day: 'Day 03', title: 'Departure', desc: 'Enjoy your final breakfast at the accommodation. Check out and transfer for your onward journey.' }
+        ]
+      },
+      'pkg12': {
+        title: 'Haridwar Pilgrimage',
+        duration: '3 Days / 2 Nights',
+        price: '₹ 9,800 <span style="font-size:14px; font-weight:normal; color:#888">/ pax</span>',
+        days: [
+          { day: 'Day 01', title: 'Arrival & Welcome', desc: 'Arrive at the destination. You will be greeted by our representative and transferred to your premium accommodation in Uttarakhand.' },
+          { day: 'Day 02', title: 'Explore Haridwar Pilgrimage', desc: 'Full day sightseeing and activities around Haridwar Pilgrimage. Evening at leisure.' },
+          { day: 'Day 03', title: 'Departure', desc: 'Enjoy your final breakfast at the accommodation. Check out and transfer for your onward journey.' }
+        ]
+      },
+      'pkg13': {
+        title: 'Spiti Valley',
+        duration: '6 Days / 5 Nights',
+        price: '₹ 21,000 <span style="font-size:14px; font-weight:normal; color:#888">/ pax</span>',
+        days: [
+          { day: 'Day 01', title: 'Arrival & Welcome', desc: 'Arrive at the destination. You will be greeted by our representative and transferred to your premium accommodation in Himachal Pradesh.' },
+          { day: 'Day 02', title: 'Explore Spiti Valley', desc: 'Full day sightseeing and activities around Spiti Valley. Evening at leisure.' },
+          { day: 'Day 03', title: 'Explore Spiti Valley', desc: 'Full day sightseeing and activities around Spiti Valley. Evening at leisure.' },
+          { day: 'Day 04', title: 'Explore Spiti Valley', desc: 'Full day sightseeing and activities around Spiti Valley. Evening at leisure.' },
+          { day: 'Day 05', title: 'Explore Spiti Valley', desc: 'Full day sightseeing and activities around Spiti Valley. Evening at leisure.' },
+          { day: 'Day 06', title: 'Departure', desc: 'Enjoy your final breakfast at the accommodation. Check out and transfer for your onward journey.' }
+        ]
+      },
+      'pkg14': {
+        title: 'Dalhousie Retreat',
+        duration: '4 Days / 3 Nights',
+        price: '₹ 14,500 <span style="font-size:14px; font-weight:normal; color:#888">/ pax</span>',
+        days: [
+          { day: 'Day 01', title: 'Arrival & Welcome', desc: 'Arrive at the destination. You will be greeted by our representative and transferred to your premium accommodation in Himachal Pradesh.' },
+          { day: 'Day 02', title: 'Explore Dalhousie Retreat', desc: 'Full day sightseeing and activities around Dalhousie Retreat. Evening at leisure.' },
+          { day: 'Day 03', title: 'Explore Dalhousie Retreat', desc: 'Full day sightseeing and activities around Dalhousie Retreat. Evening at leisure.' },
+          { day: 'Day 04', title: 'Departure', desc: 'Enjoy your final breakfast at the accommodation. Check out and transfer for your onward journey.' }
+        ]
+      },
+    };
+
+    function showDetailedProgram(id) {
+       const data = itineraries[id] || { title: 'Program Coming Soon', duration: '', price: '', days: [{ day: 'Info', title: 'Details', desc: 'Please contact us for more info.' }] };
+       
+       document.getElementById('modalTitle').innerText = data.title;
+       document.getElementById('modalDuration').innerHTML = `<i class="fa fa-clock" style="color: var(--gold); margin-right: 6px;"></i> ${data.duration}`;
+       document.getElementById('modalPrice').innerHTML = data.price;
+       
+       const list = document.getElementById('modalItineraryList');
+       list.innerHTML = data.days.map((d, index) => {
+         const isLast = index === data.days.length - 1;
+         return `
+           <div style="display: flex; gap: 28px; position: relative;">
+             <div style="flex-shrink: 0; display: flex; flex-direction: column; align-items: center; width: 44px;">
+               <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--gold); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; box-shadow: 0 4px 12px rgba(245, 166, 35, 0.25); z-index: 2;">${index + 1}</div>
+               ${!isLast ? '<div style="width: 2px; flex-grow: 1; background: #f0f0f0; margin: 4px 0;"></div>' : ''}
+             </div>
+             <div style="padding-bottom: ${isLast ? '0' : '36px'}; padding-top: 4px; flex-grow: 1;">
+               <div style="font-size: 12px; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px; display: flex; align-items: center; gap: 8px;">
+                 <i class="fa fa-map-pin" style="font-size: 10px;"></i> DAY ${index + 1}
+               </div>
+               <h4 style="font-size: 20px; color: var(--dark); margin-bottom: 12px; font-family: 'Playfair Display', serif; font-weight: 700; line-height: 1.3;">${d.title}</h4>
+               <div style="background: #fbfbfb; padding: 16px 20px; border-radius: 10px; border-left: 3px solid var(--gold);">
+                 <p style="color: #555; font-size: 15px; line-height: 1.7; margin: 0; font-weight: 400;">${d.desc}</p>
+               </div>
+             </div>
+           </div>
+         `;
+       }).join('');
+       
+       const modal = document.getElementById('itineraryModal');
+       modal.style.display = 'flex';
+       setTimeout(() => modal.style.opacity = '1', 10);
+       document.body.style.overflow = 'hidden'; 
+    }
+
+    // Alias — some cards use openItinerary, some use showDetailedProgram
+    function openItinerary(id) { showDetailedProgram(id); }
+
+    function closeItinerary() {
+      const modal = document.getElementById('itineraryModal');
+      if (modal) {
+        modal.style.opacity = '0';
+        setTimeout(() => {
+          modal.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }, 400);
+      }
+    }
+
+    // Close on outside click
+    window.addEventListener('click', (e) => {
+      const modal = document.getElementById('itineraryModal');
+      if (e.target === modal) closeItinerary();
+    });
+
+    // Card hover effects
+    const style = document.createElement('style');
+    style.innerHTML = `
+      .itinerary-card:hover .pkg-img { transform: scale(1.05); }
+      .itinerary-card:hover { transform: translateY(-8px) !important; box-shadow: 0 12px 30px rgba(0,0,0,0.12) !important; }
+      @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    `;
+    document.head.appendChild(style);
+  </script>
+
+
+<script>
+    function openBookingModal() { 
+        if(typeof window.openModal === "function") {
+            window.openModal(); 
+        } else {
+            console.warn("Global booking system not ready");
+            alert("Booking system is loading. Please try again in a moment.");
+        }
+    }
+</script>
+</body>
+
+</html>
+

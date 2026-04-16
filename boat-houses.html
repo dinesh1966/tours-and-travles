@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boat Houses - NextTrip Holidays</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+  <script src="script.js" defer></script>
+  
+  <!-- Lottie Player -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+
+<body>
+
+  <!-- Premium Page Loader -->
+  <div id="premiumLoader">
+    <div class="loader-earth">
+      <lottie-player src="https://lottie.host/df254881-c7c4-42f1-aa8f-28c0570bde7c/55u6YkF8Wb.json" background="transparent" speed="1" style="width: 220px; height: 220px;" loop autoplay></lottie-player>
+    </div>
+    <div class="loader-text">NextTrip Holidays</div>
+  </div>
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const loader = document.getElementById('premiumLoader');
+        if (loader) loader.classList.add('fade-out');
+        document.body.classList.add('body-loaded');
+      }, 900);
+    });
+    document.querySelectorAll('a').forEach(link => {
+      if (link.target !== '_blank' && link.href && link.href.indexOf('#') === -1 && !link.href.startsWith('tel:') && !link.href.startsWith('mailto:')) {
+        link.addEventListener('click', (e) => {
+          const loader = document.getElementById('premiumLoader');
+          if (loader) {
+            e.preventDefault();
+            loader.classList.remove('fade-out');
+            loader.style.opacity = '1';
+            loader.style.transform = 'translateY(0)';
+            setTimeout(() => window.location = link.href, 500);
+          }
+        });
+      }
+    });
+  </script>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="https://res.cloudinary.com/drkgkgiat/image/upload/q_auto/f_auto/v1775567539/Next_TRip_Final_Logo_Square_Size_-_Copy-removebg-preview_bsfsev.png"
+          alt="NextTrip" height="50">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#packages">Packages</a></li>
+        <li><a href="index.html#experiences">Experiences</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="package-hero"
+    style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1400&h=600&fit=crop');">
+    <div class="package-hero-content">
+      <h1>Luxury Boat Houses</h1>
+      <p>Experience serene waterway living at its finest</p>
+    </div>
+  </section>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <a href="index.html#packages">Packages</a>
+      <span>/</span>
+      <span>Boat Houses</span>
+    </div>
+  </div>
+
+  <!-- ===== TOUR PACKAGE TYPES ===== -->
+  <section class="section-pad tour-types-section">
+    <div class="container">
+      <h2 class="section-title">Choose Your Boat House Type</h2>
+      <div class="tour-types-grid">
+        <div class="tour-type-card" onclick="window.location.href='luxury-houseboats.html'"
+          style="background-image: url('https://images.unsplash.com/photo-1544182990-dffeafbe841d?w=800');">
+          <div class="tour-type-content">
+            <h3>Luxury Houseboats</h3>
+            <a href="luxury-houseboats.html" class="tour-count">8 TOURS</a>
+          </div>
+        </div>
+
+        <div class="tour-type-card" onclick="window.location.href='backwater-cruises.html'"
+          style="background-image: url('https://images.unsplash.com/photo-1583037189850-1921ae7c6c22?w=800');">
+          <div class="tour-type-content">
+            <h3>Backwater Cruises</h3>
+            <a href="backwater-cruises.html" class="tour-count">6 TOURS</a>
+          </div>
+        </div>
+
+        <div class="tour-type-card" onclick="window.location.href='honeymoon-stays.html'"
+          style="background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800');">
+          <div class="tour-type-content">
+            <h3>Honeymoon Stays</h3>
+            <a href="honeymoon-stays.html" class="tour-count">5 TOURS</a>
+          </div>
+        </div>
+
+        <div class="tour-type-card" onclick="window.location.href='sunset-cruises.html'"
+          style="background-image: url('https://images.unsplash.com/photo-1504681869696-d977e2a1b289?w=800');">
+          <div class="tour-type-content">
+            <h3>Sunset Cruises</h3>
+            <a href="sunset-cruises.html" class="tour-count">7 TOURS</a>
+          </div>
+        </div>
+
+        <div class="tour-type-card" onclick="window.location.href='wildlife-tours.html'"
+          style="background-image: url('https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=800');">
+          <div class="tour-type-content">
+            <h3>Wildlife Tours</h3>
+            <a href="wildlife-tours.html" class="tour-count">4 TOURS</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <!-- Packages Grid Section -->
+  <div class="dt-packages container" style="margin-top: 80px; margin-bottom: 80px;">
+    <h2
+      style="font-family: 'Playfair Display', serif; font-size: 36px; color: var(--dark); margin-bottom: 40px; font-weight: 700;">
+      Luxury Boat House Experiences
+    </h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px;">
+
+      <!-- Package pkg1 -->
+      <div class="itinerary-card" onclick="openItinerary('pkg1')"
+        style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+        <div style="position: relative; height: 220px;">
+          <img src="https://images.unsplash.com/photo-1593693397690-362cb9666fca?w=600"
+            style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+          <div
+            style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+            <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 2 Days / 1 Nights
+          </div>
+        </div>
+        <div style="padding: 24px;">
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">
+            Alleppey Premium Houseboat</h3>
+          <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+              style="color: var(--gold); margin-right: 6px;"></i> Kerala</p>
+          <div
+            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+            <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 12,000</span>
+            <span style="color: var(--gold); font-size: 14px; font-weight: 600;">View Details <i
+                class="fa fa-arrow-right" style="margin-left: 4px;"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package pkg2 -->
+      <div class="itinerary-card" onclick="openItinerary('pkg2')"
+        style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+        <div style="position: relative; height: 220px;">
+          <img src="https://images.unsplash.com/photo-1583037189850-1921ae7c6c22?w=600"
+            style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+          <div
+            style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+            <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 2 Days / 1 Nights
+          </div>
+        </div>
+        <div style="padding: 24px;">
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">
+            Kumarakom Luxury Cruise</h3>
+          <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+              style="color: var(--gold); margin-right: 6px;"></i> Kerala</p>
+          <div
+            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+            <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 15,000</span>
+            <span style="color: var(--gold); font-size: 14px; font-weight: 600;">View Details <i
+                class="fa fa-arrow-right" style="margin-left: 4px;"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package pkg3 -->
+      <div class="itinerary-card" onclick="openItinerary('pkg3')"
+        style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+        <div style="position: relative; height: 220px;">
+          <img src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?w=600"
+            style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+          <div
+            style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+            <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 3 Days / 2 Nights
+          </div>
+        </div>
+        <div style="padding: 24px;">
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">
+            Dal Lake Houseboat</h3>
+          <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+              style="color: var(--gold); margin-right: 6px;"></i> Kashmir</p>
+          <div
+            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+            <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 14,000</span>
+            <span style="color: var(--gold); font-size: 14px; font-weight: 600;">View Details <i
+                class="fa fa-arrow-right" style="margin-left: 4px;"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package pkg4 -->
+      <div class="itinerary-card" onclick="openItinerary('pkg4')"
+        style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+        <div style="position: relative; height: 220px;">
+          <img src="https://images.unsplash.com/photo-1626782522774-709deaaaecc2?w=600"
+            style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+          <div
+            style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+            <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 2 Days / 1 Nights
+          </div>
+        </div>
+        <div style="padding: 24px;">
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">
+            Srinagar Shikara Stay</h3>
+          <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+              style="color: var(--gold); margin-right: 6px;"></i> Kashmir</p>
+          <div
+            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+            <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 10,500</span>
+            <span style="color: var(--gold); font-size: 14px; font-weight: 600;">View Details <i
+                class="fa fa-arrow-right" style="margin-left: 4px;"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package pkg5 -->
+      <div class="itinerary-card" onclick="openItinerary('pkg5')"
+        style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+        <div style="position: relative; height: 220px;">
+          <img src="https://images.unsplash.com/photo-1504681869696-d977e2a1b289?w=600"
+            style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+          <div
+            style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+            <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 3 Days / 2 Nights
+          </div>
+        </div>
+        <div style="padding: 24px;">
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">
+            Goa River Cruise Package</h3>
+          <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+              style="color: var(--gold); margin-right: 6px;"></i> Goa</p>
+          <div
+            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+            <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 18,000</span>
+            <span style="color: var(--gold); font-size: 14px; font-weight: 600;">View Details <i
+                class="fa fa-arrow-right" style="margin-left: 4px;"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package pkg6 -->
+      <div class="itinerary-card" onclick="openItinerary('pkg6')"
+        style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+        <div style="position: relative; height: 220px;">
+          <img src="https://images.unsplash.com/photo-1627814421256-4c4c23db2e65?w=600"
+            style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+          <div
+            style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+            <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 3 Days / 2 Nights
+          </div>
+        </div>
+        <div style="padding: 24px;">
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">
+            Sundarban Boat Safari</h3>
+          <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+              style="color: var(--gold); margin-right: 6px;"></i> West Bengal</p>
+          <div
+            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+            <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 16,500</span>
+            <span style="color: var(--gold); font-size: 14px; font-weight: 600;">View Details <i
+                class="fa fa-arrow-right" style="margin-left: 4px;"></i></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Itinerary Modal -->
+  <div class="itinerary-modal" id="itineraryModal"
+    style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.75); backdrop-filter: blur(5px); z-index: 10000; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box;">
+    <div class="modal-content"
+      style="background: white; width: 100%; max-width: 750px; max-height: 85vh; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 20px 50px rgba(0,0,0,0.3); animation: fadeUp 0.4s ease;">
+      <!-- Header -->
+      <div
+        style="padding: 24px 30px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; background: #fafafa;">
+        <div>
+          <h2 id="modalTitle"
+            style="font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 6px; color: var(--dark);">
+            Tour Itinerary</h2>
+          <span id="modalDuration" style="font-size: 14px; color: var(--text-light); font-weight: 500;"><i
+              class="fa fa-clock" style="color: var(--gold); margin-right: 6px;"></i> Loading...</span>
+        </div>
+        <button onclick="closeItinerary()"
+          style="width: 40px; height: 40px; border-radius: 50%; background: #eee; border: none; font-size: 18px; color: #555; cursor: pointer; display: flex; justify-content: center; align-items: center; transition: 0.3s;"
+          onmouseover="this.style.background='#ddd'" onmouseout="this.style.background='#eee'"><i
+            class="fa fa-times"></i></button>
+      </div>
+      <!-- Body -->
+      <div style="padding: 30px; overflow-y: auto; flex: 1; background: white;">
+        <div id="modalItineraryList" style="display: flex; flex-direction: column; gap: 0;">
+        </div>
+      </div>
+      <!-- Footer -->
+      <div
+        style="padding: 20px 30px; border-top: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; background: #fafafa;">
+        <div id="modalPrice" style="font-size: 20px; font-weight: 700; color: var(--dark);"></div>
+        <button onclick="openBookingModal()"
+          style="background: var(--gold); color: white; border: none; padding: 14px 36px; border-radius: 8px; font-weight: 600; font-size: 16px; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 12px rgba(245,166,35,0.3);"
+          onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">Book This
+          Tour</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    const itineraries = {
+
+      'pkg1': {
+        title: 'Alleppey Premium Houseboat',
+        duration: '2 Days / 1 Nights',
+        price: '₹ 12,000',
+        days: [
+          { day: 'Day 01', title: 'Arrival & Welcome', desc: 'Arrive at the destination. You will be greeted by our representative and transferred to your accommodation in Kerala.' },
+          { day: 'Day 02', title: 'Departure', desc: 'Enjoy your final breakfast. Check out and transfer for your onward journey.' }
+        ]
+      },
+      'pkg2': {
+        title: 'Kumarakom Luxury Cruise',
+        duration: '2 Days / 1 Nights',
+        price: '₹ 15,000',
+        days: [
+          { day: 'Day 01', title: 'Arrival & Welcome', desc: 'Arrive at the destination. You will be greeted by our representative and transferred to your accommodation in Kerala.' },
+          { day: 'Day 02', title: 'Departure', desc: 'Enjoy your final breakfast. Check out and transfer for your onward journey.' }
+        ]
+      },
+      'pkg3': {
+        title: 'Dal Lake Houseboat',
+        duration: '3 Days / 2 Nights',
+        price: '₹ 14,000',
+        days: [
+          { day: 'Day 01', title: 'Arrival & Welcome', desc: 'Arrive at the destination. You will be greeted by our representative and transferred to your accommodation in Kashmir.' },
+          { day: 'Day 02', title: 'Explore Dal Lake Houseboat', desc: 'Enjoy sightseeing and activities around Dal Lake Houseboat. Evening at leisure.' },
+          { day: 'Day 03', title: 'Departure', desc: 'Enjoy your final breakfast. Check out and transfer for your onward journey.' }
+        ]
+      },
+      'pkg4': {
+        title: 'Srinagar Shikara Stay',
+        duration: '2 Days / 1 Nights',
+        price: '₹ 10,500',
+        days: [
+          { day: 'Day 01', title: 'Arrival & Welcome', desc: 'Arrive at the destination. You will be greeted by our representative and transferred to your accommodation in Kashmir.' },
+          { day: 'Day 02', title: 'Departure', desc: 'Enjoy your final breakfast. Check out and transfer for your onward journey.' }
+        ]
+      },
+      'pkg5': {
+        title: 'Goa River Cruise Package',
+        duration: '3 Days / 2 Nights',
+        price: '₹ 18,000',
+        days: [
+          { day: 'Day 01', title: 'Arrival & Welcome', desc: 'Arrive at the destination. You will be greeted by our representative and transferred to your accommodation in Goa.' },
+          { day: 'Day 02', title: 'Explore Goa River Cruise Package', desc: 'Enjoy sightseeing and activities around Goa River Cruise Package. Evening at leisure.' },
+          { day: 'Day 03', title: 'Departure', desc: 'Enjoy your final breakfast. Check out and transfer for your onward journey.' }
+        ]
+      },
+      'pkg6': {
+        title: 'Sundarban Boat Safari',
+        duration: '3 Days / 2 Nights',
+        price: '₹ 16,500',
+        days: [
+          { day: 'Day 01', title: 'Arrival & Welcome', desc: 'Arrive at the destination. You will be greeted by our representative and transferred to your accommodation in West Bengal.' },
+          { day: 'Day 02', title: 'Explore Sundarban Boat Safari', desc: 'Enjoy sightseeing and activities around Sundarban Boat Safari. Evening at leisure.' },
+          { day: 'Day 03', title: 'Departure', desc: 'Enjoy your final breakfast. Check out and transfer for your onward journey.' }
+        ]
+      },
+    };
+
+    function openItinerary(id) {
+      const data = itineraries[id];
+      document.getElementById('modalTitle').innerText = data.title;
+      document.getElementById('modalDuration').innerHTML = '<i class="fa fa-clock" style="color: var(--gold); margin-right: 6px;"></i> ' + data.duration;
+      document.getElementById('modalPrice').innerHTML = data.price;
+
+      const list = document.getElementById('modalItineraryList');
+      list.innerHTML = data.days.map((d, index) => {
+        const isLast = index === data.days.length - 1;
+        return `
+          <div style="display: flex; gap: 24px;">
+            <div style="flex-shrink: 0; display: flex; flex-direction: column; align-items: center; width: 44px;">
+              <div style="width: 44px; height: 44px; border-radius: 50%; background: #fff; border: 2px solid var(--gold); color: var(--gold); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; box-shadow: 0 4px 10px rgba(245,166,35,0.15); z-index: 2;">${d.day.replace('Day ', '')}</div>
+              ${!isLast ? '<div style="width: 2px; height: 100%; background: #eaeaea; margin: 4px 0; min-height: 40px;"></div>' : ''}
+            </div>
+            <div style="padding-bottom: ${isLast ? '0' : '30px'}; padding-top: 5px;">
+              <div style="font-size: 13px; color: var(--gold); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">${d.day}</div>
+              <h4 style="font-size: 20px; color: var(--dark); margin-bottom: 10px; font-family: 'Playfair Display', serif;">${d.title}</h4>
+              <p style="color: #666; font-size: 15px; line-height: 1.6; margin: 0;">${d.desc}</p>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      const modal = document.getElementById('itineraryModal');
+      modal.style.display = 'flex';
+      setTimeout(() => modal.style.opacity = '1', 10);
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeItinerary() {
+      const modal = document.getElementById('itineraryModal');
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    const style = document.createElement('style');
+    style.innerHTML = `
+      .itinerary-card:hover .pkg-img { transform: scale(1.05); }
+      .itinerary-card:hover { transform: translateY(-8px) !important; box-shadow: 0 12px 30px rgba(0,0,0,0.12) !important; }
+    `;
+    document.head.appendChild(style);
+
+  </script>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section-pad contact-section" id="contact" style="background: #fdfdfd; padding: 80px 0;">
+    <div class="container">
+      <div class="section-header centered" style="text-align: center; margin-bottom: 48px;">
+        <span class="section-tag" style="display: inline-block; background: var(--gold); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; padding: 5px 16px; border-radius: 30px; margin-bottom: 12px; box-shadow: 0 2px 12px rgba(245,166,10,0.3);">Contact Us</span>
+        <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(28px, 4vw, 42px); font-weight: 700; color: var(--dark); line-height: 1.2;">Get in <span style="color: var(--gold);">Touch</span></h2>
+        <p style="color: var(--text-light); margin-top: 10px; font-size: 16px;">Planning a trip? Let us help you create the perfect itinerary.</p>
+      </div>
+
+      <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 50px; align-items: start;">
+        <!-- Contact Info -->
+        <div class="contact-info-wrap">
+          <div class="contact-info-card" style="display: flex; gap: 20px; background: white; padding: 24px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); margin-bottom: 24px; transition: 0.3s; border: 1px solid #f0f0f0;">
+            <div class="info-icon" style="width: 50px; height: 50px; background: rgba(245,166,10,0.1); color: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;"><i class="fa fa-phone"></i></div>
+            <div class="info-text">
+              <h5 style="font-size: 16px; font-weight: 700; margin-bottom: 5px; color: var(--dark);">Mobile Number</h5>
+              <p style="color: var(--text-light); font-size: 14px;">+91 98765 43210</p>
+              <p style="color: var(--text-light); font-size: 14px;">+91 12345 67890</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card" style="display: flex; gap: 20px; background: white; padding: 24px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); margin-bottom: 24px; transition: 0.3s; border: 1px solid #f0f0f0;">
+            <div class="info-icon" style="width: 50px; height: 50px; background: rgba(245,166,10,0.1); color: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;"><i class="fa fa-envelope"></i></div>
+            <div class="info-text">
+              <h5 style="font-size: 16px; font-weight: 700; margin-bottom: 5px; color: var(--dark);">Email Address</h5>
+              <p style="color: var(--text-light); font-size: 14px;">info@nextripholidays.com</p>
+              <p style="color: var(--text-light); font-size: 14px;">bookings@nextripholidays.com</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card" style="display: flex; gap: 20px; background: white; padding: 24px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); margin-bottom: 24px; transition: 0.3s; border: 1px solid #f0f0f0;">
+            <div class="info-icon" style="width: 50px; height: 50px; background: rgba(245,166,10,0.1); color: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;"><i class="fa fa-location-dot"></i></div>
+            <div class="info-text">
+              <h5 style="font-size: 16px; font-weight: 700; margin-bottom: 5px; color: var(--dark);">Office Location</h5>
+              <p style="color: var(--text-light); font-size: 14px;">No. 45, Travel Tower, Main Road,</p>
+              <p style="color: var(--text-light); font-size: 14px;">Madurai - 625001, Tamil Nadu, India</p>
+            </div>
+          </div>
+
+          <!-- Social Connect -->
+          <div class="social-connect" style="margin-top: 40px; padding: 0 10px;">
+            <h5 style="margin-bottom: 15px; font-weight: 700; font-size: 16px;">Connect with us:</h5>
+            <div class="social-links-circle" style="display: flex; gap: 15px;">
+              <a href="#" style="width: 45px; height: 45px; border-radius: 50%; background: var(--dark); color: white; display: flex; align-items: center; justify-content: center; transition: 0.3s;"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" style="width: 45px; height: 45px; border-radius: 50%; background: var(--dark); color: white; display: flex; align-items: center; justify-content: center; transition: 0.3s;"><i class="fab fa-instagram"></i></a>
+              <a href="#" style="width: 45px; height: 45px; border-radius: 50%; background: var(--dark); color: white; display: flex; align-items: center; justify-content: center; transition: 0.3s;"><i class="fab fa-whatsapp"></i></a>
+              <a href="#" style="width: 45px; height: 45px; border-radius: 50%; background: var(--dark); color: white; display: flex; align-items: center; justify-content: center; transition: 0.3s;"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Booking Form -->
+        <div class="contact-form-wrap">
+          <form class="booking-form-premium" id="contactForm" style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 12px 48px rgba(0,0,0,0.1); border: 1px solid #eee;">
+            <div class="form-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+              <div class="form-group">
+                <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; color: #444;">Full Name</label>
+                <input type="text" placeholder="Enter your name" required style="width: 100%; padding: 12px 16px; border: 1.5px solid #eef0f2; border-radius: 8px; background: #f8f9fa; font-size: 14px; transition: 0.3s;">
+              </div>
+              <div class="form-group">
+                <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; color: #444;">Email Address</label>
+                <input type="email" placeholder="Enter your email" required style="width: 100%; padding: 12px 16px; border: 1.5px solid #eef0f2; border-radius: 8px; background: #f8f9fa; font-size: 14px; transition: 0.3s;">
+              </div>
+              <div class="form-group">
+                <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; color: #444;">Mobile Number</label>
+                <input type="tel" placeholder="Enter phone number" required style="width: 100%; padding: 12px 16px; border: 1.5px solid #eef0f2; border-radius: 8px; background: #f8f9fa; font-size: 14px; transition: 0.3s;">
+              </div>
+              <div class="form-group">
+                <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; color: #444;">Destination</label>
+                <select required style="width: 100%; padding: 12px 16px; border: 1.5px solid #eef0f2; border-radius: 8px; background: #f8f9fa; font-size: 14px; transition: 0.3s;">
+                  <option value="" disabled selected>Select Destination</option>
+                  <option>International</option>
+                  <option>Domestic</option>
+                  <option>South India</option>
+                  <option>North India</option>
+                </select>
+              </div>
+              <div class="form-group full-width" style="grid-column: span 2;">
+                <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; color: #444;">Special Requirements</label>
+                <textarea rows="4" placeholder="Tell us about your dream trip..." style="width: 100%; padding: 12px 16px; border: 1.5px solid #eef0f2; border-radius: 8px; background: #f8f9fa; font-size: 14px; transition: 0.3s;"></textarea>
+              </div>
+            </div>
+            <button type="submit" class="submit-booking-btn" style="width: 100%; margin-top: 25px; padding: 14px; background: linear-gradient(135deg, var(--gold), #e07d00); color: white; border-radius: 10px; font-weight: 700; font-size: 15px; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; transition: 0.3s; box-shadow: 0 10px 20px rgba(245,166,10,0.25);">Send Enquiry <i class="fa fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>NextTrip Holidays</h4>
+          <p>Your trusted travel partner for unforgettable journeys around the world.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="index.html#packages">Packages</a>
+          <a href="#contact">Contact</a>
+          <a href="#">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p><i class="fa fa-phone"></i> +91-XXX-XXX-XXXX</p>
+          <p><i class="fa fa-envelope"></i> info@nexttrip.com</p>
+          <p><i class="fa fa-map-marker"></i> India</p>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 NextTrip Holidays. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+<script>
+    function openBookingModal() { 
+        if(typeof window.openModal === "function") {
+            window.openModal(); 
+        } else {
+            console.warn("Global booking system not ready");
+            alert("Booking system is loading. Please try again in a moment.");
+        }
+    }
+</script>
+</body>
+
+</html>

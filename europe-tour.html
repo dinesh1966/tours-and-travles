@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Europe Tour Packages - NextTrip Holidays</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+  <script src="script.js" defer></script>
+  
+  <!-- Lottie Player -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+
+<body>
+
+  <!-- Premium Page Loader -->
+  <div id="premiumLoader">
+    <div class="loader-earth">
+      <lottie-player src="https://lottie.host/df254881-c7c4-42f1-aa8f-28c0570bde7c/55u6YkF8Wb.json" background="transparent" speed="1" style="width: 220px; height: 220px;" loop autoplay></lottie-player>
+    </div>
+    <div class="loader-text">NextTrip Holidays</div>
+  </div>
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const loader = document.getElementById('premiumLoader');
+        if (loader) loader.classList.add('fade-out');
+        document.body.classList.add('body-loaded');
+      }, 900);
+    });
+    document.querySelectorAll('a').forEach(link => {
+      if (link.target !== '_blank' && link.href && link.href.indexOf('#') === -1 && !link.href.startsWith('tel:') && !link.href.startsWith('mailto:')) {
+        link.addEventListener('click', (e) => {
+          const loader = document.getElementById('premiumLoader');
+          if (loader) {
+            e.preventDefault();
+            loader.classList.remove('fade-out');
+            loader.style.opacity = '1';
+            loader.style.transform = 'translateY(0)';
+            setTimeout(() => window.location = link.href, 500);
+          }
+        });
+      }
+    });
+  </script>
+
+  <nav class="navbar" style="background: var(--dark);">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="https://res.cloudinary.com/drkgkgiat/image/upload/q_auto/f_auto/v1775567539/Next_TRip_Final_Logo_Square_Size_-_Copy-removebg-preview_bsfsev.png"
+          alt="NextTrip" height="50">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="international-packages.html" class="active">International</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main style="padding-top: 140px; background: white;">
+    <div class="container">
+      <!-- Header -->
+      <div class="dt-header" style="display: flex; justify-content: space-between; align-items: stretch; margin-bottom: 40px; flex-wrap: wrap; gap: 20px;">
+        <div class="dt-header-left" style="display: flex; gap: 30px; align-items: flex-start;">
+          <div class="dt-count" style="text-align: center; border-right: 1px solid #eee; padding-right: 30px; margin-top: 5px;">
+            <span style="display: block; font-size: 52px; color: var(--primary); font-weight: 700; line-height: 1;">10</span>
+            <span style="display: block; font-size: 16px; color: #888; line-height: 1.2; margin-top: 8px;">Europe<br>Destinations</span>
+          </div>
+          <div class="dt-title-area">
+            <h1 style="font-family: 'Playfair Display', serif; font-size: 46px; margin-bottom: 12px; color: var(--dark); font-weight: 700;">Grand Europe Explorer</h1>
+            <p style="color: var(--text); font-weight: 600; font-size: 17px;"><i class="fa fa-globe-europe" style="color: var(--primary); margin-right: 8px;"></i> Continental Wonders & Historic Cities</p>
+          </div>
+        </div>
+        <div class="dt-header-right" style="display: flex; flex-direction: column; gap: 12px;">
+          <button class="btn-primary" onclick="openBookingModal()" style="background: var(--primary); color: white; padding: 14px 35px; border-radius: 8px; font-weight: 700; border: none; cursor: pointer;">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="dt-image-area" style="position: relative; border-radius: 20px; overflow: hidden; margin-bottom: 60px; height: 450px; background-image: url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1600'); background-size: cover; background-position: center;">
+        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); pointer-events: none;"></div>
+        <div style="position: absolute; bottom: 40px; left: 40px; color: white; pointer-events: none;">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 0;">Paris - The City of Lights</h2>
+            <p style="opacity: 0.9;">Included in almost every European package</p>
+        </div>
+      </div>
+
+      <!-- Packages Grid -->
+      <div class="dt-packages">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 36px; color: var(--dark); margin-bottom: 40px;">Expertly Crafted Europe Itineraries</h2>
+      <div id="packageGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px;"></div>
+    </div>
+  </main>
+
+  <!-- Itinerary Modal -->
+  <div class="itinerary-modal" id="itineraryModal" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.75); backdrop-filter: blur(5px); z-index: 10000; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box;">
+      <div class="modal-content" style="background: white; width: 100%; max-width: 750px; max-height: 85vh; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 20px 50px rgba(0,0,0,0.3); animation: fadeUp 0.4s ease;">
+          <!-- Header -->
+          <div style="padding: 24px 30px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; background: #fafafa;">
+              <div>
+                  <h2 id="modalTitle" style="font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 6px; color: var(--dark);">Tour Itinerary</h2>
+                  <span id="modalDuration" style="font-size: 14px; color: var(--text-light); font-weight: 500;"><i class="fa fa-clock" style="color: var(--primary); margin-right: 6px;"></i> Loading...</span>
+              </div>
+              <button onclick="closeItinerary()" style="width: 40px; height: 40px; border-radius: 50%; background: #eee; border: none; font-size: 18px; color: #555; cursor: pointer; display: flex; justify-content: center; align-items: center; transition: 0.3s;" onmouseover="this.style.background='#ddd'" onmouseout="this.style.background='#eee'"><i class="fa fa-times"></i></button>
+          </div>
+          <!-- Body -->
+          <div style="padding: 30px; overflow-y: auto; flex: 1; background: white;">
+              <div id="modalItineraryList" style="display: flex; flex-direction: column; gap: 0;"></div>
+          </div>
+          <!-- Footer -->
+          <div style="padding: 20px 30px; border-top: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; background: #fafafa;">
+              <div id="modalPrice" style="font-size: 20px; font-weight: 700; color: var(--dark);"></div>
+              <button onclick="openBookingModal()" style="background: var(--primary); color: white; border: none; padding: 14px 36px; border-radius: 8px; font-weight: 600; font-size: 16px; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 12px rgba(242, 140, 0, 0.3);" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">Book This Tour</button>
+          </div>
+      </div>
+  </div>
+
+  <script>
+    const europeData = {
+        'eur1': {
+            title: 'Paris & Louvre Walk', dur: '5D/4N', price: '₹ 85,000', img: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600',
+            days: [
+                {d: 'Day 1', t: 'Arrival in Paris', c: 'Arrive at CDG Airport, private transfer to hotel. Evening Seine River cruise with dinner.'},
+                {d: 'Day 2', t: 'Eiffel & Louvre', c: 'Visit Eiffel Tower (2nd level), then a guided tour of the Louvre Museum.'},
+                {d: 'Day 3', t: 'Versailles Palace', c: 'Excursion to the magnificent Palace of Versailles and its Royal Gardens.'},
+                {d: 'Day 4', t: 'Montmartre Village', c: 'Explore the artistic district of Montmartre and Sacré-Cœur Basilica.'},
+                {d: 'Day 5', t: 'Departure', c: 'Morning shopping at Champs-Élysées before airport transfer.'}
+            ]
+        },
+        'eur2': {
+            title: 'Swiss Alps Explorer', dur: '6D/5N', price: '₹ 1,15,000', img: 'https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?w=600',
+            days: [
+                {d: 'Day 1', t: 'Zurich to Lucerne', c: 'Arrival in Zurich, transfer to hotel. Relax by Lake Lucerne.'},
+                {d: 'Day 2', t: 'Mt. Titlis Adventure', c: 'Rotair cable car to the summit. Ice flyer and glacier park fun.'},
+                {d: 'Day 3', t: 'Interlaken Scenic', c: 'Golden Pass train to Interlaken. Evening free to explore.'},
+                {d: 'Day 4', t: 'Jungfraujoch', c: 'Trip to the "Top of Europe" via cogwheel train. Snow fun guaranteed.'},
+                {d: 'Day 5', t: 'Rhine Falls', c: 'Visit Europe\'s largest waterfall near Zurich. Guided boat tour.'},
+                {d: 'Day 6', t: 'Departure', c: 'Zurich city tour and transfer to airport.'}
+            ]
+        },
+        'eur3': {
+            title: 'Rome & Vatican Journey', dur: '5D/4N', price: '₹ 78,000', img: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=600',
+            days: [
+                {d: 'Day 1', t: 'Arrival in Rome', c: 'Check-in and evening walk at Piazza Navona and Pantheon.'},
+                {d: 'Day 2', t: 'Vatican Museums', c: 'Skip-the-line entrance to Vatican Museums and Sistine Chapel.'},
+                {d: 'Day 3', t: 'Colosseum & Forum', c: 'Ancient Rome tour: Colosseum, Roman Forum, and Palatine Hill.'},
+                {d: 'Day 4', t: 'Trevi Fountain', c: 'Wishing at Trevi Fountain and Spanish Steps. Shopping time.'},
+                {d: 'Day 5', t: 'Departure', c: 'Trastevere walking tour and airport transfer.'}
+            ]
+        },
+        'eur4': {
+            title: 'Amsterdam Canal Tour', dur: '4D/3N', price: '₹ 65,000', img: 'https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?w=600',
+            days: [
+                {d: 'Day 1', t: 'Arrival in Amsterdam', c: 'Traditional evening canal cruise with cheese and wine.'},
+                {d: 'Day 2', t: 'Van Gogh Museum', c: 'Visit Van Gogh Museum and Rijksmuseum. Evening at Dam Square.'},
+                {d: 'Day 3', t: 'Zaanse Schans', c: 'Excursion to the windmill village, wooden shoe maker, and cheese farm.'},
+                {d: 'Day 4', t: 'Departure', c: 'Vondelpark walk and transfer to Schiphol Airport.'}
+            ]
+        },
+        'eur5': {
+            title: 'Santorini Romance', dur: '6D/5N', price: '₹ 1,25,000', img: 'https://images.unsplash.com/photo-1549144511-f099e773c147?w=600',
+            days: [
+                {d: 'Day 1', t: 'Arrival in Santorini', c: 'Airport/Port transfer to Oia. Sunset dinner overlook.'},
+                {d: 'Day 2', t: 'Volcano Cruise', c: 'Boat trip to the volcano and hot springs for a unique swim.'},
+                {d: 'Day 3', t: 'Wine Tasting', c: 'Visit 3 traditional wineries with sunset views of the Caldera.'},
+                {d: 'Day 4', t: 'Red Beach & Akrotiri', c: 'Visit prehistoric city of Akrotiri and the famous Red Beach.'},
+                {d: 'Day 5', t: 'Fira Discovery', c: 'Walking tour of Fira town and donkey ride experience.'},
+                {d: 'Day 6', t: 'Departure', c: 'Morning at leisure and transfer for departure.'}
+            ]
+        },
+        'eur6': {
+            title: 'London Highlights', dur: '4D/3N', price: '₹ 82,000', img: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600',
+            days: [
+                {d: 'Day 1', t: 'Arrival in London', c: 'Transfer to hotel and evening at London Eye for skyline views.'},
+                {d: 'Day 2', t: 'Tower of London', c: 'Visit Tower of London, Tower Bridge, and St. Paul\'s Cathedral.'},
+                {d: 'Day 3', t: 'Buckingham Palace', c: 'Changing of the Guard and afternoon tea at a classic hotel.'},
+                {d: 'Day 4', t: 'Departure', c: 'Oxford Street shopping and transfer to Heathrow.'}
+            ]
+        },
+        'eur7': {
+            title: 'Barcelona Gaudi Tour', dur: '5D/4N', price: '₹ 72,000', img: 'https://images.unsplash.com/photo-1583422409516-2895a77efded?w=600',
+            days: [
+                {d: 'Day 1', t: 'Barcelona Arrival', c: 'Evening walk at Las Ramblas and Gothic Quarter.'},
+                {d: 'Day 2', t: 'Sagrada Familia', c: 'Visit Gaudí’s masterpiece Sagrada Familia and Park Güell.'},
+                {d: 'Day 3', t: 'Montserrat Excursion', c: 'Trip to the mountain monastery of Montserrat.'},
+                {d: 'Day 4', t: 'Beach & Tapas', c: 'Relax at Barceloneta beach and evening Tapas crawl tour.'},
+                {d: 'Day 5', t: 'Departure', c: 'Morning at Boqueria Market and airport transfer.'}
+            ]
+        },
+        'eur8': {
+            title: 'Prague Old Town', dur: '4D/3N', price: '₹ 58,000', img: 'https://images.unsplash.com/photo-1519677100203-ad0382b629e4?w=600',
+            days: [
+                {d: 'Day 1', t: 'Prague Arrival', c: 'Sunset walk over Charles Bridge to Old Town Square.'},
+                {d: 'Day 2', t: 'Prague Castle', c: 'Guided tour of Prague Castle and St. Vitus Cathedral.'},
+                {d: 'Day 3', t: 'Jewish Quarter', c: 'Exploring the history of Josefov and the Astronomical Clock.'},
+                {d: 'Day 4', t: 'Departure', c: 'Souvenir shopping and transfer to airport.'}
+            ]
+        },
+        'eur9': {
+            title: 'Venice Gondola Bliss', dur: '4D/3N', price: '₹ 76,000', img: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=600',
+            days: [
+                {d: 'Day 1', t: 'Venice Arrival', c: 'Private water taxi to hotel. Evening Gondola ride.'},
+                {d: 'Day 2', t: 'St. Marks Square', c: 'Visit Doge\'s Palace and St. Mark\'s Basilica.'},
+                {d: 'Day 3', t: 'Murano & Burano', c: 'Island hopping to see glass blowing and lace making.'},
+                {d: 'Day 4', t: 'Departure', c: 'Morning at Rialto Market and transfer.'}
+            ]
+        },
+        'eur10': {
+            title: 'Athens Ancient Glory', dur: '5D/4N', price: '₹ 68,000', img: 'https://images.unsplash.com/photo-1503152394-c571994fd383?w=600',
+            days: [
+                {d: 'Day 1', t: 'Athens Arrival', c: 'Welcome dinner in Plaka district with Acropolis views.'},
+                {d: 'Day 2', t: 'Acropolis Museum', c: 'Visit Parthenon, Acropolis, and the modern Museum.'},
+                {d: 'Day 3', t: 'Cape Sounion', c: 'Sunset trip to the Temple of Poseidon at Cape Sounion.'},
+                {d: 'Day 4', t: 'Local Food Tour', c: 'Greek olive oil and honey tasting tour at local markets.'},
+                {d: 'Day 5', t: 'Departure', c: 'Syntagma Square walk and transfer.'}
+            ]
+        }
+    };
+
+    const grid = document.getElementById('packageGrid');
+    Object.keys(europeData).forEach(id => {
+        const pkg = europeData[id];
+        grid.innerHTML += `
+            <div class="itinerary-card" onclick="showDetailedProgram('${id}')" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; border: 1px solid #f0f0f0; transition: 0.3s;">
+                <div style="position: relative; height: 220px; overflow: hidden;">
+                    <img src="${pkg.img}" style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                    <div style="position: absolute; top: 15px; right: 15px; background: rgba(0,0,0,0.8); color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">${pkg.dur}</div>
+                </div>
+                <div style="padding: 24px;">
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 10px;">${pkg.title}</h3>
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                        <span style="font-weight: 700; color: #333; font-size: 18px;">${pkg.price}</span>
+                        <span style="color: var(--primary); font-size: 13px; font-weight: 700;">VIEW PROGRAM <i class="fa fa-chevron-down"></i></span>
+                    </div>
+                </div>
+            </div>`;
+    });
+
+    function showDetailedProgram(id) {
+        const data = europeData[id];
+        if(!data) return;
+
+        document.getElementById('modalTitle').innerText = data.title;
+        document.getElementById('modalDuration').innerHTML = `<i class="fa fa-clock" style="color: var(--primary); margin-right: 6px;"></i> ${data.dur}`;
+        document.getElementById('modalPrice').innerText = data.price;
+        
+        const list = document.getElementById('modalItineraryList');
+        list.innerHTML = data.days.map((d, index) => {
+            const isLast = index === data.days.length - 1;
+            return `
+            <div style="display: flex; gap: 24px;">
+                <div style="flex-shrink: 0; display: flex; flex-direction: column; align-items: center; width: 44px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #fff; border: 2px solid var(--primary); color: var(--primary); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; box-shadow: 0 4px 10px rgba(242, 140, 0, 0.1); z-index: 2;">${index + 1}</div>
+                    ${!isLast ? '<div style="width: 2px; height: 100%; background: #eaeaea; margin: 4px 0; min-height: 40px;"></div>' : ''}
+                </div>
+                <div style="padding-bottom: ${isLast ? '0' : '30px'}; padding-top: 5px;">
+                    <div style="font-size: 13px; color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">Day ${index + 1}</div>
+                    <h4 style="font-size: 20px; color: var(--dark); margin-bottom: 10px; font-family: \'Playfair Display\', serif;">${d.t}</h4>
+                    <p style="color: #666; font-size: 15px; line-height: 1.6; margin: 0;">${d.c}</p>
+                </div>
+            </div>`;
+        }).join('');
+        
+        const modal = document.getElementById('itineraryModal');
+        modal.style.display = 'flex';
+        setTimeout(() => modal.style.opacity = '1', 10);
+        document.body.style.overflow = 'hidden'; 
+    }
+
+    function closeItinerary() {
+        const modal = document.getElementById('itineraryModal');
+        if(modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    }
+
+    
+    function openBookingModal() { 
+        if(typeof window.openModal === "function") {
+            window.openModal(); 
+        } else {
+            console.warn("Global booking system not ready");
+            alert("Booking system is loading. Please try again in a moment.");
+        }
+    }
+
+
+    // Close modal on outside click
+    window.addEventListener('click', (e) => {
+        const modal = document.getElementById('itineraryModal');
+        if (e.target === modal) closeItinerary();
+    });
+  </script>
+
+  <style>
+    .itinerary-modal { opacity: 0; transition: opacity 0.4s ease; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .itinerary-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important; }
+  </style>
+</body>
+</html>

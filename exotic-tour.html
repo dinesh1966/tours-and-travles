@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exotic Packages - NextTrip</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+    <script src="script.js" defer></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+
+<body>
+
+  <!-- Premium Page Loader -->
+
+  <div id="premiumLoader">
+    <div class="loader-plane"><i class="fa fa-plane"></i></div>
+  </div>
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const loader = document.getElementById('premiumLoader');
+        if (loader) loader.classList.add('fade-out');
+        document.body.classList.add('body-loaded');
+      }, 800);
+    });
+
+    // Add page exit transitions for links
+    document.querySelectorAll('a').forEach(link => {
+      if (link.target !== '_blank' && link.href && link.href.indexOf('#') === -1) {
+        link.addEventListener('click', (e) => {
+          const loader = document.getElementById('premiumLoader');
+          if (loader) {
+            e.preventDefault();
+            loader.style.transition = 'opacity 0.4s ease';
+            loader.style.transform = 'scale(1)';
+            loader.style.opacity = '1';
+            setTimeout(() => window.location = link.href, 400);
+          }
+        });
+      }
+    });
+  </script>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <img
+          src="https://res.cloudinary.com/drkgkgiat/image/upload/q_auto/f_auto/v1775567539/Next_TRip_Final_Logo_Square_Size_-_Copy-removebg-preview_bsfsev.png"
+          alt="NextTrip" height="50">
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#destinations">Destination</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <span class="phone-link"><i class="fa fa-phone"></i> +91 345 533 865</span>
+        <button class="icon-btn"><i class="fa fa-search"></i></button>
+        <button class="icon-btn"><i class="fa fa-user"></i></button>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="package-hero"
+    style="background-image: url('https://images.unsplash.com/photo-1596484552834-6a58f850d18d?w=1600&h=600&fit=crop');">
+    <div class="package-hero-content">
+      <h1>Exotic Student Packages</h1>
+      <p>Kalvetu, Culture & Epigraphy Expeditions</p>
+    </div>
+  </section>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <a href="index.html#destinations">Destinations</a>
+      <span>/</span>
+      <span>Exotic Packages</span>
+    </div>
+  </div>
+
+  <main style="padding-top: 60px; background: white; min-height: 80vh;">
+    <div class="container">
+      <div class="dt-header"
+        style="display: flex; justify-content: space-between; align-items: stretch; margin-bottom: 40px;">
+        <div class="dt-header-left">
+          <h2
+            style="font-family: 'Playfair Display', serif; font-size: 36px; margin-bottom: 12px; color: var(--dark); font-weight: 700;">
+            Featured Batches
+          </h2>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px;">
+        <!-- Package pkg1 -->
+        <div class="itinerary-card" onclick="showDetailedProgram('pkg1')"
+          style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+          <div style="position: relative; height: 220px;">
+            <img src="https://images.unsplash.com/photo-1596484552834-6a58f850d18d?w=600"
+              style="width: 100%; height: 100%; object-fit: cover;" class="pkg-img">
+            <div
+              style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.8); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+              <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 4 Days
+            </div>
+          </div>
+          <div style="padding: 24px;">
+            <h3
+              style="font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 10px; color: var(--dark);">
+              Ooty Heritage Expedition</h3>
+            <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+                style="color: var(--gold); margin-right: 6px;"></i> Tamil Nadu</p>
+            <div
+              style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+              <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 4,500 <span
+                  style="font-size: 12px; font-weight: 400;">/ student</span></span>
+              <span style="color: var(--gold); font-size: 14px; font-weight: 600;">Full Program <i
+                  class="fa fa-chevron-down"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package pkg2 -->
+        <div class="itinerary-card" onclick="showDetailedProgram('pkg2')"
+          style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+          <div style="position: relative; height: 220px;">
+            <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0e9944?w=600"
+              style="width: 100%; height: 100%; object-fit: cover;" class="pkg-img">
+            <div
+              style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.8); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+              <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 3 Days
+            </div>
+          </div>
+          <div style="padding: 24px;">
+            <h3
+              style="font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 10px; color: var(--dark);">
+              Munnar Tribal Study</h3>
+            <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+                style="color: var(--gold); margin-right: 6px;"></i> Kerala</p>
+            <div
+              style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+              <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 3,500 <span
+                  style="font-size: 12px; font-weight: 400;">/ student</span></span>
+              <span style="color: var(--gold); font-size: 14px; font-weight: 600;">Full Program <i
+                  class="fa fa-chevron-down"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package pkg3 -->
+        <div class="itinerary-card" onclick="showDetailedProgram('pkg3')"
+          style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+          <div style="position: relative; height: 220px;">
+            <img src="https://images.unsplash.com/photo-1582654157770-4965fa28636b?w=600"
+              style="width: 100%; height: 100%; object-fit: cover;" class="pkg-img">
+            <div
+              style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.8); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+              <i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 3 Days
+            </div>
+          </div>
+          <div style="padding: 24px;">
+            <h3
+              style="font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 10px; color: var(--dark);">
+              Palakkad Fort Scripts</h3>
+            <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+                style="color: var(--gold); margin-right: 6px;"></i> Kerala</p>
+            <div
+              style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+              <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 3,500 <span
+                  style="font-size: 12px; font-weight: 400;">/ student</span></span>
+              <span style="color: var(--gold); font-size: 14px; font-weight: 600;">Full Program <i
+                  class="fa fa-chevron-down"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detailed Daily Program Section (ON-PAGE) -->
+      <div id="programSection"
+        style="display: none; padding: 50px; background: #fafafa; border-radius: 20px; border: 1px solid #eee; margin-top: 60px; margin-bottom: 80px; box-shadow: 0 20px 50px rgba(0,0,0,0.05);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;">
+          <div>
+            <span
+              style="color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 13px;">Tour
+              Details</span>
+            <h3 id="pgmTitle"
+              style="font-family: 'Playfair Display', serif; font-size: 36px; color: var(--dark); margin-top: 5px;">
+              Detailed Itinerary</h3>
+          </div>
+          <button onclick="document.getElementById('programSection').style.display='none'"
+            style="width: 44px; height: 44px; border-radius: 50%; background: white; border: 1px solid #ddd; font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center;">×</button>
+        </div>
+        <div id="pgmContent" style="display: grid; gap: 20px;"></div>
+        <div style="margin-top: 50px; text-align: center; border-top: 1px solid #eee; padding-top: 40px;">
+          <p style="margin-bottom: 25px; color: #666; font-size: 18px;">Ready for an educational journey?</p>
+          <button onclick="openBookingModal()"
+            style="background: var(--gold); color: white; border: none; padding: 18px 50px; border-radius: 10px; font-weight: 700; cursor: pointer; font-size: 18px; box-shadow: 0 10px 25px rgba(245,166,35,0.3); transition: 0.3s;"
+            onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'">Register
+            Batch Now</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </m <main style="padding-top: 140px; background: white;">
+    <div class="container">
+      <!-- Header Area -->
+      <div class="dt-header"
+        style="display: flex; justify-content: space-between; align-items: stretch; margin-bottom: 40px; flex-wrap: wrap; gap: 20px;">
+        <div class="dt-header-left" style="display: flex; gap: 30px; align-items: flex-start;">
+          <div class="dt-count"
+            style="text-align: center; border-right: 1px solid #eee; padding-right: 30px; margin-top: 5px;">
+            <span
+              style="display: block; font-size: 52px; color: var(--gold); font-weight: 700; line-height: 1; letter-spacing: -1px;">10+</span>
+            <span
+              style="display: block; font-size: 16px; color: var(--text-light); line-height: 1.2; margin-top: 8px;">Exotic<br>Packages</span>
+          </div>
+          <div class="dt-title-area">
+            <div class="breadcrumb"
+              style="padding: 0; background: transparent; border: none; margin-bottom: 8px; font-size: 13px;">
+              <a href="index.html">Home</a> <span>»</span> <a href="index.html#destinations">Destinations</a>
+              <span>»</span> <span style="color: #888;">Exotic Tours</span>
+            </div>
+            <h1
+              style="font-family: 'Playfair Display', serif; font-size: 46px; margin-bottom: 12px; color: var(--dark); font-weight: 700; letter-spacing: -0.5px;">
+              Exotic Student Tours</h1>
+            <p style="color: var(--text); font-weight: 600; font-size: 17px;"><i class="fa fa-graduation-cap"
+                style="color: var(--gold); margin-right: 8px;"></i> Kalvetu & Cultural Expeditions</p>
+          </div>
+        </div>
+        <div class="dt-header-right"
+          style="display: flex; flex-direction: column; gap: 12px; justify-content: flex-start; min-width: 220px;">
+          <button class="btn-primary" onclick="openBookingModal()"
+            style="background: var(--gold); color: white; padding: 14px 30px; border-radius: 6px; font-weight: 600; border: none; cursor: pointer;">Book
+            Now</button>
+          <button class="btn-secondary"
+            style="background: #40e0d0; color: white; padding: 14px 30px; border-radius: 6px; font-weight: 600; font-size: 15px; border: none; cursor: pointer; transition: 0.3s; width: 100%;"
+            onclick="document.querySelector('.dt-packages').scrollIntoView({behavior: 'smooth'})">View All
+            Batches</button>
+        </div>
+      </div>
+
+      <!-- Main Content Area -->
+      <div class="dt-main" style="display: grid; grid-template-columns: 8fr 4fr; gap: 40px;">
+        <!-- Left col -->
+        <div class="dt-image-col">
+          <div class="dt-main-img"
+            style="position: relative; border-radius: 12px; overflow: hidden; margin-bottom: 20px;">
+            <img src="https://images.unsplash.com/photo-1596484552834-6a58f850d18d?w=1200" alt="Student Expedition"
+              style="width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block;">
+            <div
+              style="position: absolute; bottom: 20px; left: 20px; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+              <h2 style="font-family: 'Playfair Display', serif; font-size: 28px; margin: 0;">Beyond the Books</h2>
+              <p style="margin: 5px 0 0; font-size: 14px;">Hands-on history and epigraphy studies</p>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <p style="font-size: 15px; margin: 0; color: #222;"><strong>Core Study:</strong> Epigraphy & Heritage
+            </p>
+            <button
+              style="background: var(--gold); color: white; padding: 12px 28px; border-radius: 6px; font-weight: 600; font-size: 14px; border: none; cursor: pointer;"
+              onclick="document.querySelector('.dt-packages').scrollIntoView({behavior: 'smooth'})">Explore
+              Batches</button>
+          </div>
+        </div>
+
+        <!-- Right col -->
+        <div class="dt-info-col">
+          <div style="background: #f8f8f8; padding: 24px; border-radius: 8px; margin-bottom: 30px;">
+            <h3
+              style="font-family: 'Playfair Display', serif; font-size: 22px; color: var(--dark); margin-bottom: 20px; border-bottom: 1px solid #e5e5e5; padding-bottom: 12px;">
+              Educational Excellence</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; row-gap: 20px;">
+              <div>
+                <div style="font-size: 17px; color: var(--dark); font-weight: 500; margin-bottom: 4px;">Epigraphy</div>
+                <div style="font-size: 12px; color: var(--text-light);">Stone Inscriptions</div>
+              </div>
+              <div>
+                <div style="font-size: 17px; color: var(--dark); font-weight: 500; margin-bottom: 4px;">Archives</div>
+                <div style="font-size: 12px; color: var(--text-light);">Ancient Scripts</div>
+              </div>
+              <div>
+                <div style="font-size: 17px; color: var(--dark); font-weight: 500; margin-bottom: 4px;">Tribal Study
+                </div>
+                <div style="font-size: 12px; color: var(--text-light);">Folklore Research</div>
+              </div>
+              <div>
+                <div style="font-size: 17px; color: var(--dark); font-weight: 500; margin-bottom: 4px;">Field Work</div>
+                <div style="font-size: 12px; color: var(--text-light);">Hands-on Learning</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3
+              style="font-family: 'Playfair Display', serif; font-size: 24px; color: var(--dark); margin-bottom: 24px;">
+              Student Benefits</h3>
+            <ul class="dt-highlights"
+              style="display: flex; flex-direction: column; gap: 16px; margin: 0; padding: 0; list-style: none;">
+              <li
+                style="display: flex; gap: 12px; align-items: flex-start; font-size: 14px; color: #555; line-height: 1.5;">
+                <div
+                  style="width: 26px; height: 26px; background: var(--gold); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                  <i class="fa fa-certificate" style="font-size: 11px;"></i>
+                </div>
+                <span>Participation Certificates for Researchers.</span>
+              </li>
+              <li
+                style="display: flex; gap: 12px; align-items: flex-start; font-size: 14px; color: #555; line-height: 1.5;">
+                <div
+                  style="width: 26px; height: 26px; background: var(--gold); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                  <i class="fa fa-user-tie" style="font-size: 11px;"></i>
+                </div>
+                <span>Guided by Expert Historians & Epigraphists.</span>
+              </li>
+              <li
+                style="display: flex; gap: 12px; align-items: flex-start; font-size: 14px; color: #555; line-height: 1.5;">
+                <div
+                  style="width: 26px; height: 26px; background: var(--gold); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                  <i class="fa fa-bus" style="font-size: 11px;"></i>
+                </div>
+                <span>Safe & Secure Group Transportation.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overview Section -->
+      <div class="dt-overview" style="margin-top: 80px;">
+        <h2
+          style="font-family: 'Playfair Display', serif; font-size: 36px; color: var(--dark); margin-bottom: 40px; font-weight: 700;">
+          The Kalvetu Expedition - Overview</h2>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 40px; border-top: 2px solid var(--gold); padding-top: 40px;">
+          <div style="flex: 1; min-width: 300px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 25px;">Learning Through
+              Exploration</h3>
+            <p style="color: #666; line-height: 1.8; margin-bottom: 20px;">Our exotic student tours are designed to
+              bridge the gap between classroom theory and real-world history. Students engage with ancient stone
+              inscriptions (Kalvetu) and tribal cultures.</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+              <div style="background: #fff8f0; padding: 15px; border-radius: 8px;">
+                <strong style="display: block; color: var(--gold); font-size: 20px;">Group</strong>
+                <span style="font-size: 12px; color: #888;">Study Modules</span>
+              </div>
+              <div style="background: #fff8f0; padding: 15px; border-radius: 8px;">
+                <strong style="display: block; color: var(--gold); font-size: 20px;">Guided</strong>
+                <span style="font-size: 12px; color: #888;">By Academicians</span>
+              </div>
+            </div>
+          </div>
+          <div style="flex: 1; min-width: 300px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 25px;">Expedition Hubs
+            </h3>
+            <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; list-style: none; padding: 0;">
+              <li style="font-size: 14px;"><i class="fa fa-circle"
+                  style="font-size: 6px; color: var(--gold); margin-right: 8px; vertical-align: middle;"></i> Ooty
+                British Archives</li>
+              <li style="font-size: 14px;"><i class="fa fa-circle"
+                  style="font-size: 6px; color: var(--gold); margin-right: 8px; vertical-align: middle;"></i> Munnar
+                Tribal Lands</li>
+              <li style="font-size: 14px;"><i class="fa fa-circle"
+                  style="font-size: 6px; color: var(--gold); margin-right: 8px; vertical-align: middle;"></i> Palakkad
+                Fort Scripts</li>
+              <li style="font-size: 14px;"><i class="fa fa-circle"
+                  style="font-size: 6px; color: var(--gold); margin-right: 8px; vertical-align: middle;"></i> Madurai
+                Pandya Cave Art</li>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top-wrap">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img
+              src="https://res.cloudinary.com/drkgkgiat/image/upload/q_auto/f_auto/v1775567539/Next_TRip_Final_Logo_Square_Size_-_Copy-removebg-preview_bsfsev.png"
+              alt="NextTrip" height="60">
+            <p>Your trusted partner for seamless, memorable travel experiences around the globe.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h5>Quick Links</h5>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Tours</a>
+            <a href="#">Hotels</a>
+            <a href="#">Cruises</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="footer-col">
+            <h5>Destinations</h5>
+            <a href="#">Thailand</a>
+            <a href="#">Singapore</a>
+            <a href="#">Dubai</a>
+            <a href="#">Europe</a>
+            <a href="#">Kerala</a>
+            <a href="#">Goa</a>
+          </div>
+          <div class="footer-col">
+            <h5>Contact Us</h5>
+            <p><i class="fa fa-phone"></i> +91 345 533 865</p>
+            <p><i class="fa fa-envelope"></i> info@nextrip.com</p>
+            <p><i class="fa fa-location-dot"></i> Madurai, Tamil Nadu</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 <strong>NextTrip Holidays</strong>. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    const itineraries = {
+      'pkg1': { title: 'Ooty Colonial Heritage & Epigraphy', days: [{ day: 'Day 1', title: 'Arrival & Orientation', desc: 'Welcome to Ooty. Lecture on Nilgiri history.' }, { day: 'Day 2', title: 'Archives Visit', desc: 'Studying stone inscriptions at local sites.' }] },
+      'pkg2': { title: 'Munnar Tribal & Cultural Study', days: [{ day: 'Day 1', title: 'Tribal Visit', desc: 'Engagement with local tribal communities.' }, { day: 'Day 2', title: 'Stone Deciphering', desc: 'Hands-on recording of cave scripts.' }] },
+      'pkg3': { title: 'Palakkad Fort Kalvetu Archives', days: [{ day: 'Day 1', title: 'Fort History', desc: 'Tour of Hyder Ali\'s fort.' }, { day: 'Day 2', title: 'Transcription', desc: 'Documenting the inscribed stones inside walls.' }] }
+    };
+
+    function showDetailedProgram(id) {
+      const data = itineraries[id] || { title: 'Program Coming Soon', days: [{ day: 'Info', title: 'Details', desc: 'Please contact us for more info.' }] };
+      document.getElementById('pgmTitle').innerText = data.title;
+      document.getElementById('pgmContent').innerHTML = data.days.map(d => `
+            <div style="display: flex; gap: 30px; padding: 30px; background: white; border-radius: 15px; border-left: 6px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s;" class="pgm-day-item">
+                <div style="flex-shrink: 0; display: flex; flex-direction: column; align-items: center;">
+                   <div style="width: 60px; height: 60px; border-radius: 50%; background: var(--gold); color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-family: 'DM Sans', sans-serif;">${d.day}</div>
+                </div>
+                <div style="flex: 1;">
+                   <h4 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">${d.title}</h4>
+                   <p style="color: #555; line-height: 1.8; font-size: 15px;">${d.desc}</p>
+                </div>
+            </div>
+        `).join('');
+
+      const section = document.getElementById('programSection');
+      section.style.display = 'block';
+      window.scrollTo({ top: section.offsetTop - 120, behavior: 'smooth' });
+    }
+
+    
+    function openBookingModal() { 
+        if(typeof window.openModal === "function") {
+            window.openModal(); 
+        } else {
+            console.warn("Global booking system not ready");
+            alert("Booking system is loading. Please try again in a moment.");
+        }
+    }
+
+  </script>
+
+  <style>
+    .itinerary-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12) !important;
+    }
+
+    .itinerary-card:hover .pkg-img {
+      transform: scale(1.08);
+    }
+
+    .pgm-day-item:hover {
+      transform: translateX(10px);
+      background: #fffdf9 !important;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: white;
+      border: none;
+      padding: 14px 30px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+  </style>
+</body>
+
+</html>

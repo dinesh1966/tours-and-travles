@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heritage Homes Packages - NextTrip Holidays</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+  <script src="script.js" defer></script>
+  
+  <!-- Lottie Player -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+
+  <!-- Premium Page Loader -->
+  <div id="premiumLoader">
+    <div class="loader-earth">
+      <lottie-player src="https://lottie.host/df254881-c7c4-42f1-aa8f-28c0570bde7c/55u6YkF8Wb.json" background="transparent" speed="1" style="width: 220px; height: 220px;" loop autoplay></lottie-player>
+    </div>
+    <div class="loader-text">NextTrip Holidays</div>
+  </div>
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const loader = document.getElementById('premiumLoader');
+        if (loader) loader.classList.add('fade-out');
+        document.body.classList.add('body-loaded');
+      }, 900);
+    });
+    document.querySelectorAll('a').forEach(link => {
+      if (link.target !== '_blank' && link.href && link.href.indexOf('#') === -1 && !link.href.startsWith('tel:') && !link.href.startsWith('mailto:')) {
+        link.addEventListener('click', (e) => {
+          const loader = document.getElementById('premiumLoader');
+          if (loader) {
+            e.preventDefault();
+            loader.classList.remove('fade-out');
+            loader.style.opacity = '1';
+            loader.style.transform = 'translateY(0)';
+            setTimeout(() => window.location = link.href, 500);
+          }
+        });
+      }
+    });
+  </script>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="https://res.cloudinary.com/drkgkgiat/image/upload/q_auto/f_auto/v1775567539/Next_TRip_Final_Logo_Square_Size_-_Copy-removebg-preview_bsfsev.png" alt="NextTrip" height="50">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#packages" class="active">Packages</a></li>
+        <li><a href="index.html#experiences">Experiences</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main style="padding-top: 140px; background: white;">
+    <div class="container">
+      <!-- Header Area -->
+      <div class="dt-header" style="display: flex; justify-content: space-between; align-items: stretch; margin-bottom: 40px; flex-wrap: wrap; gap: 20px;">
+        <div class="dt-header-left" style="display: flex; gap: 30px; align-items: flex-start;">
+          <div class="dt-count" style="text-align: center; border-right: 1px solid #eee; padding-right: 30px; margin-top: 5px;">
+            <span style="display: block; font-size: 52px; color: var(--gold); font-weight: 700; line-height: 1; letter-spacing: -1px;">18</span>
+            <span style="display: block; font-size: 16px; color: var(--text-light); line-height: 1.2; margin-top: 8px;">Tour<br>Packages</span>
+          </div>
+          <div class="dt-title-area">
+            <div class="breadcrumb" style="padding: 0; background: transparent; border: none; margin-bottom: 8px; font-size: 13px;">
+              <a href="index.html">Home</a> <span>»</span> <a href="index.html#packages">Tour Packages</a> <span>»</span> <a href="india-tour-packages.html">Tour Packages</a> <span>»</span> <span style="color: #888;">Heritage Homes Packages</span>
+            </div>
+            <h1 style="font-family: 'Playfair Display', serif; font-size: 46px; margin-bottom: 12px; color: var(--dark); font-weight: 700; letter-spacing: -0.5px;">Heritage Homes Tour Packages</h1>
+            <p style="color: var(--text); font-weight: 600; font-size: 17px;"><i class="fa fa-map-marked-alt" style="color: var(--gold); margin-right: 8px;"></i> Peninsular India</p>
+          </div>
+        </div>
+        <div class="dt-header-right" style="display: flex; flex-direction: column; gap: 12px; justify-content: flex-start; min-width: 220px;">
+          <button class="btn-primary" onclick="openBookingModal()">Book Now</button>
+          <button class="btn-secondary" style="background: #40e0d0; color: white; padding: 14px 30px; border-radius: 6px; font-weight: 600; font-size: 15px; border: none; cursor: pointer; transition: 0.3s; width: 100%;" onclick="document.querySelector('.dt-packages').scrollIntoView({behavior: 'smooth'})">View All Packages</button>
+        </div>
+      </div>
+
+      <!-- Main Content Area -->
+      <div class="dt-main" style="display: grid; grid-template-columns: 8fr 4fr; gap: 40px;">
+        <!-- Left col -->
+        <div class="dt-image-col">
+          <div class="dt-main-img" style="position: relative; border-radius: 12px; overflow: hidden; margin-bottom: 20px;">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f7ecd89f?w=1200" alt="Brihadeeswara Temple" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block;">
+            <!-- Left/right arrows -->
+            <button style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.15); border: none; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: 0.3s;"><i class="fa fa-chevron-left"></i></button>
+            <button style="position: absolute; right: 16px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.15); border: none; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: 0.3s;"><i class="fa fa-chevron-right"></i></button>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <p style="font-size: 15px; margin: 0; color: #222;"><strong>Princess of Hill Stations:</strong> Kodaikanal</p>
+            <button style="background: var(--gold); color: white; padding: 12px 28px; border-radius: 6px; font-weight: 600; font-size: 14px; border: none; cursor: pointer;" onclick="document.querySelector('.dt-packages').scrollIntoView({behavior: 'smooth'})">View All Packages</button>
+          </div>
+        </div>
+
+        <!-- Right col -->
+        <div class="dt-info-col">
+          <div style="background: #f8f8f8; padding: 24px; border-radius: 8px; margin-bottom: 30px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; color: var(--dark); margin-bottom: 20px; border-bottom: 1px solid #e5e5e5; padding-bottom: 12px;">Heritage Homes's No.1 Travel Brand</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; row-gap: 20px;">
+              <div>
+                <div style="font-size: 17px; color: var(--dark); font-weight: 500; margin-bottom: 4px;">Beachfront</div>
+                <div style="font-size: 12px; color: var(--text-light);">Ocean Views</div>
+              </div>
+              <div>
+                <div style="font-size: 17px; color: var(--dark); font-weight: 500; margin-bottom: 4px;">Mountains</div>
+                <div style="font-size: 12px; color: var(--text-light);">Cozy Cabins</div>
+              </div>
+              <div>
+                <div style="font-size: 17px; color: var(--dark); font-weight: 500; margin-bottom: 4px;">Heritage</div>
+                <div style="font-size: 12px; color: var(--text-light);">Historic Stays</div>
+              </div>
+              <div>
+                <div style="font-size: 17px; color: var(--dark); font-weight: 500; margin-bottom: 4px;">Luxury</div>
+                <div style="font-size: 12px; color: var(--text-light);">Premium Pools</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 24px; color: var(--dark); margin-bottom: 24px;">Top Cultural Highlights of Heritage Homes</h3>
+            <ul class="dt-highlights" style="display: flex; flex-direction: column; gap: 16px; margin: 0; padding: 0; list-style: none;">
+              <li style="display: flex; gap: 12px; align-items: flex-start; font-size: 14px; color: #555; line-height: 1.5;">
+                <div style="width: 26px; height: 26px; background: var(--gold); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 2px 5px rgba(245,166,18,0.4);"><i class="fa fa-vihara" style="font-size: 11px;"></i></div>
+                <span>Meenakshi Temple is a Dravidian masterpiece.</span>
+              </li>
+              <li style="display: flex; gap: 12px; align-items: flex-start; font-size: 14px; color: #555; line-height: 1.5;">
+                <div style="width: 26px; height: 26px; background: var(--gold); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 2px 5px rgba(245,166,18,0.4);"><i class="fa fa-train" style="font-size: 11px;"></i></div>
+                <span>Nilgiri Mountain Railway offers scenic train journey.</span>
+              </li>
+              <li style="display: flex; gap: 12px; align-items: flex-start; font-size: 14px; color: #555; line-height: 1.5;">
+                <div style="width: 26px; height: 26px; background: var(--gold); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 2px 5px rgba(245,166,18,0.4);"><i class="fa fa-leaf" style="font-size: 11px;"></i></div>
+                <span>Sadhya is a Kerala feast served on banana leaf.</span>
+              </li>
+              <li style="display: flex; gap: 12px; align-items: flex-start; font-size: 14px; color: #555; line-height: 1.5;">
+                <div style="width: 26px; height: 26px; background: var(--gold); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 2px 5px rgba(245,166,18,0.4);"><i class="fa fa-tree" style="font-size: 11px;"></i></div>
+                <span>Western Ghats, world's 8th hottest biodiversity hotspot.</span>
+              </li>
+              <li style="display: flex; gap: 12px; align-items: flex-start; font-size: 14px; color: #555; line-height: 1.5;">
+                <div style="width: 26px; height: 26px; background: var(--gold); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 2px 5px rgba(245,166,18,0.4);"><i class="fa fa-book" style="font-size: 11px;"></i></div>
+                <span>Tamil, one of the oldest languages, culturally rich.</span>
+              </li>
+              <li style="display: flex; gap: 12px; align-items: flex-start; font-size: 14px; color: #555; line-height: 1.5;">
+                <div style="width: 26px; height: 26px; background: var(--gold); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 2px 5px rgba(245,166,18,0.4);"><i class="fa fa-sun" style="font-size: 11px;"></i></div>
+                <span>Kanyakumari offers a unique sunrise and sunset view.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Overview Section -->
+      <div class="dt-overview" style="margin-top: 80px;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 36px; color: var(--dark); margin-bottom: 40px; font-weight: 700;">Heritage Homes - Overview</h2>
+        
+        <div style="display: flex; flex-wrap: wrap; gap: 0; border-top: 2px solid var(--gold); padding-top: 40px;">
+          <!-- Map image -->
+          <div style="flex: 1; min-width: 250px; display: flex; justify-content: center; align-items: flex-start; padding-right: 40px;">
+            <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=400" alt="Heritage Homes Map" style="max-width: 220px; filter: grayscale(100%) opacity(0.8) sepia(0.5) hue-rotate(200deg);">
+          </div>
+          
+          <!-- By Purpose -->
+          <div style="flex: 1.5; min-width: 300px; border-left: 1px solid #ddd; padding-left: 40px; padding-right: 30px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 26px; margin-bottom: 30px; font-weight: 500;">By Purpose</h3>
+            
+            <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
+              <div style="width:56px; height:56px; display:flex; align-items:center; justify-content:center; background:#fff3e0; border-radius:50%; flex-shrink:0;"><i class="fa fa-user-friends" style="font-size: 24px; color: var(--gold);"></i></div>
+              <div style="flex: 1;">
+                <div style="font-size: 19px; color: var(--dark); font-weight: 500;">Couples</div>
+                <div style="font-size: 14px; color: var(--text-light); margin-bottom: 10px;">For Newlywed Vacations</div>
+                <div style="width: 100%; height: 4px; background: #e5e5e5; border-radius: 2px; position: relative;">
+                  <div style="width: 80%; height: 100%; background: var(--gold); border-radius: 2px;"></div>
+                </div>
+              </div>
+            </div>
+            
+            <div style="display: flex; align-items: center; gap: 20px;">
+              <div style="width:56px; height:56px; display:flex; align-items:center; justify-content:center; background:#fff3e0; border-radius:50%; flex-shrink:0;"><i class="fa fa-users" style="font-size: 24px; color: var(--gold);"></i></div>
+              <div style="flex: 1;">
+                <div style="font-size: 19px; color: var(--dark); font-weight: 500;">Family</div>
+                <div style="font-size: 14px; color: var(--text-light); margin-bottom: 10px;">For Family Vacations</div>
+                <div style="width: 100%; height: 4px; background: #e5e5e5; border-radius: 2px; position: relative;">
+                  <div style="width: 65%; height: 100%; background: var(--gold); border-radius: 2px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Top Attractions -->
+          <div style="flex: 2; min-width: 180px; border-left: 1px solid #ddd; padding-left: 40px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 26px; margin-bottom: 30px; font-weight: 500;">Top Attractions</h3>
+            <ul style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 0; padding: 0; list-style: none;">
+              <li style="font-size: 15px; color: #444;"><span style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Coorg</li>
+              <li style="font-size: 15px; color: #444;"><span style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Mysore</li>
+              <li style="font-size: 15px; color: #444;"><span style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Ooty</li>
+              
+              <li style="font-size: 15px; color: #444;"><span style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Kodaikanal</li>
+              <li style="font-size: 15px; color: #444;"><span style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Chennai</li>
+              <li style="font-size: 15px; color: #444;"><span style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Hampi</li>
+              
+              <li style="font-size: 15px; color: #444;"><span style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Alleppey</li>
+              <li style="font-size: 15px; color: #444;"><span style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Munnar</li>
+              <li style="font-size: 15px; color: #444;"><span style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Rameswaram</li>
+              
+              <li style="font-size: 15px; color: #444;"><span style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Madurai</li>
+              <li style="font-size: 15px; color: #444;"><span style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Pondicherry</li>
+              <li style="font-size: 15px; color: #444;"><span style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Kanchipuram</li>
+              
+              <li style="font-size: 15px; color: #444;"><span style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Varkala</li>
+              <li style="font-size: 15px; color: #444;"><span style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Wayanad</li>
+              <li style="font-size: 15px; color: #444;"><span style="color: var(--gold); margin-right: 12px; font-size: 10px;">●</span>Tiruvannamalai</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      
+      <!-- Packages Grid Section -->
+      <div class="dt-packages" style="margin-top: 80px;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 36px; color: var(--dark); margin-bottom: 40px; font-weight: 700;">Heritage Homes Packages & Itineraries</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px;">
+          
+          <!-- Package 1 -->
+          <div class="itinerary-card" onclick="openItinerary('pkg1')" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+            <div style="position: relative; height: 220px;">
+              <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=600" style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+              <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;"><i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 5 Days / 4 Nights</div>
+            </div>
+            <div style="padding: 24px;">
+              <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">Magical Heritage Homes</h3>
+              <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt" style="color: var(--gold); margin-right: 6px;"></i> Premium Sightseeing & Stay</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 18,500 <span style="font-size: 13px; font-weight: 400; color: #888;">/ pax</span></span>
+                <span style="color: var(--gold); font-size: 14px; font-weight: 600;">View Details <i class="fa fa-arrow-right" style="margin-left: 4px;"></i></span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Package 2 -->
+          <div class="itinerary-card" onclick="openItinerary('pkg2')" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+            <div style="position: relative; height: 220px;">
+              <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+              <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;"><i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 4 Days / 3 Nights</div>
+            </div>
+            <div style="padding: 24px;">
+              <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">Heart of Heritage Homes</h3>
+              <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt" style="color: var(--gold); margin-right: 6px;"></i> Core Cultural Experience</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 14,200 <span style="font-size: 13px; font-weight: 400; color: #888;">/ pax</span></span>
+                <span style="color: var(--gold); font-size: 14px; font-weight: 600;">View Details <i class="fa fa-arrow-right" style="margin-left: 4px;"></i></span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Package 3 -->
+          <div class="itinerary-card" onclick="openItinerary('pkg3')" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.3s ease; border: 1px solid #f0f0f0;">
+            <div style="position: relative; height: 220px;">
+              <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=600" style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease;" class="pkg-img">
+              <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;"><i class="fa fa-clock" style="color: var(--gold); margin-right: 4px;"></i> 7 Days / 6 Nights</div>
+            </div>
+            <div style="padding: 24px;">
+              <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--dark);">Heritage Homes Wonders</h3>
+              <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;"><i class="fa fa-map-marker-alt" style="color: var(--gold); margin-right: 6px;"></i> Extended Grand Tour</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                <span style="font-weight: 700; color: var(--dark); font-size: 18px;">₹ 28,000 <span style="font-size: 13px; font-weight: 400; color: #888;">/ pax</span></span>
+                <span style="color: var(--gold); font-size: 14px; font-weight: 600;">View Details <i class="fa fa-arrow-right" style="margin-left: 4px;"></i></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+
+      <!-- Info section -->
+      <div class="dt-info" style="margin-top: 80px; margin-bottom: 100px;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; color: var(--dark); margin-bottom: 30px; font-weight: 700;">Everything You Need to Know About Heritage Homes</h2>
+        <p style="color: #666; font-size: 16px; margin-bottom: 20px; line-height: 1.8;">Heritage Homes, or Southern India, is a region steeped in a rich tapestry of history, culture, and heritage. It's a society that has flourished south of the Vindhyas for several thousand years, offering every visitor a unique and fascinating experience. Southern India differs from the North in various aspects, including topography, race, language, weather, cuisine, festivals, and architectural heritage.</p>
+        <p style="color: #666; font-size: 16px; margin-bottom: 20px; line-height: 1.8;">Even within Heritage Homes, you'll find varied geographical and cultural differences. For instance, Kerala is famous for its backwaters and the verdant greenery of the Western Ghats, but its adjacent state Tamil Nadu is famed for its grand temples and magnificent architecture ranging from the Cholas and Pandyas.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>NextTrip Holidays</h4>
+          <p>Your trusted travel partner for unforgettable journeys around the world.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="index.html#packages">Packages</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="#">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p><i class="fa fa-phone"></i> +91-XXX-XXX-XXXX</p>
+          <p><i class="fa fa-envelope"></i> info@nexttrip.com</p>
+          <p><i class="fa fa-map-marker"></i> India</p>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 NextTrip Holidays. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Handle transparent navbar
+    var navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+        navbar.style.background = 'var(--dark)';
+      } else {
+        navbar.classList.remove('scrolled');
+        navbar.style.background = 'var(--dark)'; // Ensure background because there is no hero image overlay for this page
+      }
+    });
+    // Set initial background for this page
+    navbar.style.background = 'var(--dark)';
+  </script>
+
+  <!-- Itinerary Modal -->
+  <div class="itinerary-modal" id="itineraryModal" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.75); backdrop-filter: blur(5px); z-index: 10000; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box;">
+    <div class="modal-content" style="background: white; width: 100%; max-width: 750px; max-height: 85vh; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 20px 50px rgba(0,0,0,0.3); animation: fadeUp 0.4s ease;">
+      
+      <!-- Header -->
+      <div style="padding: 24px 30px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; background: #fafafa;">
+        <div>
+          <h2 id="modalTitle" style="font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 6px; color: var(--dark);">Tour Itinerary</h2>
+          <span id="modalDuration" style="font-size: 14px; color: var(--text-light); font-weight: 500;"><i class="fa fa-clock" style="color: var(--gold); margin-right: 6px;"></i> Loading...</span>
+        </div>
+        <button onclick="closeItinerary()" style="width: 40px; height: 40px; border-radius: 50%; background: #eee; border: none; font-size: 18px; color: #555; cursor: pointer; display: flex; justify-content: center; align-items: center; transition: 0.3s;" onmouseover="this.style.background='#ddd'" onmouseout="this.style.background='#eee'"><i class="fa fa-times"></i></button>
+      </div>
+      
+      <!-- Body -->
+      <div style="padding: 30px; overflow-y: auto; flex: 1; background: white;">
+        <div id="modalItineraryList" style="display: flex; flex-direction: column; gap: 0;">
+          <!-- Day items injected here via JS -->
+        </div>
+      </div>
+      
+      <!-- Footer -->
+      <div style="padding: 20px 30px; border-top: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; background: #fafafa;">
+        <div id="modalPrice" style="font-size: 20px; font-weight: 700; color: var(--dark);"></div>
+        <button style="background: var(--gold); color: white; border: none; padding: 14px 36px; border-radius: 8px; font-weight: 600; font-size: 16px; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 12px rgba(245,166,18,0.3);" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'" onclick="openBookingModal()">Book This Tour</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const itineraries = {
+      'pkg1': {
+        title: 'Magical Heritage Homes',
+        duration: '5 Days / 4 Nights',
+        price: '₹ 18,500 <span style="font-size:14px; font-weight:normal; color:#888">/ pax</span>',
+        days: [
+          { day: 'Day 01', title: 'Arrival & Welcome', desc: 'Arrive at the destination airport or railway station. You will be greeted by our representative and transferred to your premium hotel. Spend the afternoon relaxing or exploring local markets.' },
+          { day: 'Day 02', title: 'Local Sightseeing', desc: 'After breakfast, embark on a full-day guided city tour. Visit iconic cultural landmarks, ancient monuments, and scenic viewpoints that define the beauty of Heritage Homes.' },
+          { day: 'Day 03', title: 'Nature & Adventure', desc: 'Travel to the countryside to experience local nature. Whether it is hills, backwaters, or deserts, today is about breathtaking landscapes and optional adventure activities.' },
+          { day: 'Day 04', title: 'Heritage Walk & Leisure', desc: 'Immerse yourself in the local heritage with a guided walk through historical districts. The evening is free for shopping and trying authentic regional cuisine.' },
+          { day: 'Day 05', title: 'Departure', desc: 'Enjoy your final breakfast at the hotel. Check out and transfer to the airport or railway station for your onward journey with beautiful memories.' }
+        ]
+      },
+      'pkg2': {
+        title: 'Heart of Heritage Homes',
+        duration: '4 Days / 3 Nights',
+        price: '₹ 14,200 <span style="font-size:14px; font-weight:normal; color:#888">/ pax</span>',
+        days: [
+          { day: 'Day 01', title: 'Arrival & Check-in', desc: 'Welcome to Heritage Homes. Transfer to the hotel and rest. Evening stroll along the popular local streets.' },
+          { day: 'Day 02', title: 'Core Monuments Tour', desc: 'Visit the most famous landmarks. Enjoy a detailed historic tour followed by a traditional lunch.' },
+          { day: 'Day 03', title: 'Cultural Immersion', desc: 'Experience local art forms, visit a museum, and enjoy an evening cultural performance.' },
+          { day: 'Day 04', title: 'Happy Departure', desc: 'Morning at leisure. Afternoon transfer to the airport.' }
+        ]
+      },
+      'pkg3': {
+        title: 'Heritage Homes Wonders',
+        duration: '7 Days / 6 Nights',
+        price: '₹ 28,000 <span style="font-size:14px; font-weight:normal; color:#888">/ pax</span>',
+        days: [
+          { day: 'Day 01', title: 'Grand Welcome', desc: 'VIP pickup and transfer to a luxury resort. Relax and unwind.' },
+          { day: 'Day 02', title: 'City Wonders', desc: 'Explore the urban marvels and towering monuments of the city.' },
+          { day: 'Day 03', title: 'Journey to the Hills', desc: 'Take a scenic drive to the highest peak in the region. Check-in to a hill-station resort.' },
+          { day: 'Day 04', title: 'Nature Safari', desc: 'Early morning wildlife safari or nature walk to spot exotic local flora and fauna.' },
+          { day: 'Day 05', title: 'Coastal Retreat', desc: 'Travel down to the relaxing beaches or riverfront. Sunset cruise included.' },
+          { day: 'Day 06', title: 'Leisure Day', desc: 'A completely free day to use the resort amenities, get a spa treatment, or shop.' },
+          { day: 'Day 07', title: 'Farewell', desc: 'Departure after breakfast with a grand souvenir from NextTrip Holidays.' }
+        ]
+      }
+    };
+
+    function openItinerary(id) {
+      const data = itineraries[id];
+      document.getElementById('modalTitle').innerText = data.title;
+      document.getElementById('modalDuration').innerHTML = '<i class="fa fa-clock" style="color: var(--gold); margin-right: 6px;"></i> ' + data.duration;
+      document.getElementById('modalPrice').innerHTML = data.price;
+      
+      const list = document.getElementById('modalItineraryList');
+      list.innerHTML = data.days.map((d, index) => {
+        const isLast = index === data.days.length - 1;
+        return `
+          <div style="display: flex; gap: 24px;">
+            <div style="flex-shrink: 0; display: flex; flex-direction: column; align-items: center; width: 44px;">
+              <div style="width: 44px; height: 44px; border-radius: 50%; background: #fff; border: 2px solid var(--gold); color: var(--gold); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; box-shadow: 0 4px 10px rgba(245,166,18,0.15); z-index: 2;">${d.day.replace('Day ', '')}</div>
+              ${!isLast ? '<div style="width: 2px; height: 100%; background: #eaeaea; margin: 4px 0; min-height: 40px;"></div>' : ''}
+            </div>
+            <div style="padding-bottom: ${isLast ? '0' : '30px'}; padding-top: 5px;">
+              <div style="font-size: 13px; color: var(--gold); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">${d.day}</div>
+              <h4 style="font-size: 20px; color: var(--dark); margin-bottom: 10px; font-family: 'Playfair Display', serif;">${d.title}</h4>
+              <p style="color: #666; font-size: 15px; line-height: 1.6; margin: 0;">${d.desc}</p>
+            </div>
+          </div>
+        `;
+      }).join('');
+      
+      const modal = document.getElementById('itineraryModal');
+      modal.style.display = 'flex';
+      setTimeout(() => modal.style.opacity = '1', 10);
+      document.body.style.overflow = 'hidden'; 
+    }
+
+    function closeItinerary() {
+      const modal = document.getElementById('itineraryModal');
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    
+    // Custom hover CSS for cards
+    const style = document.createElement('style');
+    style.innerHTML = `
+      .itinerary-card:hover .pkg-img { transform: scale(1.05); }
+      .itinerary-card:hover { transform: translateY(-8px) !important; box-shadow: 0 12px 30px rgba(0,0,0,0.12) !important; }
+    `;
+    document.head.appendChild(style);
+  </script>
+
+
+<script>
+    function openBookingModal() { 
+        if(typeof window.openModal === "function") {
+            window.openModal(); 
+        } else {
+            console.warn("Global booking system not ready");
+            alert("Booking system is loading. Please try again in a moment.");
+        }
+    }
+</script>
+</body>
+</html>
+

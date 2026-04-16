@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>South India Tour Packages - NextTrip Holidays</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+  <script src="script.js" defer></script>
+  
+  <!-- Lottie Player -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+
+<body>
+
+  <!-- Premium Page Loader -->
+  <div id="premiumLoader">
+    <div class="loader-earth">
+      <lottie-player src="https://lottie.host/df254881-c7c4-42f1-aa8f-28c0570bde7c/55u6YkF8Wb.json" background="transparent" speed="1" style="width: 220px; height: 220px;" loop autoplay></lottie-player>
+    </div>
+    <div class="loader-text">NextTrip Holidays</div>
+  </div>
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const loader = document.getElementById('premiumLoader');
+        if (loader) loader.classList.add('fade-out');
+        document.body.classList.add('body-loaded');
+      }, 900);
+    });
+    document.querySelectorAll('a').forEach(link => {
+      if (link.target !== '_blank' && link.href && link.href.indexOf('#') === -1 && !link.href.startsWith('tel:') && !link.href.startsWith('mailto:')) {
+        link.addEventListener('click', (e) => {
+          const loader = document.getElementById('premiumLoader');
+          if (loader) {
+            e.preventDefault();
+            loader.classList.remove('fade-out');
+            loader.style.opacity = '1';
+            loader.style.transform = 'translateY(0)';
+            setTimeout(() => window.location = link.href, 500);
+          }
+        });
+      }
+    });
+  </script>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img
+          src="https://res.cloudinary.com/drkgkgiat/image/upload/q_auto/f_auto/v1775567539/Next_TRip_Final_Logo_Square_Size_-_Copy-removebg-preview_bsfsev.png"
+          alt="NextTrip" height="50">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#packages" class="active">Packages</a></li>
+        <li><a href="index.html#experiences">Experiences</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main style="padding-top: 140px; background: white;">
+    <div class="container">
+      <!-- Header Area -->
+      <div class="dt-header"
+        style="display: flex; justify-content: space-between; align-items: stretch; margin-bottom: 40px; flex-wrap: wrap; gap: 20px;">
+        <div class="dt-header-left" style="display: flex; gap: 30px; align-items: flex-start;">
+          <div class="dt-count"
+            style="text-align: center; border-right: 1px solid #eee; padding-right: 30px; margin-top: 5px;">
+            <span
+              style="display: block; font-size: 52px; color: var(--gold); font-weight: 700; line-height: 1; letter-spacing: -1px;">22</span>
+            <span
+              style="display: block; font-size: 16px; color: var(--text-light); line-height: 1.2; margin-top: 8px;">Tour<br>Packages</span>
+          </div>
+          <div class="dt-title-area">
+            <div class="breadcrumb"
+              style="padding: 0; background: transparent; border: none; margin-bottom: 8px; font-size: 13px;">
+              <a href="index.html">Home</a> <span>Â»</span> <a href="index.html#packages">Tour Packages</a>
+              <span>Â»</span> <a href="india-tour-packages.html">India Tour Packages</a> <span>Â»</span> <span
+                style="color: #888;">South India Tour Packages</span>
+            </div>
+            <h1
+              style="font-family: 'Playfair Display', serif; font-size: 46px; margin-bottom: 12px; color: var(--dark); font-weight: 700; letter-spacing: -0.5px;">
+              South India Tour Packages</h1>
+            <p style="color: var(--text); font-weight: 600; font-size: 17px;"><i class="fa fa-map-marked-alt"
+                style="color: var(--gold); margin-right: 8px;"></i> Peninsular India</p>
+          </div>
+        </div>
+        <div class="dt-header-right"
+          style="display: flex; flex-direction: column; gap: 12px; justify-content: flex-start; min-width: 220px;">
+          <button class="btn-primary" onclick="openBookingModal()">Book Now</button>
+          <button class="btn-secondary"
+            style="background: #40e0d0; color: white; padding: 14px 30px; border-radius: 6px; font-weight: 600; font-size: 15px; border: none; cursor: pointer; transition: 0.3s; width: 100%;"
+            onclick="document.querySelector('.dt-packages').scrollIntoView({behavior: 'smooth'})">View All
+            Packages</button>
+        </div>
+      </div>
+
+      <!-- Main Content Area -->
+      <div class="dt-main" style="display: grid; grid-template-columns: 8fr 4fr; gap: 40px;">
+        <!-- Left col -->
+        <div class="dt-image-col">
+          <div class="dt-main-img"
+            style="position: relative; border-radius: 12px; overflow: hidden; margin-bottom: 20px; background-image: url('https://images.unsplash.com/photo-1602216056096-3b40cc0f9942?w=1200'); background-size: cover; background-position: center; width: 100%; aspect-ratio: 16/9;">
+            <div
+              style="position: absolute; bottom: 20px; left: 20px; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+              <h2 style="font-family: 'Playfair Display', serif; font-size: 28px; margin: 0;">Land of Ancient Temples
+              </h2>
+              <p style="margin: 5px 0 0; font-size: 14px;">Experience the cultural heart of India</p>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <p style="font-size: 15px; margin: 0; color: #222;"><strong>Princess of Hill Stations:</strong> Kodaikanal
+            </p>
+            <button
+              style="background: var(--gold); color: white; padding: 12px 28px; border-radius: 6px; font-weight: 600; font-size: 14px; border: none; cursor: pointer;"
+              onclick="document.querySelector('.dt-packages').scrollIntoView({behavior: 'smooth'})">View All
+              Packages</button>
+          </div>
+        </div>
+
+        <!-- Right col -->
+        <div class="dt-info-col">
+          <div style="background: #f8f8f8; padding: 24px; border-radius: 8px; margin-bottom: 30px;">
+            <h3
+              style="font-family: 'Playfair Display', serif; font-size: 22px; color: var(--dark); margin-bottom: 20px; border-bottom: 1px solid #e5e5e5; padding-bottom: 12px;">
+              South India's No.1 Travel Brand</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; row-gap: 20px;">
+              <div>
+                <div style="font-size: 17px; color: var(--dark); font-weight: 500; margin-bottom: 4px;">Kerala</div>
+                <div style="font-size: 12px; color: var(--text-light);">God's Own Country</div>
+              </div>
+              <div>
+                <div style="font-size: 17px; color: var(--dark); font-weight: 500; margin-bottom: 4px;">Tamil Nadu</div>
+                <div style="font-size: 12px; color: var(--text-light);">Land of Temples</div>
+              </div>
+              <div>
+                <div style="font-size: 17px; color: var(--dark); font-weight: 500; margin-bottom: 4px;">Coorg</div>
+                <div style="font-size: 12px; color: var(--text-light);">Scotland of India</div>
+              </div>
+              <div>
+                <div style="font-size: 17px; color: var(--dark); font-weight: 500; margin-bottom: 4px;">Kanyakumari
+                </div>
+                <div style="font-size: 12px; color: var(--text-light);">Cape of India</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3
+              style="font-family: 'Playfair Display', serif; font-size: 24px; color: var(--dark); margin-bottom: 24px;">
+              Top Cultural Highlights</h3>
+            <ul class="dt-highlights"
+              style="display: flex; flex-direction: column; gap: 16px; margin: 0; padding: 0; list-style: none;">
+              <li
+                style="display: flex; gap: 12px; align-items: flex-start; font-size: 14px; color: #555; line-height: 1.5;">
+                <div
+                  style="width: 26px; height: 26px; background: var(--gold); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                  <i class="fa fa-gem" style="font-size: 11px;"></i>
+                </div>
+                <span>Dravidian Architecture and Monuments.</span>
+              </li>
+              <li
+                style="display: flex; gap: 12px; align-items: flex-start; font-size: 14px; color: #555; line-height: 1.5;">
+                <div
+                  style="width: 26px; height: 26px; background: var(--gold); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                  <i class="fa fa-utensils" style="font-size: 11px;"></i>
+                </div>
+                <span>Rich and Spicy Culinary Traditions.</span>
+              </li>
+              <li
+                style="display: flex; gap: 12px; align-items: flex-start; font-size: 14px; color: #555; line-height: 1.5;">
+                <div
+                  style="width: 26px; height: 26px; background: var(--gold); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                  <i class="fa fa-music" style="font-size: 11px;"></i>
+                </div>
+                <span>Carnatic Music and Classical Dances.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overview Section -->
+      <div class="dt-overview" style="margin-top: 80px;">
+        <h2
+          style="font-family: 'Playfair Display', serif; font-size: 36px; color: var(--dark); margin-bottom: 40px; font-weight: 700;">
+          South India - Overview</h2>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 40px; border-top: 2px solid var(--gold); padding-top: 40px;">
+          <div style="flex: 1; min-width: 300px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 25px;">Why Visit South
+              India?</h3>
+            <p style="color: #666; line-height: 1.8; margin-bottom: 20px;">South India's diverse landscape ranges from
+              misty hill stations and dense jungles to tranquil backwaters and sun-kissed beaches. The region is a
+              treasure trove of UNESCO World Heritage sites and ancient traditions.</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+              <div style="background: #fff8f0; padding: 15px; border-radius: 8px;">
+                <strong style="display: block; color: var(--gold); font-size: 20px;">1000+</strong>
+                <span style="font-size: 12px; color: #888;">Ancient Temples</span>
+              </div>
+              <div style="background: #fff8f0; padding: 15px; border-radius: 8px;">
+                <strong style="display: block; color: var(--gold); font-size: 20px;">500km+</strong>
+                <span style="font-size: 12px; color: #888;">Pristine Coastline</span>
+              </div>
+            </div>
+          </div>
+          <div style="flex: 1; min-width: 300px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 25px;">Top Destinations
+            </h3>
+            <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; list-style: none; padding: 0;">
+              <li style="font-size: 14px;"><i class="fa fa-circle"
+                  style="font-size: 6px; color: var(--gold); margin-right: 8px; vertical-align: middle;"></i> Munnar,
+                Kerala</li>
+              <li style="font-size: 14px;"><i class="fa fa-circle"
+                  style="font-size: 6px; color: var(--gold); margin-right: 8px; vertical-align: middle;"></i> Alleppey
+                Backwaters</li>
+              <li style="font-size: 14px;"><i class="fa fa-circle"
+                  style="font-size: 6px; color: var(--gold); margin-right: 8px; vertical-align: middle;"></i> Ooty,
+                Tamil Nadu</li>
+              <li style="font-size: 14px;"><i class="fa fa-circle"
+                  style="font-size: 6px; color: var(--gold); margin-right: 8px; vertical-align: middle;"></i> Coorg,
+                Karnataka</li>
+              <li style="font-size: 14px;"><i class="fa fa-circle"
+                  style="font-size: 6px; color: var(--gold); margin-right: 8px; vertical-align: middle;"></i> Kodaikanal
+                Hills</li>
+              <li style="font-size: 14px;"><i class="fa fa-circle"
+                  style="font-size: 6px; color: var(--gold); margin-right: 8px; vertical-align: middle;"></i> Hampi
+                Ruins</li>
+              <li style="font-size: 14px;"><i class="fa fa-circle"
+                  style="font-size: 6px; color: var(--gold); margin-right: 8px; vertical-align: middle;"></i> Madurai
+                Temples</li>
+              <li style="font-size: 14px;"><i class="fa fa-circle"
+                  style="font-size: 6px; color: var(--gold); margin-right: 8px; vertical-align: middle;"></i>
+                Pondicherry French Quarter</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Packages Grid Section -->
+      <div class="dt-packages" style="margin-top: 80px;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 36px; color: var(--dark); margin-bottom: 40px; font-weight: 700;">
+          South India Packages &amp; Itineraries</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px;">
+
+          <!-- Card 1 -->
+          <div onclick="openProgram('pkg1')" style="background:white; border-radius:14px; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,0.07); cursor:pointer; border:1px solid #f0f0f0; transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 16px 40px rgba(0,0,0,0.13)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.07)'">
+            <div style="position:relative;height:210px;overflow:hidden;">
+              <img src="https://images.unsplash.com/photo-1593693397690-362cb9666fca?w=600" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform=''">
+              <div style="position:absolute;top:14px;right:14px;background:rgba(0,0,0,0.75);color:white;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:600;"><i class="fa fa-clock" style="color:var(--gold);margin-right:4px;"></i> 3D/2N</div>
+            </div>
+            <div style="padding:20px;">
+              <h3 style="font-family:'Playfair Display',serif;font-size:19px;margin:0 0 8px;color:var(--dark);">Munnar Tea Gardens</h3>
+              <p style="font-size:13px;color:#888;margin:0 0 16px;"><i class="fa fa-map-marker-alt" style="color:var(--gold);margin-right:5px;"></i>Kerala</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #f0f0f0;padding-top:14px;">
+                <span style="font-weight:700;color:var(--dark);font-size:17px;">&#8377; 12,500</span>
+                <span style="color:var(--gold);font-size:12px;font-weight:700;">VIEW PROGRAM <i class="fa fa-chevron-right"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div onclick="openProgram('pkg2')" style="background:white; border-radius:14px; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,0.07); cursor:pointer; border:1px solid #f0f0f0; transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 16px 40px rgba(0,0,0,0.13)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.07)'">
+            <div style="position:relative;height:210px;overflow:hidden;">
+              <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=600" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform=''">
+              <div style="position:absolute;top:14px;right:14px;background:rgba(0,0,0,0.75);color:white;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:600;"><i class="fa fa-clock" style="color:var(--gold);margin-right:4px;"></i> 4D/3N</div>
+            </div>
+            <div style="padding:20px;">
+              <h3 style="font-family:'Playfair Display',serif;font-size:19px;margin:0 0 8px;color:var(--dark);">Alleppey Backwaters</h3>
+              <p style="font-size:13px;color:#888;margin:0 0 16px;"><i class="fa fa-map-marker-alt" style="color:var(--gold);margin-right:5px;"></i>Kerala</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #f0f0f0;padding-top:14px;">
+                <span style="font-weight:700;color:var(--dark);font-size:17px;">&#8377; 14,200</span>
+                <span style="color:var(--gold);font-size:12px;font-weight:700;">VIEW PROGRAM <i class="fa fa-chevron-right"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div onclick="openProgram('pkg3')" style="background:white; border-radius:14px; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,0.07); cursor:pointer; border:1px solid #f0f0f0; transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 16px 40px rgba(0,0,0,0.13)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.07)'">
+            <div style="position:relative;height:210px;overflow:hidden;">
+              <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=600" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform=''">
+              <div style="position:absolute;top:14px;right:14px;background:rgba(0,0,0,0.75);color:white;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:600;"><i class="fa fa-clock" style="color:var(--gold);margin-right:4px;"></i> 4D/3N</div>
+            </div>
+            <div style="padding:20px;">
+              <h3 style="font-family:'Playfair Display',serif;font-size:19px;margin:0 0 8px;color:var(--dark);">Ooty Hill Station</h3>
+              <p style="font-size:13px;color:#888;margin:0 0 16px;"><i class="fa fa-map-marker-alt" style="color:var(--gold);margin-right:5px;"></i>Tamil Nadu</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #f0f0f0;padding-top:14px;">
+                <span style="font-weight:700;color:var(--dark);font-size:17px;">&#8377; 15,000</span>
+                <span style="color:var(--gold);font-size:12px;font-weight:700;">VIEW PROGRAM <i class="fa fa-chevron-right"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div onclick="openProgram('pkg4')" style="background:white; border-radius:14px; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,0.07); cursor:pointer; border:1px solid #f0f0f0; transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 16px 40px rgba(0,0,0,0.13)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.07)'">
+            <div style="position:relative;height:210px;overflow:hidden;">
+              <img src="https://images.unsplash.com/photo-1516105348601-1b3d51d0af9f?w=600" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform=''">
+              <div style="position:absolute;top:14px;right:14px;background:rgba(0,0,0,0.75);color:white;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:600;"><i class="fa fa-clock" style="color:var(--gold);margin-right:4px;"></i> 5D/4N</div>
+            </div>
+            <div style="padding:20px;">
+              <h3 style="font-family:'Playfair Display',serif;font-size:19px;margin:0 0 8px;color:var(--dark);">Coorg Coffee Estates</h3>
+              <p style="font-size:13px;color:#888;margin:0 0 16px;"><i class="fa fa-map-marker-alt" style="color:var(--gold);margin-right:5px;"></i>Karnataka</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #f0f0f0;padding-top:14px;">
+                <span style="font-weight:700;color:var(--dark);font-size:17px;">&#8377; 16,500</span>
+                <span style="color:var(--gold);font-size:12px;font-weight:700;">VIEW PROGRAM <i class="fa fa-chevron-right"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div onclick="openProgram('pkg5')" style="background:white; border-radius:14px; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,0.07); cursor:pointer; border:1px solid #f0f0f0; transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 16px 40px rgba(0,0,0,0.13)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.07)'">
+            <div style="position:relative;height:210px;overflow:hidden;">
+              <img src="https://images.unsplash.com/photo-1590766940554-634a7ed41054?w=600" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform=''">
+              <div style="position:absolute;top:14px;right:14px;background:rgba(0,0,0,0.75);color:white;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:600;"><i class="fa fa-clock" style="color:var(--gold);margin-right:4px;"></i> 3D/2N</div>
+            </div>
+            <div style="padding:20px;">
+              <h3 style="font-family:'Playfair Display',serif;font-size:19px;margin:0 0 8px;color:var(--dark);">Mysore Palace Heritage</h3>
+              <p style="font-size:13px;color:#888;margin:0 0 16px;"><i class="fa fa-map-marker-alt" style="color:var(--gold);margin-right:5px;"></i>Karnataka</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #f0f0f0;padding-top:14px;">
+                <span style="font-weight:700;color:var(--dark);font-size:17px;">&#8377; 11,000</span>
+                <span style="color:var(--gold);font-size:12px;font-weight:700;">VIEW PROGRAM <i class="fa fa-chevron-right"></i></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>NextTrip Holidays</h4>
+          <p>Your trusted travel partner for unforgettable journeys around the world.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="index.html#packages">Packages</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p><i class="fa fa-phone"></i> +91-XXX-XXX-XXXX</p>
+          <p><i class="fa fa-envelope"></i> info@nexttrip.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 NextTrip Holidays. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== ITINERARY MODAL (at body level â€” never clipped) ===== -->
+  <div id="siModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:9999999; align-items:center; justify-content:center; padding:16px; box-sizing:border-box;">
+    <div style="background:#fff; width:100%; max-width:560px; max-height:80vh; border-radius:16px; display:flex; flex-direction:column; overflow:hidden; box-shadow:0 24px 60px rgba(0,0,0,0.4);">
+      <!-- Header -->
+      <div style="padding:18px 22px; border-bottom:1px solid #eee; display:flex; align-items:center; justify-content:space-between; flex-shrink:0;">
+        <div>
+          <div style="background:rgba(245,166,35,0.12); color:#f5a623; display:inline-block; padding:2px 10px; border-radius:4px; font-size:10px; font-weight:700; letter-spacing:1px; text-transform:uppercase; margin-bottom:6px;">Detailed Itinerary</div>
+          <h2 id="siTitle" style="margin:0 0 4px; font-family:'Playfair Display',serif; font-size:20px; color:#111; font-weight:700;"></h2>
+          <div id="siDur" style="font-size:13px; color:#888;"></div>
+        </div>
+        <button onclick="closeProgram()" title="Close" style="width:36px; height:36px; border-radius:8px; border:none; background:#f0f0f0; color:#555; cursor:pointer; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:16px;" onmouseover="this.style.background='#ddd';this.style.color='#111'" onmouseout="this.style.background='#f0f0f0';this.style.color='#555'"><i class="fa fa-times"></i></button>
+      </div>
+      <!-- Body -->
+      <div id="siBody" style="padding:18px 22px; overflow-y:auto; flex:1;"></div>
+      <!-- Footer -->
+      <div style="padding:14px 22px; border-top:1px solid #eee; display:flex; align-items:center; justify-content:space-between; flex-shrink:0; background:#fafafa;">
+        <div id="siPrice" style="font-size:18px; font-weight:700; color:#111;"></div>
+        <button onclick="openBookingModal()" style="background:#f5a623; color:#fff; border:none; padding:10px 26px; border-radius:8px; font-weight:700; font-size:14px; cursor:pointer; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">Book This Tour</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var siData = {
+      pkg1: { title:'Munnar Tea Gardens', loc:'Kerala', dur:'3 Days / 2 Nights', price:'&#8377; 12,500', days:[
+        { t:'Arrival & Sightseeing', c:'Arrive at Kochi airport, transfer to Munnar. En route visit Cheeyappara and Valara waterfalls. Check in to hotel.' },
+        { t:'Tea Gardens & Sightseeing', c:'Visit Mattupetty Dam, Echo Point, Kundala Lake, Tea Museum, and Rose Garden. Evening at leisure.' },
+        { t:'Eravikulam & Departure', c:'Morning visit to Eravikulam National Park. Drive back to Kochi for onward journey.' }
+      ]},
+      pkg2: { title:'Alleppey Backwaters', loc:'Kerala', dur:'4 Days / 3 Nights', price:'&#8377; 14,200', days:[
+        { t:'Arrival &ndash; Kochi', c:'Arrive at Kochi, sightseeing at Fort Kochi, Chinese fishing nets, and St. Francis Church. Transfer to Alleppey.' },
+        { t:'Houseboat Experience', c:'Board a premium houseboat for a cruise through the scenic Kerala backwaters. Enjoy fresh seafood, sunsets, and village life.' },
+        { t:'Village & Coir Tour', c:'Explore local villages, coir making units, and toddy shops. Sunset cruise aboard the houseboat.' },
+        { t:'Check Out & Departure', c:'Morning breakfast on the houseboat. Check out and transfer back to Kochi.' }
+      ]},
+      pkg3: { title:'Ooty Hill Station', loc:'Tamil Nadu', dur:'4 Days / 3 Nights', price:'&#8377; 15,000', days:[
+        { t:'Arrival &ndash; Ooty', c:'Arrive at Ooty (via Coimbatore). Transfer to hotel. Evening visit to Ooty Lake and local market.' },
+        { t:'Botanical Wonders', c:'Visit Ooty Botanical Garden, Doddabetta Peak (highest point in Nilgiris), and Rose Garden.' },
+        { t:'Coonoor Day Trip', c:'Scenic ride to Coonoor via Nilgiri Mountain Railway (Toy Train). Visit Lamb\'s Rock and Dolphin\'s Nose viewpoints.' },
+        { t:'Shopping & Departure', c:'Morning free for shopping at tea shops. Transfer to Coimbatore airport for departure.' }
+      ]},
+      pkg4: { title:'Coorg Coffee Estates', loc:'Karnataka', dur:'5 Days / 4 Nights', price:'&#8377; 16,500', days:[
+        { t:'Bangalore to Coorg', c:'Drive from Bangalore to Coorg (Kodagu). Check in to a coffee estate resort. Evening walk through the plantation.' },
+        { t:'Dubare Elephant Camp', c:'Morning elephant interaction at Dubare. Visit Nisargadhama island and enjoy bamboo rafting.' },
+        { t:'Golden Temple &ndash; Bylakuppe', c:'Visit the Namdroling Monastery (Golden Temple) at Bylakuppe &mdash; the largest Tibetan settlement in India.' },
+        { t:'Abbey Falls & Raja Seat', c:'Visit Abbey Falls, Madikeri Fort, and Raja Seat (sunset viewpoint). Evening leisure at estate.' },
+        { t:'Departure', c:'Breakfast at the estate. Drive back to Bangalore. Tour ends with beautiful memories.' }
+      ]},
+      pkg5: { title:'Mysore Palace Heritage', loc:'Karnataka', dur:'3 Days / 2 Nights', price:'&#8377; 11,000', days:[
+        { t:'Arrival &ndash; Brindavan Gardens', c:'Arrive in Mysore. Check in to hotel. Evening visit to Brindavan Gardens (illuminations at 7 PM).' },
+        { t:'Royal Heritage Day', c:'Visit the magnificent Mysore Palace, Chamundi Hills, Mysore Zoo, and Devaraja Market.' },
+        { t:'St. Philomena\'s & Departure', c:'Morning visit to St. Philomena\'s Church (one of India\'s largest). Departure for Bangalore or Mysore station.' }
+      ]}
+    };
+
+    function openProgram(id) {
+      var d = siData[id];
+      if (!d) return;
+      document.getElementById('siTitle').textContent = d.title;
+      document.getElementById('siDur').innerHTML = '<i class="fa fa-clock" style="color:#f5a623;margin-right:5px;"></i>' + d.dur + '&nbsp;&nbsp;<i class="fa fa-map-marker-alt" style="color:#f5a623;margin-left:8px;margin-right:5px;"></i>' + d.loc;
+      document.getElementById('siPrice').innerHTML = d.price;
+      document.getElementById('siBody').innerHTML = d.days.map(function(day, i) {
+        var isLast = i === d.days.length - 1;
+        return '<div style="display:flex;gap:16px;margin-bottom:' + (isLast ? '0' : '18px') + ';">' +
+          '<div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;width:32px;">' +
+            '<div style="width:32px;height:32px;border-radius:50%;background:#f5a623;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;">' + (i+1) + '</div>' +
+            (!isLast ? '<div style="width:2px;flex-grow:1;background:#f0f0f0;margin:4px 0;"></div>' : '') +
+          '</div>' +
+          '<div style="flex:1;padding-top:2px;">' +
+            '<div style="font-size:10px;color:#f5a623;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px;">DAY ' + (i+1) + '</div>' +
+            '<h4 style="margin:0 0 6px;font-size:15px;font-family:\'Playfair Display\',serif;font-weight:700;color:#111;">' + day.t + '</h4>' +
+            '<p style="margin:0;font-size:13px;color:#555;line-height:1.6;background:#f9f9f9;padding:8px 12px;border-radius:8px;border-left:3px solid #f5a623;">' + day.c + '</p>' +
+          '</div>' +
+        '</div>';
+      }).join('');
+      var m = document.getElementById('siModal');
+      m.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeProgram() {
+      document.getElementById('siModal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('siModal').addEventListener('click', function(e) {
+      if (e.target === this) closeProgram();
+    });
+  </script>
+
+  <!-- ===== BOOKING FORM MODAL ===== -->
+  <div id="bookingFormModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.75); z-index:99999999; align-items:center; justify-content:center; padding:16px; box-sizing:border-box;">
+    <div style="background:#fff; width:100%; max-width:480px; border-radius:18px; overflow:hidden; box-shadow:0 28px 70px rgba(0,0,0,0.4); display:flex; flex-direction:column;">
+
+      <!-- Header -->
+      <div style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%); padding:24px 26px; display:flex; align-items:center; justify-content:space-between;">
+        <div>
+          <div style="color:#f5a623; font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px;">NextTrip Holidays</div>
+          <h3 style="margin:0; color:#fff; font-family:'Playfair Display',serif; font-size:22px; font-weight:700;">Book This Tour</h3>
+          <p id="bfTourName" style="margin:4px 0 0; color:rgba(255,255,255,0.6); font-size:13px;"></p>
+        </div>
+        <button onclick="closeBookingForm()" style="width:36px; height:36px; border-radius:8px; border:none; background:rgba(255,255,255,0.1); color:#fff; cursor:pointer; font-size:18px; display:flex; align-items:center; justify-content:center;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'"><i class="fa fa-times"></i></button>
+      </div>
+
+      <!-- Form Body -->
+      <div style="padding:24px 26px;">
+        <form id="bookingForm" onsubmit="submitBookingForm(event)">
+
+          <div style="margin-bottom:16px;">
+            <label style="display:block; font-size:12px; font-weight:600; color:#555; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;">Full Name *</label>
+            <input type="text" id="bfName" required placeholder="Enter your full name"
+              style="width:100%; padding:11px 14px; border:1.5px solid #e8e8e8; border-radius:8px; font-size:14px; color:#111; box-sizing:border-box; outline:none; transition:border 0.2s;"
+              onfocus="this.style.borderColor='#f5a623'" onblur="this.style.borderColor='#e8e8e8'">
+          </div>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:16px;">
+            <div>
+              <label style="display:block; font-size:12px; font-weight:600; color:#555; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;">Phone *</label>
+              <input type="tel" id="bfPhone" required placeholder="+91 XXXXX XXXXX"
+                style="width:100%; padding:11px 14px; border:1.5px solid #e8e8e8; border-radius:8px; font-size:14px; color:#111; box-sizing:border-box; outline:none; transition:border 0.2s;"
+                onfocus="this.style.borderColor='#f5a623'" onblur="this.style.borderColor='#e8e8e8'">
+            </div>
+            <div>
+              <label style="display:block; font-size:12px; font-weight:600; color:#555; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;">Travellers</label>
+              <select id="bfPeople" style="width:100%; padding:11px 14px; border:1.5px solid #e8e8e8; border-radius:8px; font-size:14px; color:#111; box-sizing:border-box; outline:none; background:#fff;">
+                <option>1 Person</option>
+                <option>2 People</option>
+                <option>3 People</option>
+                <option>4 People</option>
+                <option>5+ People</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="margin-bottom:16px;">
+            <label style="display:block; font-size:12px; font-weight:600; color:#555; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;">Email</label>
+            <input type="email" id="bfEmail" placeholder="your@email.com"
+              style="width:100%; padding:11px 14px; border:1.5px solid #e8e8e8; border-radius:8px; font-size:14px; color:#111; box-sizing:border-box; outline:none; transition:border 0.2s;"
+              onfocus="this.style.borderColor='#f5a623'" onblur="this.style.borderColor='#e8e8e8'">
+          </div>
+
+          <div style="margin-bottom:22px;">
+            <label style="display:block; font-size:12px; font-weight:600; color:#555; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;">Travel Date</label>
+            <input type="date" id="bfDate"
+              style="width:100%; padding:11px 14px; border:1.5px solid #e8e8e8; border-radius:8px; font-size:14px; color:#111; box-sizing:border-box; outline:none; transition:border 0.2s;"
+              onfocus="this.style.borderColor='#f5a623'" onblur="this.style.borderColor='#e8e8e8'">
+          </div>
+
+          <button type="submit" style="width:100%; padding:14px; background:#f5a623; color:#fff; border:none; border-radius:10px; font-size:16px; font-weight:700; cursor:pointer; letter-spacing:0.5px; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">
+            <i class="fa fa-paper-plane" style="margin-right:8px;"></i> Send Enquiry
+          </button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var _currentTourName = '';
+
+    function openBookingForm() { if(typeof window.openBookingModal === "function") window.openBookingModal(); else console.warn("Global booking system not ready"); }
+
+    function closeBookingForm() {
+      document.getElementById('bookingFormModal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('bookingFormModal').addEventListener('click', function(e) {
+      if (e.target === this) closeBookingForm();
+    });
+
+    function submitBookingForm(e) {
+      e.preventDefault();
+      var name = document.getElementById('bfName').value.trim();
+      var phone = document.getElementById('bfPhone').value.trim();
+      var email = document.getElementById('bfEmail').value.trim();
+      var date = document.getElementById('bfDate').value;
+      var people = document.getElementById('bfPeople').value;
+      var tour = _currentTourName || 'South India Tour';
+
+      // Show success message
+      document.querySelector('#bookingFormModal form').innerHTML = `
+        <div style="text-align:center; padding:20px 0;">
+          <div style="width:64px;height:64px;border-radius:50%;background:rgba(245,166,35,0.12);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
+            <i class="fa fa-check" style="font-size:28px;color:#f5a623;"></i>
+          </div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:#111;margin:0 0 10px;">Enquiry Sent!</h3>
+          <p style="color:#666;font-size:14px;line-height:1.7;margin:0 0 20px;">Thank you <strong>${name}</strong>! We've received your request for <strong>${tour}</strong>. Our team will call you at <strong>${phone}</strong> within 24 hours.</p>
+          <button onclick="closeBookingForm()" style="background:#f5a623;color:#fff;border:none;padding:12px 32px;border-radius:8px;font-weight:700;font-size:14px;cursor:pointer;">Close</button>
+        </div>
+      `;
+    }
+  </script>
+
+<script>
+    function openBookingModal() { 
+        if(typeof window.openModal === "function") {
+            window.openModal(); 
+        } else {
+            console.warn("Global booking system not ready");
+            alert("Booking system is loading. Please try again in a moment.");
+        }
+    }
+</script>
+</body>
+</html>

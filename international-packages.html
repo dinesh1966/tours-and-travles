@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Tour Packages - NextTrip Holidays</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+    <script src="script.js" defer></script>
+
+    <!-- Lottie Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+
+<body>
+
+  <!-- Premium Page Loader -->
+  <div id="premiumLoader">
+    <div class="loader-earth">
+      <lottie-player src="https://lottie.host/df254881-c7c4-42f1-aa8f-28c0570bde7c/55u6YkF8Wb.json" background="transparent" speed="1" style="width: 220px; height: 220px;" loop autoplay></lottie-player>
+    </div>
+    <div class="loader-text">NextTrip Holidays</div>
+  </div>
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const loader = document.getElementById('premiumLoader');
+        if (loader) loader.classList.add('fade-out');
+        document.body.classList.add('body-loaded');
+      }, 900);
+    });
+    document.querySelectorAll('a').forEach(link => {
+      if (link.target !== '_blank' && link.href && link.href.indexOf('#') === -1 && !link.href.startsWith('tel:') && !link.href.startsWith('mailto:')) {
+        link.addEventListener('click', (e) => {
+          const loader = document.getElementById('premiumLoader');
+          if (loader) {
+            e.preventDefault();
+            loader.classList.remove('fade-out');
+            loader.style.opacity = '1';
+            loader.style.transform = 'translateY(0)';
+            setTimeout(() => window.location = link.href, 500);
+          }
+        });
+      }
+    });
+  </script>
+
+    <nav class="navbar" style="background: var(--dark);">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://res.cloudinary.com/drkgkgiat/image/upload/q_auto/f_auto/v1775567539/Next_TRip_Final_Logo_Square_Size_-_Copy-removebg-preview_bsfsev.png"
+                    alt="NextTrip" height="50">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#packages">Packages</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="package-hero"
+        style="background-image: url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1600&q=85'); height: 400px; display: flex; align-items: center; justify-content: center; position: relative;">
+        <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.5);"></div>
+        <div style="position: relative; text-align: center; color: white;">
+            <h1 style="font-family: 'Playfair Display', serif; font-size: 52px; margin-bottom: 10px;">International Tour
+                Packages</h1>
+            <p style="font-size: 18px; opacity: 0.9;">Unforgettable Journeys Across 14 Iconic Destinations</p>
+        </div>
+    </section>
+
+    <div class="breadcrumb" style="background: #fcfcfc; border-bottom: 1px solid #eee; padding: 15px 0;">
+        <div class="container">
+            <div style="display: flex; gap: 8px; font-size: 14px; color: #888;">
+                <a href="index.html" style="color: var(--primary);">Home</a>
+                <span>/</span>
+                <span>International Packages</span>
+            </div>
+        </div>
+    </div>
+
+    <section class="section-pad">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px;">
+
+                <!-- 1. Europe -->
+                <div class="itinerary-card" onclick="window.location.href='europe-tour.html'">
+                    <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800" alt="Europe">
+                    <div style="padding: 24px;">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px;">Grand
+                            Europe Discovery</h3>
+                        <p style="font-size: 14px; color: #666; margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+                                style="color: var(--primary); margin-right: 6px;"></i> Europe</p>
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                            <span style="font-weight: 700; color: #333; font-size: 18px;">₹ 1,45,000</span>
+                            <span class="view-all-btn">10 TOURS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Singapore -->
+                <div class="itinerary-card" onclick="window.location.href='singapore-tour.html'">
+                    <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800" alt="Singapore">
+                    <div style="padding: 24px;">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px;">
+                            Singapore City Lights</h3>
+                        <p style="font-size: 14px; color: #666; margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+                                style="color: var(--primary); margin-right: 6px;"></i> Singapore</p>
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                            <span style="font-weight: 700; color: #333; font-size: 18px;">₹ 48,000</span>
+                            <span class="view-all-btn">03 TOURS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Malaysia -->
+                <div class="itinerary-card" onclick="window.location.href='malaysia-tour.html'">
+                    <img src="https://images.unsplash.com/photo-1596422846543-75c6fc18a5cf?w=800" alt="Malaysia">
+                    <div style="padding: 24px;">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px;">
+                            Malaysia Highlights</h3>
+                        <p style="font-size: 14px; color: #666; margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+                                style="color: var(--primary); margin-right: 6px;"></i> Malaysia</p>
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                            <span style="font-weight: 700; color: #333; font-size: 18px;">₹ 42,000</span>
+                            <span class="view-all-btn">03 TOURS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Dubai -->
+                <div class="itinerary-card" onclick="window.location.href='dubai-tour.html'">
+                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f88800?w=800" alt="Dubai">
+                    <div style="padding: 24px;">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px;">Dubai
+                            Desert Safari</h3>
+                        <p style="font-size: 14px; color: #666; margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+                                style="color: var(--primary); margin-right: 6px;"></i> UAE</p>
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                            <span style="font-weight: 700; color: #333; font-size: 18px;">₹ 55,000</span>
+                            <span class="view-all-btn">03 TOURS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Vietnam -->
+                <div class="itinerary-card" onclick="window.location.href='vietnam-tour.html'">
+                    <img src="https://images.unsplash.com/photo-1528127269322-539801943592?w=800" alt="Vietnam">
+                    <div style="padding: 24px;">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px;">
+                            Vietnam Heritage</h3>
+                        <p style="font-size: 14px; color: #666; margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+                                style="color: var(--primary); margin-right: 6px;"></i> Vietnam</p>
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                            <span style="font-weight: 700; color: #333; font-size: 18px;">₹ 40,000</span>
+                            <span class="view-all-btn">03 TOURS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Bali -->
+                <div class="itinerary-card" onclick="window.location.href='bali-tour.html'">
+                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800" alt="Bali">
+                    <div style="padding: 24px;">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px;">Bali
+                            Island Bliss</h3>
+                        <p style="font-size: 14px; color: #666; margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+                                style="color: var(--primary); margin-right: 6px;"></i> Indonesia</p>
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                            <span style="font-weight: 700; color: #333; font-size: 18px;">₹ 45,000</span>
+                            <span class="view-all-btn">03 TOURS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Philippines -->
+                <div class="itinerary-card" onclick="window.location.href='philippines-tour.html'">
+                    <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=800" alt="Philippines">
+                    <div style="padding: 24px;">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px;">
+                            Palawan Lagoons</h3>
+                        <p style="font-size: 14px; color: #666; margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+                                style="color: var(--primary); margin-right: 6px;"></i> Philippines</p>
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                            <span style="font-weight: 700; color: #333; font-size: 18px;">₹ 52,000</span>
+                            <span class="view-all-btn">03 TOURS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Cambodia -->
+                <div class="itinerary-card" onclick="window.location.href='cambodia-tour.html'">
+                    <img src="https://images.unsplash.com/photo-1500049222539-7476341f5927?w=800" alt="Cambodia">
+                    <div style="padding: 24px;">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px;">Angkor
+                            Wat Explorer</h3>
+                        <p style="font-size: 14px; color: #666; margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+                                style="color: var(--primary); margin-right: 6px;"></i> Cambodia</p>
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                            <span style="font-weight: 700; color: #333; font-size: 18px;">₹ 34,000</span>
+                            <span class="view-all-btn">02 TOURS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. China -->
+                <div class="itinerary-card" onclick="window.location.href='china-tour.html'">
+                    <img src="https://images.unsplash.com/photo-1547984609-bbdf6d389a6d?w=800" alt="China">
+                    <div style="padding: 24px;">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px;">Great
+                            Wall Majesty</h3>
+                        <p style="font-size: 14px; color: #666; margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+                                style="color: var(--primary); margin-right: 6px;"></i> China</p>
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                            <span style="font-weight: 700; color: #333; font-size: 18px;">₹ 1,15,000</span>
+                            <span class="view-all-btn">02 TOURS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. Japan -->
+                <div class="itinerary-card" onclick="window.location.href='japan-tour.html'">
+                    <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800" alt="Japan">
+                    <div style="padding: 24px;">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px;">Cherry
+                            Blossom Japan</h3>
+                        <p style="font-size: 14px; color: #666; margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+                                style="color: var(--primary); margin-right: 6px;"></i> Japan</p>
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                            <span style="font-weight: 700; color: #333; font-size: 18px;">₹ 1,25,000</span>
+                            <span class="view-all-btn">03 TOURS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11. Hong Kong -->
+                <div class="itinerary-card" onclick="window.location.href='hongkong-tour.html'">
+                    <img src="https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?w=800" alt="Hong Kong">
+                    <div style="padding: 24px;">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px;">HK
+                            Skyline & Magic</h3>
+                        <p style="font-size: 14px; color: #666; margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+                                style="color: var(--primary); margin-right: 6px;"></i> Hong Kong</p>
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                            <span style="font-weight: 700; color: #333; font-size: 18px;">₹ 46,000</span>
+                            <span class="view-all-btn">03 TOURS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 12. Australia -->
+                <div class="itinerary-card" onclick="window.location.href='australia-tour.html'">
+                    <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=800" alt="Australia">
+                    <div style="padding: 24px;">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px;">The
+                            Australian Outback</h3>
+                        <p style="font-size: 14px; color: #666; margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+                                style="color: var(--primary); margin-right: 6px;"></i> Australia</p>
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                            <span style="font-weight: 700; color: #333; font-size: 18px;">₹ 1,35,000</span>
+                            <span class="view-all-btn">03 TOURS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 13. South Korea -->
+                <div class="itinerary-card" onclick="window.location.href='south-korea-tour.html'">
+                    <img src="seoul_hero_1775832784357.png" alt="South Korea">
+                    <div style="padding: 24px;">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px;">Seoul
+                            K-Adventure</h3>
+                        <p style="font-size: 14px; color: #666; margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+                                style="color: var(--primary); margin-right: 6px;"></i> South Korea</p>
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                            <span style="font-weight: 700; color: #333; font-size: 18px;">₹ 72,000</span>
+                            <span class="view-all-btn">02 TOURS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 14. Turkey -->
+                <div class="itinerary-card" onclick="window.location.href='turkey-tour.html'">
+                    <img src="cappadocia_hero_1775832756186.png" alt="Turkey">
+                    <div style="padding: 24px;">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px;">
+                            Cappadocia Magic</h3>
+                        <p style="font-size: 14px; color: #666; margin-bottom: 20px;"><i class="fa fa-map-marker-alt"
+                                style="color: var(--primary); margin-right: 6px;"></i> Turkey</p>
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px;">
+                            <span style="font-weight: 700; color: #333; font-size: 18px;">₹ 68,000</span>
+                            <span class="view-all-btn">02 TOURS</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function openBookingModal() {
+            if (typeof window.openModal === "function") {
+                window.openModal();
+            } else {
+                console.warn("Global booking system not ready");
+                alert("Booking system is loading. Please try again in a moment.");
+            }
+        }
+    </script>
+</body>
+
+</html>
